@@ -101,4 +101,21 @@ table "taxonomy_domain"
 - language
 ~~~
 
+
 The app will sync with this remote sqlite. 
+
+
+Spectrogramms
+-------------
+
+The nice spectrograms are generated with sox. 
+
+~~~
+wget -r -l0 -erobots=off -R.mp3 http://www.tierstimmenarchiv.de/recordings
+for fn in *.mp3 ; do lame --decode $fn $fn.wav ; done
+mkdir ./spectrograms
+for fn in *.wav ; do sox $fn -n spectrogram  -r  -o  spectrograms/$fn.png ; done
+for fn in spectrograms/*.png ; do convert $fn  spectrograms/$fn.jpg ; done
+tar -zcvf spectrograms.tar.gz ./spectrograms
+
+~~~
