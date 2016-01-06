@@ -1,0 +1,995 @@
+
+1/5/2016, 11:50:23 PM
+
+Operating System
+  Name                        = Mac OS X
+  Version                     = 10.10.5
+  Architecture                = 64bit
+  # CPUs                      = 4
+  Memory                      = 8589934592
+
+Node.js
+  Node.js Version             = 0.12.7
+  npm Version                 = 2.11.3
+
+Titanium CLI
+  CLI Version                 = 5.0.5
+
+Titanium SDK
+  SDK Version                 = 5.1.0.GA
+  SDK Path                    = /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA
+  Target Platform             = android
+
+Command
+  /usr/local/bin/node /Users/fuerst/.appcelerator/install/5.1.0/package/node_modules/appc-cli-titanium/node_modules/titanium/bin/titanium build --platform android --log-level trace --sdk 5.1.0.GA --project-dir /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv --target device --android-sdk /Users/fuerst/Library/android-sdk-macosx --device-id 0621ed32229928e7 --alias googlekey --keystore /Users/fuerst/.android.keystore --store-password *MHpsNH --skip-js-minify --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 56443 --plugin-paths /Users/fuerst/.appcelerator/install/5.1.0/package/node_modules --config-file /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/build-1452034216751.json --no-banner
+
+[DEBUG]  Detecting modules in /Users/fuerst/Library/Application Support/Titanium/modules
+[DEBUG]  Detected android module: analytics.google 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/analytics.google/1.0
+[DEBUG]  Detected android module: appcelerator.encrypteddatabase 1.0.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/appcelerator.encrypteddatabase/1.0.4
+[DEBUG]  Detected android module: bencoding.alarmmanager 0.11 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/bencoding.alarmmanager/0.11
+[DEBUG]  Detected android module: bencoding.alarmmanager 0.123 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/bencoding.alarmmanager/0.123
+[DEBUG]  Detected android module: bencoding.alarmmanager 0.123RAI @ /Users/fuerst/Library/Application Support/Titanium/modules/android/bencoding.alarmmanager/0.123RAI
+[DEBUG]  Detected android module: bencoding.alarmmanager 0.13 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/bencoding.alarmmanager/0.13
+[DEBUG]  Detected android module: bencoding.android.tools 0.31 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/bencoding.android.tools/0.31
+[DEBUG]  Detected android module: bencoding.blur 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/bencoding.blur/0.1
+[DEBUG]  Detected android module: bencoding.blur 0.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/bencoding.blur/0.2
+[DEBUG]  Detected android module: bencoding.utterance 0.5 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/bencoding.utterance/0.5
+[DEBUG]  Detected android module: co.il.webe.speechrecognizer 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/co.il.webe.speechrecognizer/1.0
+[DEBUG]  Detected android module: co.kommit.gtm 0.0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/co.kommit.gtm/0.0.1
+[DEBUG]  Detected android module: co.lanica.almixer 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/co.lanica.almixer/0.1
+[DEBUG]  Detected android module: co.lanica.chipmunk2d 0.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/co.lanica.chipmunk2d/0.2
+[DEBUG]  Detected android module: com.abp.chooseintent 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.abp.chooseintent/1.0
+[DEBUG]  Detected android module: com.alcoapps.actionbarextras 1.6.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.1
+[DEBUG]  Detected android module: com.alcoapps.actionbarextras 1.6.5 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.5
+[DEBUG]  Detected android module: com.alcoapps.actionbarextras 1.6.8 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.8
+[DEBUG]  Detected android module: com.appcelerator.apm 1.1.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.appcelerator.apm/1.1.1
+[DEBUG]  Detected android module: com.gbaldera.titouchgallery 1.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.gbaldera.titouchgallery/1.1
+[DEBUG]  Detected android module: com.gbaldera.titouchgallery 1.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.gbaldera.titouchgallery/1.2
+[DEBUG]  Detected android module: com.googlecode.quicktigame2d 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.googlecode.quicktigame2d/1.0
+[DEBUG]  Detected android module: com.goyya.telephonymanager 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.goyya.telephonymanager/1.0.0
+[DEBUG]  Detected android module: com.ionrod.accountmanager 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.ionrod.accountmanager/1.0.0
+[DEBUG]  Detected android module: com.kosso.tiandroidaudioplayer 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.kosso.tiandroidaudioplayer/0.1
+[DEBUG]  Detected android module: com.liferay.beacons 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.liferay.beacons/0.1
+[DEBUG]  Detected android module: com.mcongrove.pebble 1.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.mcongrove.pebble/1.1
+[DEBUG]  Detected android module: com.mirasense.scanditsdk 4.3.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.mirasense.scanditsdk/4.3.0
+[DEBUG]  Detected android module: com.navid.tabs 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.navid.tabs/1.0
+[DEBUG]  Detected android module: com.rkam.swiperefreshlayout 0.4.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.rkam.swiperefreshlayout/0.4.1
+[DEBUG]  Detected android module: com.tripvi.drawerlayout 1.1.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.tripvi.drawerlayout/1.1.1
+[DEBUG]  Detected android module: com.tripvi.drawerlayout 1.2.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.tripvi.drawerlayout/1.2.2
+[DEBUG]  Detected android module: com.universalavenue.ticrosswalk 1.3.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.universalavenue.ticrosswalk/1.3.0
+[DEBUG]  Detected android module: com.wikitude.ti 4.1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.wikitude.ti/4.1.0
+[DEBUG]  Detected android module: com.wikitude.ti 5.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/com.wikitude.ti/5.0.0
+[DEBUG]  Detected android module: de.manumaticx.androidflip 1.0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/de.manumaticx.androidflip/1.0.1
+[DEBUG]  Detected android module: de.manumaticx.crouton 1.2.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/de.manumaticx.crouton/1.2.3
+[DEBUG]  Detected android module: de.manumaticx.crouton 1.2.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/de.manumaticx.crouton/1.2.4
+[DEBUG]  Detected android module: de.manumaticx.printmanager 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/de.manumaticx.printmanager/1.0.0
+[DEBUG]  Detected android module: de.marcelpociot.circularslider 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/de.marcelpociot.circularslider/1.0
+[DEBUG]  Detected android module: dk.napp.flashlight 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/dk.napp.flashlight/1.0
+[DEBUG]  Detected android module: facebook 3.0.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/facebook/3.0.3
+[DEBUG]  Detected android module: facebook 4.0.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/facebook/4.0.3
+[DEBUG]  Detected android module: facebook 4.0.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/facebook/4.0.4
+[DEBUG]  Detected android module: facebook 4.0.5 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/facebook/4.0.5
+[DEBUG]  Detected android module: io.platino 2.9.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/io.platino/2.9.0
+[DEBUG]  Detected android module: jp.isisredirect.speechrecognizer 2.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/jp.isisredirect.speechrecognizer/2.0
+[DEBUG]  Detected android module: jp.isisredirect.speechrecognizer 3.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/jp.isisredirect.speechrecognizer/3.0
+[DEBUG]  Detected android module: miga.tibeacon 1.6.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/miga.tibeacon/1.6.3
+[DEBUG]  Detected android module: net.iamyellow.gcmjs 0.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/net.iamyellow.gcmjs/0.2
+[DEBUG]  Detected android module: net.iamyellow.tiws 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/net.iamyellow.tiws/0.1
+[DEBUG]  Detected android module: org.bcbhh 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/org.bcbhh/1.0.0
+[DEBUG]  Detected android module: org.iotashan.TiTouchImageView 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/org.iotashan.titouchimageview/1.0.0
+[DEBUG]  Detected android module: org.iotashan.TiTouchImageView 1.0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/org.iotashan.titouchimageview/1.0.1
+[DEBUG]  Detected android module: org.mumumu.ti.android.speech 0.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/org.mumumu.ti.android.speech/0.3
+[DEBUG]  Detected android module: ti.barcode 1.7 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.barcode/1.7
+[DEBUG]  Detected android module: ti.barcode 2.3.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.barcode/2.3.0
+[DEBUG]  Detected android module: ti.cloudpush 2.0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/2.0.1
+[DEBUG]  Detected android module: ti.cloudpush 2.0.5 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/2.0.5
+[DEBUG]  Detected android module: ti.cloudpush 2.0.7 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/2.0.7
+[DEBUG]  Detected android module: ti.cloudpush 2.1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/2.1.0
+[DEBUG]  Detected android module: ti.cloudpush 2.2.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/2.2.0
+[DEBUG]  Detected android module: ti.cloudpush 2.3.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/2.3.0
+[DEBUG]  Detected android module: ti.cloudpush 2.3.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/2.3.2
+[DEBUG]  Detected android module: ti.cloudpush 2.3.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/2.3.3
+[DEBUG]  Detected android module: ti.cloudpush 3.2.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/3.2.0
+[DEBUG]  Detected android module: ti.cloudpush 3.2.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/3.2.1
+[DEBUG]  Detected android module: ti.cloudpush 3.3.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/3.3.0
+[DEBUG]  Detected android module: ti.cloudpush 3.3.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/3.3.4
+[DEBUG]  Detected android module: ti.cloudpush 3.3.5 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/3.3.5
+[DEBUG]  Detected android module: ti.cloudpush 3.3.7 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/3.3.7
+[DEBUG]  Detected android module: ti.cloudpush 3.3.8 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/3.3.8
+[DEBUG]  Detected android module: ti.cloudpush 3.4.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.cloudpush/3.4.0
+[DEBUG]  Detected android module: ti.compression 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.compression/1.0
+[DEBUG]  Detected android module: ti.compression 2.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.compression/2.0
+[DEBUG]  Detected android module: ti.draggable 1.2.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.draggable/1.2.3
+[DEBUG]  Detected android module: ti.draggable 2.0.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.draggable/2.0.3
+[DEBUG]  Detected android module: ti.expansionfiles 1.0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.expansionfiles/1.0.1
+[DEBUG]  Detected android module: ti.flurry 1.2.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.flurry/1.2.0
+[DEBUG]  Detected android module: ti.ga 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.ga/1.0.0
+[DEBUG]  Detected android module: ti.googleanalytics 1.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.googleanalytics/1.1
+[DEBUG]  Detected android module: ti.imagefactory 2.2.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.imagefactory/2.2.1
+[DEBUG]  Detected android module: ti.light 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.light/0.1
+[DEBUG]  Detected android module: ti.map 2.1.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.map/2.1.2
+[DEBUG]  Detected android module: ti.map 2.1.2.nf @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.map/2.1.2.nf
+[DEBUG]  Detected android module: ti.map 2.1.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.map/2.1.3
+[DEBUG]  Detected android module: ti.map 2.1.4.fixed @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.map/2.1.4.fixed
+[DEBUG]  Detected android module: ti.map 2.1.5 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.map/2.1.5
+[DEBUG]  Detected android module: ti.map 2.2.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.map/2.2.2
+[DEBUG]  Detected android module: ti.map 2.2.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.map/2.2.3
+[DEBUG]  Detected android module: ti.map 2.3.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.map/2.3.0
+[DEBUG]  Detected android module: ti.map 2.3.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.map/2.3.1
+[DEBUG]  Detected android module: ti.map 2.3.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.map/2.3.3
+[DEBUG]  Detected android module: ti.map 3.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.map/3.0.0
+[DEBUG]  Detected android module: ti.map 3.0.0.Rai @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.map/3.0.0.Rai
+[DEBUG]  Detected android module: ti.mely 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.mely/0.1
+[DEBUG]  Detected android module: ti.sq 0.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/ti.sq/0.2
+[DEBUG]  Detected android module: titutorial.audiorecorder 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/titutorial.audiorecorder/0.1
+[DEBUG]  Detected android module: titutorial.ratingbar 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/titutorial.ratingbar/0.1
+[DEBUG]  Detected android module: titutorial.youtubeplayer 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/titutorial.youtubeplayer/0.1
+[DEBUG]  Detected android module: yy.defaultfont 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/yy.defaultfont/0.1
+[DEBUG]  Detected android module: yy.tidialogs 0.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/yy.tidialogs/0.3
+[DEBUG]  Detected android module: yy.tidialogs 0.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/android/yy.tidialogs/0.4
+[DEBUG]  Detected commonjs module: co.lanica.chipmunk2d.debugdraw 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/co.lanica.chipmunk2d.debugdraw/1.0.0
+[DEBUG]  Detected commonjs module: co.lanica.platino 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/co.lanica.platino/1.0.0
+[DEBUG]  Detected commonjs module: com.baqend.js-sdk 0.9.3-SNAPSHOT @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/com.baqend.js-sdk/0.9.3-SNAPSHOT
+[DEBUG]  Detected commonjs module: de.appwerft.geotools 0.0.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/de.appwerft.geotools/0.0.3
+[DEBUG]  Detected commonjs module: org.favo.promise 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/org.favo.promise/1.0.0
+[DEBUG]  Detected commonjs module: pdfmake 0.1.18 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/pdfmake/0.1.18
+[DEBUG]  Detected commonjs module: superagent 0.7.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/superagent/0.7.0
+[DEBUG]  Detected commonjs module: ti.cloud 2.3.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/ti.cloud/2.3.0
+[DEBUG]  Detected commonjs module: ti.cloud 2.3.7 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/ti.cloud/2.3.7
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.0
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.1
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.3
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.5 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.5
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.7 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.7
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.8 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.8
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.9 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.9
+[DEBUG]  Detected commonjs module: ti.js2xml 0.1.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/ti.js2xml/0.1.4
+[DEBUG]  Detected commonjs module: tinkerforge 2.0.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/tinkerforge/2.0.2
+[DEBUG]  Detected commonjs module: ts.videoprovider 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/commonjs/ts.videoprovider/1.0.0
+[DEBUG]  Detected iphone module: ag.calendar 1.2.8 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ag.calendar/1.2.8
+[DEBUG]  Detected iphone module: analytics.google 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/analytics.google/1.0
+[DEBUG]  Detected iphone module: appcelerator.encrypteddatabase 1.0.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/appcelerator.encrypteddatabase/1.0.4
+[DEBUG]  Detected iphone module: BCB.bonjourService 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/bcb.bonjourservice/1.0.0
+[DEBUG]  Detected iphone module: BCB.bonjourService 1.0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/bcb.bonjourservice/1.0.1
+[DEBUG]  Detected iphone module: BCB.bonjourService 1.0.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/bcb.bonjourservice/1.0.2
+[DEBUG]  Detected iphone module: BCB.bonjourService 1.0.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/bcb.bonjourservice/1.0.3
+[DEBUG]  Detected iphone module: BCB.bonjourService 1.0.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/bcb.bonjourservice/1.0.4
+[DEBUG]  Detected iphone module: bcbhh.bestsign 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/bcbhh.bestsign/0.1
+[DEBUG]  Detected iphone module: be.k0suke.tiisrefreshcontrol 0.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/be.k0suke.tiisrefreshcontrol/0.2
+[DEBUG]  Detected iphone module: be.k0suke.tisystemsound 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/be.k0suke.tisystemsound/0.1
+[DEBUG]  Detected iphone module: bencoding.dictionary 1.2.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/bencoding.dictionary/1.2.1
+[DEBUG]  Detected iphone module: bencoding.localnotify 0.44 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/bencoding.localnotify/0.44
+[DEBUG]  Detected iphone module: bencoding.localnotify 0.45 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/bencoding.localnotify/0.45
+[DEBUG]  Detected iphone module: bencoding.utterance 0.5.beta @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/bencoding.utterance/0.5.beta
+[DEBUG]  Detected iphone module: co.kommit.gtm 0.0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/co.kommit.gtm/0.0.1
+[DEBUG]  Detected iphone module: co.lanica.almixer 0.5 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/co.lanica.almixer/0.5
+[DEBUG]  Detected iphone module: co.lanica.chipmunk2d 0.5 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/co.lanica.chipmunk2d/0.5
+[DEBUG]  Detected iphone module: com.0x82.sharekit 0.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.0x82.sharekit/0.3
+[DEBUG]  Detected iphone module: com.0x82.sharekit 0.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.0x82.sharekit/0.4
+[DEBUG]  Detected iphone module: com.apaladini.devicemodel 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.apaladini.devicemodel/0.1
+[DEBUG]  Detected iphone module: com.appcelerator.apm 1.1.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.appcelerator.apm/1.1.1
+[DEBUG]  Detected iphone module: com.appcelerator.urlSession 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.appcelerator.urlSession/1.0.0
+[DEBUG]  Detected iphone module: com.appcelerator.urlSession 1.0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.appcelerator.urlSession/1.0.1
+[DEBUG]  Detected iphone module: com.appcelerator.urlSession 1.1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.appcelerator.urlSession/1.1.0
+[DEBUG]  Detected iphone module: com.appcelerator.urlSession 1.1.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.appcelerator.urlSession/1.1.1
+[DEBUG]  Detected iphone module: com.appmodulator.offline 1.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.appmodulator.offline/1.3
+[DEBUG]  Detected iphone module: com.googlecode.quicktigame2d 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.googlecode.quicktigame2d/1.0
+[DEBUG]  Detected iphone module: com.infinery.pageflip 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.infinery.pageflip/1.0
+[DEBUG]  Detected iphone module: com.kuchbee.quickpdf 2.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.kuchbee.quickpdf/2.0
+[DEBUG]  Detected iphone module: com.mcongrove.pebble 1.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.mcongrove.pebble/1.1
+[DEBUG]  Detected iphone module: com.mfogg.squarecamera 0.7 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.mfogg.squarecamera/0.7
+[DEBUG]  Detected iphone module: com.mirasense.scanditsdk 4.3.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.mirasense.scanditsdk/4.3.0
+[DEBUG]  Detected iphone module: com.obscure.ticarousel 1.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.obscure.ticarousel/1.2
+[DEBUG]  Detected iphone module: com.omorandi 0.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.omorandi/0.2
+[DEBUG]  Detected iphone module: com.polancomedia.mapbox 0.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.polancomedia.mapbox/0.4
+[DEBUG]  Detected iphone module: com.pspdfkit 3.5.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.pspdfkit/3.5.0
+[DEBUG]  Detected iphone module: com.ti.calendar 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.ti.calendar/0.1
+[DEBUG]  Detected iphone module: com.wikitude.ti 4.1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.wikitude.ti/4.1.0
+[DEBUG]  Detected iphone module: com.yydigital.tintswitch 0.2.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/com.yydigital.tintswitch/0.2.1
+[DEBUG]  Detected iphone module: de.appwerft.sqlitemirror 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/de.appwerft.sqlitemirror/1.0.0
+[DEBUG]  Detected iphone module: de.appwerft.testjsmodule 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/de.appwerft.testjsmodule/1.0.0
+[DEBUG]  Detected iphone module: de.appwerft.view360 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/de.appwerft.view360/1.0.0
+[DEBUG]  Detected iphone module: de.marcelpociot.circularprogress 1.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/de.marcelpociot.circularprogress/1.1
+[DEBUG]  Detected iphone module: de.marcelpociot.circularslider 1.1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/de.marcelpociot.circularslider/1.1.0
+[DEBUG]  Detected iphone module: de.marcelpociot.transitioncontroller 1.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/de.marcelpociot.transitioncontroller/1.0.0
+[DEBUG]  Detected iphone module: dk.napp.drawer 1.1.6 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/dk.napp.drawer/1.1.6
+[DEBUG]  Detected iphone module: dk.napp.imageview 1.0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/dk.napp.imageview/1.0.1
+[DEBUG]  Detected iphone module: dk.napp.slidemenu 1.4.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/dk.napp.slidemenu/1.4.2
+[DEBUG]  Detected iphone module: dk.napp.social 1.7.9 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/dk.napp.social/1.7.9
+[DEBUG]  Detected iphone module: dk.napp.ui 1.2.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/dk.napp.ui/1.2.3
+[DEBUG]  Detected iphone module: facebook 3.1.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/facebook/3.1.1
+[DEBUG]  Detected iphone module: facebook 3.1.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/facebook/3.1.2
+[DEBUG]  Detected iphone module: facebook 3.2.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/facebook/3.2.0
+[DEBUG]  Detected iphone module: facebook 4.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/facebook/4.0.0
+[DEBUG]  Detected iphone module: facebook 4.0.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/facebook/4.0.3
+[DEBUG]  Detected iphone module: facebook 4.0.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/facebook/4.0.4
+[DEBUG]  Detected iphone module: facebook 4.0.5 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/facebook/4.0.5
+[DEBUG]  Detected iphone module: io.platino 2.9.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/io.platino/2.9.0
+[DEBUG]  Detected iphone module: me.izen.tabbar 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/me.izen.tabbar/1.0
+[DEBUG]  Detected iphone module: net.iamyellow.tiws 0.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/net.iamyellow.tiws/0.3
+[DEBUG]  Detected iphone module: net.iamyellow.tiws 0.5 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/net.iamyellow.tiws/0.5
+[DEBUG]  Detected iphone module: org.bcbhh.iosflipview 1.0.12 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/org.bcbhh.iosflipview/1.0.12
+[DEBUG]  Detected iphone module: org.bcbhh.iosflipview 1.0.13 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/org.bcbhh.iosflipview/1.0.13
+[DEBUG]  Detected iphone module: org.bcbhh.iosflipview 1.0.14 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/org.bcbhh.iosflipview/1.0.14
+[DEBUG]  Detected iphone module: org.beuckman.tibeacons 0.82 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/org.beuckman.tibeacons/0.82
+[DEBUG]  Detected iphone module: path.animator 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/path.animator/1.0
+[DEBUG]  Detected iphone module: ti.airprint 1.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.airprint/1.2
+[DEBUG]  Detected iphone module: ti.barcode 1.8.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.barcode/1.8.1
+[DEBUG]  Detected iphone module: ti.box2d 0.9 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.box2d/0.9
+[DEBUG]  Detected iphone module: ti.charts 1.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.charts/1.4
+[DEBUG]  Detected iphone module: ti.columns 1.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.columns/1.2
+[DEBUG]  Detected iphone module: ti.compression 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.compression/1.0
+[DEBUG]  Detected iphone module: ti.coremotion 1.0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.coremotion/1.0.1
+[DEBUG]  Detected iphone module: ti.coremotion 1.1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.coremotion/1.1.0
+[DEBUG]  Detected iphone module: ti.draggable 2.0.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.draggable/2.0.4
+[DEBUG]  Detected iphone module: ti.flurry 1.5 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.flurry/1.5
+[DEBUG]  Detected iphone module: ti.ga 1.0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.ga/1.0.1
+[DEBUG]  Detected iphone module: ti.gamekit 1.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.gamekit/1.4
+[DEBUG]  Detected iphone module: ti.googleanalytics 1.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.googleanalytics/1.2
+[DEBUG]  Detected iphone module: ti.googleanalytics 1.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.googleanalytics/1.4
+[DEBUG]  Detected iphone module: ti.imagefactory 1.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.imagefactory/1.1
+[DEBUG]  Detected iphone module: ti.light 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.light/0.1
+[DEBUG]  Detected iphone module: ti.map 2.2.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.map/2.2.0
+[DEBUG]  Detected iphone module: ti.map 2.2.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.map/2.2.1
+[DEBUG]  Detected iphone module: ti.map 2.2.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.map/2.2.2
+[DEBUG]  Detected iphone module: ti.map 2.3.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.map/2.3.1
+[DEBUG]  Detected iphone module: ti.map 2.3.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.map/2.3.3
+[DEBUG]  Detected iphone module: ti.map 2.4.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.map/2.4.1
+[DEBUG]  Detected iphone module: ti.mely 0.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.mely/0.1
+[DEBUG]  Detected iphone module: ti.pageflip 1.8.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.pageflip/1.8.3
+[DEBUG]  Detected iphone module: ti.paint 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0
+[DEBUG]  Detected iphone module: ti.paint 1.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.paint/1.1
+[DEBUG]  Detected iphone module: ti.paint 1.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.paint/1.3
+[DEBUG]  Detected iphone module: ti.paypal 1.3 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.paypal/1.3
+[DEBUG]  Detected iphone module: ti.quicklook 1.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.quicklook/1.2
+[DEBUG]  Detected iphone module: ti.sms 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.sms/1.0
+[DEBUG]  Detected iphone module: ti.soundsampler 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.soundsampler/1.0
+[DEBUG]  Detected iphone module: ti.sq 0.4 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.sq/0.4
+[DEBUG]  Detected iphone module: ti.storekit 1.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.storekit/1.2
+[DEBUG]  Detected iphone module: ti.styledlabel 1.5.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.styledlabel/1.5.1
+[DEBUG]  Detected iphone module: ti.touchid 1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.touchid/1.0
+[DEBUG]  Detected iphone module: ti.touchid 1.1.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.touchid/1.1.0
+[DEBUG]  Detected iphone module: ti.tvout 1.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/ti.tvout/1.1
+[DEBUG]  Detected iphone module: tibar 0.4.1 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/tibar/0.4.1
+[DEBUG]  Detected iphone module: tibar 0.4.2 @ /Users/fuerst/Library/Application Support/Titanium/modules/iphone/tibar/0.4.2
+[DEBUG]  Detected tizen module: tizen 3.0.0 @ /Users/fuerst/Library/Application Support/Titanium/modules/tizen/tizen/3.0.0
+[DEBUG]  Detecting modules in /Library/Application Support/Titanium/modules
+[DEBUG]  Detected android module: analytics.google 1.0 @ /Library/Application Support/Titanium/modules/android/analytics.google/1.0
+[DEBUG]  Detected android module: appcelerator.https 1.0.0 @ /Library/Application Support/Titanium/modules/android/appcelerator.https/1.0.0
+[DEBUG]  Detected android module: bencoding.alarmmanager 0.11 @ /Library/Application Support/Titanium/modules/android/bencoding.alarmmanager/0.11
+[DEBUG]  Detected android module: bencoding.alarmmanager 0.123 @ /Library/Application Support/Titanium/modules/android/bencoding.alarmmanager/0.123
+[DEBUG]  Detected android module: bencoding.alarmmanager 0.123RAI @ /Library/Application Support/Titanium/modules/android/bencoding.alarmmanager/0.123RAI
+[DEBUG]  Detected android module: bencoding.alarmmanager 0.13 @ /Library/Application Support/Titanium/modules/android/bencoding.alarmmanager/0.13
+[DEBUG]  Detected android module: bencoding.android.tools 0.31 @ /Library/Application Support/Titanium/modules/android/bencoding.android.tools/0.31
+[DEBUG]  Detected android module: bencoding.blur 0.1 @ /Library/Application Support/Titanium/modules/android/bencoding.blur/0.1
+[DEBUG]  Detected android module: co.il.webe.speechrecognizer 1.0 @ /Library/Application Support/Titanium/modules/android/co.il.webe.speechrecognizer/1.0
+[DEBUG]  Detected android module: co.kommit.gtm 0.0.1 @ /Library/Application Support/Titanium/modules/android/co.kommit.gtm/0.0.1
+[DEBUG]  Detected android module: com.abp.chooseintent 1.0 @ /Library/Application Support/Titanium/modules/android/com.abp.chooseintent/1.0
+[DEBUG]  Detected android module: com.alcoapps.actionbarextras 1.6.1 @ /Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.1
+[DEBUG]  Detected android module: com.alcoapps.actionbarextras 1.6.5 @ /Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.5
+[DEBUG]  Detected android module: com.alcoapps.actionbarextras 1.6.7 @ /Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.7
+[DEBUG]  Detected android module: com.alcoapps.actionbarextras 1.6.8 @ /Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.8
+[DEBUG]  Detected android module: com.appcelerator.apm 1.1.1 @ /Library/Application Support/Titanium/modules/android/com.appcelerator.apm/1.1.1
+[DEBUG]  Detected android module: com.appcelerator.apm 1.1.5 @ /Library/Application Support/Titanium/modules/android/com.appcelerator.apm/1.1.5
+[DEBUG]  Detected android module: com.batasoft.appicons 2.0 @ /Library/Application Support/Titanium/modules/android/com.batasoft.appicons/2.0
+[DEBUG]  Detected android module: com.gbaldera.titouchgallery 1.1 @ /Library/Application Support/Titanium/modules/android/com.gbaldera.titouchgallery/1.1
+[DEBUG]  Detected android module: com.gbaldera.titouchgallery 1.2 @ /Library/Application Support/Titanium/modules/android/com.gbaldera.titouchgallery/1.2
+[DEBUG]  Detected android module: com.googlecode.quicktigame2d 1.0 @ /Library/Application Support/Titanium/modules/android/com.googlecode.quicktigame2d/1.0
+[DEBUG]  Detected android module: com.goyya.telephonymanager 1.0.0 @ /Library/Application Support/Titanium/modules/android/com.goyya.telephonymanager/1.0.0
+[DEBUG]  Detected android module: com.ionrod.accountmanager 1.0.0 @ /Library/Application Support/Titanium/modules/android/com.ionrod.accountmanager/1.0.0
+[DEBUG]  Detected android module: com.kosso.tiandroidaudioplayer 0.1 @ /Library/Application Support/Titanium/modules/android/com.kosso.tiandroidaudioplayer/0.1
+[DEBUG]  Detected android module: com.liferay.beacons 0.1 @ /Library/Application Support/Titanium/modules/android/com.liferay.beacons/0.1
+[DEBUG]  Detected android module: com.mcongrove.pebble 1.1 @ /Library/Application Support/Titanium/modules/android/com.mcongrove.pebble/1.1
+[DEBUG]  Detected android module: com.mirasense.scanditsdk 4.3.0 @ /Library/Application Support/Titanium/modules/android/com.mirasense.scanditsdk/4.3.0
+[DEBUG]  Detected android module: com.mykingdom.mupdf 1.8 @ /Library/Application Support/Titanium/modules/android/com.mykingdom.mupdf/1.8
+[DEBUG]  Detected android module: com.navid.tabs 1.0 @ /Library/Application Support/Titanium/modules/android/com.navid.tabs/1.0
+[DEBUG]  Detected android module: com.rkam.swiperefreshlayout 0.4.1 @ /Library/Application Support/Titanium/modules/android/com.rkam.swiperefreshlayout/0.4.1
+[DEBUG]  Detected android module: com.tripvi.drawerlayout 1.1.1 @ /Library/Application Support/Titanium/modules/android/com.tripvi.drawerlayout/1.1.1
+[DEBUG]  Detected android module: com.tripvi.drawerlayout 1.2.2 @ /Library/Application Support/Titanium/modules/android/com.tripvi.drawerlayout/1.2.2
+[DEBUG]  Detected android module: com.universalavenue.ticrosswalk 1.3.0 @ /Library/Application Support/Titanium/modules/android/com.universalavenue.ticrosswalk/1.3.0
+[DEBUG]  Detected android module: com.universalavenue.ticrosswalk 1.3.1 @ /Library/Application Support/Titanium/modules/android/com.universalavenue.ticrosswalk/1.3.1
+[DEBUG]  Detected android module: com.wikitude.ti 4.1.0 @ /Library/Application Support/Titanium/modules/android/com.wikitude.ti/4.1.0
+[DEBUG]  Detected android module: com.wikitude.ti 5.0.0 @ /Library/Application Support/Titanium/modules/android/com.wikitude.ti/5.0.0
+[DEBUG]  Detected android module: com.woohoo.androidaudiostreamer 1.7.1 @ /Library/Application Support/Titanium/modules/android/com.woohoo.androidaudiostreamer/1.7.1
+[DEBUG]  Detected android module: com.wwl.canvas 1.0 @ /Library/Application Support/Titanium/modules/android/com.wwl.canvas/1.0
+[DEBUG]  Detected android module: de.manumaticx.androidflip 1.0.1 @ /Library/Application Support/Titanium/modules/android/de.manumaticx.androidflip/1.0.1
+[DEBUG]  Detected android module: de.manumaticx.crouton 1.2.3 @ /Library/Application Support/Titanium/modules/android/de.manumaticx.crouton/1.2.3
+[DEBUG]  Detected android module: de.manumaticx.printmanager 1.0.0 @ /Library/Application Support/Titanium/modules/android/de.manumaticx.printmanager/1.0.0
+[DEBUG]  Detected android module: de.marcelpociot.circularslider 1.0 @ /Library/Application Support/Titanium/modules/android/de.marcelpociot.circularslider/1.0
+[DEBUG]  Detected android module: dk.napp.flashlight 1.0 @ /Library/Application Support/Titanium/modules/android/dk.napp.flashlight/1.0
+[DEBUG]  Detected android module: facebook 3.0.3 @ /Library/Application Support/Titanium/modules/android/facebook/3.0.3
+[DEBUG]  Detected android module: facebook 4.0.3 @ /Library/Application Support/Titanium/modules/android/facebook/4.0.3
+[DEBUG]  Detected android module: facebook 4.0.4 @ /Library/Application Support/Titanium/modules/android/facebook/4.0.4
+[DEBUG]  Detected android module: facebook 4.0.5 @ /Library/Application Support/Titanium/modules/android/facebook/4.0.5
+[DEBUG]  Detected android module: io.platino 3.0.0 @ /Library/Application Support/Titanium/modules/android/io.platino/3.0.0
+[DEBUG]  Detected android module: jp.isisredirect.speechrecognizer 2.0 @ /Library/Application Support/Titanium/modules/android/jp.isisredirect.speechrecognizer/2.0
+[DEBUG]  Detected android module: jp.isisredirect.speechrecognizer 3.0 @ /Library/Application Support/Titanium/modules/android/jp.isisredirect.speechrecognizer/3.0
+[DEBUG]  Detected android module: miga.tibeacon 1.6.3 @ /Library/Application Support/Titanium/modules/android/miga.tibeacon/1.6.3
+[DEBUG]  Detected android module: net.iamyellow.gcmjs 0.2 @ /Library/Application Support/Titanium/modules/android/net.iamyellow.gcmjs/0.2
+[DEBUG]  Detected android module: net.iamyellow.tiws 0.1 @ /Library/Application Support/Titanium/modules/android/net.iamyellow.tiws/0.1
+[DEBUG]  Detected android module: org.bcbhh 1.0.0 @ /Library/Application Support/Titanium/modules/android/org.bcbhh/1.0.0
+[DEBUG]  Detected android module: org.iotashan.TiTouchImageView 1.0.0 @ /Library/Application Support/Titanium/modules/android/org.iotashan.titouchimageview/1.0.0
+[DEBUG]  Detected android module: org.iotashan.TiTouchImageView 1.0.1 @ /Library/Application Support/Titanium/modules/android/org.iotashan.titouchimageview/1.0.1
+[DEBUG]  Detected android module: org.iotashan.TiTouchImageView 1.0.2 @ /Library/Application Support/Titanium/modules/android/org.iotashan.titouchimageview/1.0.2
+[DEBUG]  Detected android module: org.mumumu.ti.android.speech 0.3 @ /Library/Application Support/Titanium/modules/android/org.mumumu.ti.android.speech/0.3
+[DEBUG]  Detected android module: ti.barcode 1.7 @ /Library/Application Support/Titanium/modules/android/ti.barcode/1.7
+[DEBUG]  Detected android module: ti.barcode 2.3.0 @ /Library/Application Support/Titanium/modules/android/ti.barcode/2.3.0
+[DEBUG]  Detected android module: ti.cloudpush 2.0.1 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/2.0.1
+[DEBUG]  Detected android module: ti.cloudpush 2.0.5 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/2.0.5
+[DEBUG]  Detected android module: ti.cloudpush 2.0.7 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/2.0.7
+[DEBUG]  Detected android module: ti.cloudpush 2.1.0 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/2.1.0
+[DEBUG]  Detected android module: ti.cloudpush 2.2.0 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/2.2.0
+[DEBUG]  Detected android module: ti.cloudpush 2.3.0 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/2.3.0
+[DEBUG]  Detected android module: ti.cloudpush 2.3.2 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/2.3.2
+[DEBUG]  Detected android module: ti.cloudpush 2.3.3 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/2.3.3
+[DEBUG]  Detected android module: ti.cloudpush 3.2.0 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/3.2.0
+[DEBUG]  Detected android module: ti.cloudpush 3.2.1 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/3.2.1
+[DEBUG]  Detected android module: ti.cloudpush 3.3.0 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/3.3.0
+[DEBUG]  Detected android module: ti.cloudpush 3.3.4 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/3.3.4
+[DEBUG]  Detected android module: ti.cloudpush 3.3.5 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/3.3.5
+[DEBUG]  Detected android module: ti.cloudpush 3.3.7 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/3.3.7
+[DEBUG]  Detected android module: ti.cloudpush 3.3.8 @ /Library/Application Support/Titanium/modules/android/ti.cloudpush/3.3.8
+[DEBUG]  Detected android module: ti.compression 1.0 @ /Library/Application Support/Titanium/modules/android/ti.compression/1.0
+[DEBUG]  Detected android module: ti.compression 2.0 @ /Library/Application Support/Titanium/modules/android/ti.compression/2.0
+[DEBUG]  Detected android module: ti.draggable 1.2.3 @ /Library/Application Support/Titanium/modules/android/ti.draggable/1.2.3
+[DEBUG]  Detected android module: ti.draggable 2.0.3 @ /Library/Application Support/Titanium/modules/android/ti.draggable/2.0.3
+[DEBUG]  Detected android module: ti.expansionfiles 1.0.1 @ /Library/Application Support/Titanium/modules/android/ti.expansionfiles/1.0.1
+[DEBUG]  Detected android module: ti.flurry 1.2.0 @ /Library/Application Support/Titanium/modules/android/ti.flurry/1.2.0
+[DEBUG]  Detected android module: ti.ga 1.0.0 @ /Library/Application Support/Titanium/modules/android/ti.ga/1.0.0
+[DEBUG]  Detected android module: ti.googleanalytics 1.1 @ /Library/Application Support/Titanium/modules/android/ti.googleanalytics/1.1
+[DEBUG]  Detected android module: ti.imagefactory 2.2.1 @ /Library/Application Support/Titanium/modules/android/ti.imagefactory/2.2.1
+[DEBUG]  Detected android module: ti.light 0.1 @ /Library/Application Support/Titanium/modules/android/ti.light/0.1
+[DEBUG]  Detected android module: ti.map 2.1.2 @ /Library/Application Support/Titanium/modules/android/ti.map/2.1.2
+[DEBUG]  Detected android module: ti.map 2.1.2.nf @ /Library/Application Support/Titanium/modules/android/ti.map/2.1.2.nf
+[DEBUG]  Detected android module: ti.map 2.1.3 @ /Library/Application Support/Titanium/modules/android/ti.map/2.1.3
+[DEBUG]  Detected android module: ti.map 2.1.4.fixed @ /Library/Application Support/Titanium/modules/android/ti.map/2.1.4.fixed
+[DEBUG]  Detected android module: ti.map 2.1.5 @ /Library/Application Support/Titanium/modules/android/ti.map/2.1.5
+[DEBUG]  Detected android module: ti.map 2.2.2 @ /Library/Application Support/Titanium/modules/android/ti.map/2.2.2
+[DEBUG]  Detected android module: ti.map 2.2.3 @ /Library/Application Support/Titanium/modules/android/ti.map/2.2.3
+[DEBUG]  Detected android module: ti.map 2.3.0 @ /Library/Application Support/Titanium/modules/android/ti.map/2.3.0
+[DEBUG]  Detected android module: ti.map 2.3.1 @ /Library/Application Support/Titanium/modules/android/ti.map/2.3.1
+[DEBUG]  Detected android module: ti.map 3.0.0 @ /Library/Application Support/Titanium/modules/android/ti.map/3.0.0
+[DEBUG]  Detected android module: ti.map 3.0.0.Rai @ /Library/Application Support/Titanium/modules/android/ti.map/3.0.0.Rai
+[DEBUG]  Detected android module: ti.mely 0.1 @ /Library/Application Support/Titanium/modules/android/ti.mely/0.1
+[DEBUG]  Detected android module: ti.sq 0.2 @ /Library/Application Support/Titanium/modules/android/ti.sq/0.2
+[DEBUG]  Detected android module: titutorial.audiorecorder 0.1 @ /Library/Application Support/Titanium/modules/android/titutorial.audiorecorder/0.1
+[DEBUG]  Detected android module: titutorial.ratingbar 0.1 @ /Library/Application Support/Titanium/modules/android/titutorial.ratingbar/0.1
+[DEBUG]  Detected android module: titutorial.youtubeplayer 0.1 @ /Library/Application Support/Titanium/modules/android/titutorial.youtubeplayer/0.1
+[DEBUG]  Detected android module: yy.tidialogs 0.3 @ /Library/Application Support/Titanium/modules/android/yy.tidialogs/0.3
+[DEBUG]  Detected android module: yy.tidialogs 0.4 @ /Library/Application Support/Titanium/modules/android/yy.tidialogs/0.4
+[DEBUG]  Detected commonjs module: com.baqend.js-sdk 0.9.3-SNAPSHOT @ /Library/Application Support/Titanium/modules/commonjs/com.baqend.js-sdk/0.9.3-SNAPSHOT
+[DEBUG]  Detected commonjs module: de.appwerft.geotools 0.0.3 @ /Library/Application Support/Titanium/modules/commonjs/de.appwerft.geotools/0.0.3
+[DEBUG]  Detected commonjs module: de.appwerft.qrcode 1.0.0 @ /Library/Application Support/Titanium/modules/commonjs/de.appwerft.qrcode/1.0.0
+[DEBUG]  Detected commonjs module: ti-htmlparser2 3.8.0 @ /Library/Application Support/Titanium/modules/commonjs/htmlparser2/3.8.0
+[DEBUG]  Detected commonjs module: jp.coe.mod.csvparser 0.1.1 @ /Library/Application Support/Titanium/modules/commonjs/jp.coe.mod.csvparser/0.1.1
+[DEBUG]  Detected commonjs module: org.favo.promise 1.0.0 @ /Library/Application Support/Titanium/modules/commonjs/org.favo.promise/1.0.0
+[DEBUG]  Detected commonjs module: superagent 0.7.0 @ /Library/Application Support/Titanium/modules/commonjs/superagent/0.7.0
+[DEBUG]  Detected commonjs module: ti.cloud 2.3.0 @ /Library/Application Support/Titanium/modules/commonjs/ti.cloud/2.3.0
+[DEBUG]  Detected commonjs module: ti.cloud 2.3.7 @ /Library/Application Support/Titanium/modules/commonjs/ti.cloud/2.3.7
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.0 @ /Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.0
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.1 @ /Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.1
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.3 @ /Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.3
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.5 @ /Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.5
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.7 @ /Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.7
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.8 @ /Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.8
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.9 @ /Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.9
+[DEBUG]  Detected commonjs module: ti.js2xml 0.1.4 @ /Library/Application Support/Titanium/modules/commonjs/ti.js2xml/0.1.4
+[DEBUG]  Detected commonjs module: tinkerforge 2.0.2 @ /Library/Application Support/Titanium/modules/commonjs/tinkerforge/2.0.2
+[DEBUG]  Detected iphone module: ag.calendar 1.2.8 @ /Library/Application Support/Titanium/modules/iphone/ag.calendar/1.2.8
+[DEBUG]  Detected iphone module: analytics.google 1.0 @ /Library/Application Support/Titanium/modules/iphone/analytics.google/1.0
+[DEBUG]  Detected iphone module: appcelerator.https 1.0.0 @ /Library/Application Support/Titanium/modules/iphone/appcelerator.https/1.0.0
+[DEBUG]  Detected iphone module: BCB.bonjourService 1.0.0 @ /Library/Application Support/Titanium/modules/iphone/bcb.bonjourservice/1.0.0
+[DEBUG]  Detected iphone module: BCB.bonjourService 1.0.1 @ /Library/Application Support/Titanium/modules/iphone/bcb.bonjourservice/1.0.1
+[DEBUG]  Detected iphone module: BCB.bonjourService 1.0.2 @ /Library/Application Support/Titanium/modules/iphone/bcb.bonjourservice/1.0.2
+[DEBUG]  Detected iphone module: BCB.bonjourService 1.0.3 @ /Library/Application Support/Titanium/modules/iphone/bcb.bonjourservice/1.0.3
+[DEBUG]  Detected iphone module: BCB.bonjourService 1.0.4 @ /Library/Application Support/Titanium/modules/iphone/bcb.bonjourservice/1.0.4
+[DEBUG]  Detected iphone module: be.k0suke.tiisrefreshcontrol 0.2 @ /Library/Application Support/Titanium/modules/iphone/be.k0suke.tiisrefreshcontrol/0.2
+[DEBUG]  Detected iphone module: bencoding.blur 0.40-beta @ /Library/Application Support/Titanium/modules/iphone/bencoding.blur/0.40-beta
+[DEBUG]  Detected iphone module: bencoding.dictionary 1.2.1 @ /Library/Application Support/Titanium/modules/iphone/bencoding.dictionary/1.2.1
+[DEBUG]  Detected iphone module: bencoding.localnotify 0.44 @ /Library/Application Support/Titanium/modules/iphone/bencoding.localnotify/0.44
+[DEBUG]  Detected iphone module: bencoding.localnotify 0.45 @ /Library/Application Support/Titanium/modules/iphone/bencoding.localnotify/0.45
+[DEBUG]  Detected iphone module: co.kommit.gtm 0.0.1 @ /Library/Application Support/Titanium/modules/iphone/co.kommit.gtm/0.0.1
+[DEBUG]  Detected iphone module: com.0x82.sharekit 0.3 @ /Library/Application Support/Titanium/modules/iphone/com.0x82.sharekit/0.3
+[DEBUG]  Detected iphone module: com.0x82.sharekit 0.4 @ /Library/Application Support/Titanium/modules/iphone/com.0x82.sharekit/0.4
+[DEBUG]  Detected iphone module: com.apaladini.blur 1.0.0 @ /Library/Application Support/Titanium/modules/iphone/com.apaladini.blur/1.0.0
+[DEBUG]  Detected iphone module: com.apaladini.devicemodel 0.1 @ /Library/Application Support/Titanium/modules/iphone/com.apaladini.devicemodel/0.1
+[DEBUG]  Detected iphone module: com.appcelerator.apm 1.1.1 @ /Library/Application Support/Titanium/modules/iphone/com.appcelerator.apm/1.1.1
+[DEBUG]  Detected iphone module: com.appcelerator.apm 1.1.5 @ /Library/Application Support/Titanium/modules/iphone/com.appcelerator.apm/1.1.5
+[DEBUG]  Detected iphone module: com.appcelerator.urlSession 1.0.0 @ /Library/Application Support/Titanium/modules/iphone/com.appcelerator.urlSession/1.0.0
+[DEBUG]  Detected iphone module: com.appcelerator.urlSession 1.0.1 @ /Library/Application Support/Titanium/modules/iphone/com.appcelerator.urlSession/1.0.1
+[DEBUG]  Detected iphone module: com.appcelerator.urlSession 1.1.0 @ /Library/Application Support/Titanium/modules/iphone/com.appcelerator.urlSession/1.1.0
+[DEBUG]  Detected iphone module: com.appcelerator.urlSession 1.1.1 @ /Library/Application Support/Titanium/modules/iphone/com.appcelerator.urlSession/1.1.1
+[DEBUG]  Detected iphone module: com.appmodulator.offline 1.3 @ /Library/Application Support/Titanium/modules/iphone/com.appmodulator.offline/1.3
+[DEBUG]  Detected iphone module: com.batasoft.appicons 2.0 @ /Library/Application Support/Titanium/modules/iphone/com.batasoft.appicons/2.0
+[DEBUG]  Detected iphone module: com.googlecode.quicktigame2d 1.0 @ /Library/Application Support/Titanium/modules/iphone/com.googlecode.quicktigame2d/1.0
+[DEBUG]  Detected iphone module: com.infinery.pageflip 1.0 @ /Library/Application Support/Titanium/modules/iphone/com.infinery.pageflip/1.0
+[DEBUG]  Detected iphone module: com.kuchbee.quickpdf 2.0 @ /Library/Application Support/Titanium/modules/iphone/com.kuchbee.quickpdf/2.0
+[DEBUG]  Detected iphone module: com.mcongrove.pebble 1.1 @ /Library/Application Support/Titanium/modules/iphone/com.mcongrove.pebble/1.1
+[DEBUG]  Detected iphone module: com.mfogg.squarecamera 0.7 @ /Library/Application Support/Titanium/modules/iphone/com.mfogg.squarecamera/0.7
+[DEBUG]  Detected iphone module: com.mirasense.scanditsdk 4.3.0 @ /Library/Application Support/Titanium/modules/iphone/com.mirasense.scanditsdk/4.3.0
+[DEBUG]  Detected iphone module: com.obscure.ticarousel 1.2 @ /Library/Application Support/Titanium/modules/iphone/com.obscure.ticarousel/1.2
+[DEBUG]  Detected iphone module: com.omorandi 0.2 @ /Library/Application Support/Titanium/modules/iphone/com.omorandi/0.2
+[DEBUG]  Detected iphone module: com.polancomedia.mapbox 0.4 @ /Library/Application Support/Titanium/modules/iphone/com.polancomedia.mapbox/0.4
+[DEBUG]  Detected iphone module: com.pspdfkit 3.5.0 @ /Library/Application Support/Titanium/modules/iphone/com.pspdfkit/3.5.0
+[DEBUG]  Detected iphone module: com.ti.calendar 0.1 @ /Library/Application Support/Titanium/modules/iphone/com.ti.calendar/0.1
+[DEBUG]  Detected iphone module: com.wikitude.ti 5.0.0 @ /Library/Application Support/Titanium/modules/iphone/com.wikitude.ti/5.0.0
+[DEBUG]  Detected iphone module: com.yydigital.tintswitch 0.2.1 @ /Library/Application Support/Titanium/modules/iphone/com.yydigital.tintswitch/0.2.1
+[DEBUG]  Detected iphone module: de.appwerft.sqlitemirror 1.0.0 @ /Library/Application Support/Titanium/modules/iphone/de.appwerft.sqlitemirror/1.0.0
+[DEBUG]  Detected iphone module: de.appwerft.testjsmodule 1.0.0 @ /Library/Application Support/Titanium/modules/iphone/de.appwerft.testjsmodule/1.0.0
+[DEBUG]  Detected iphone module: de.appwerft.view360 1.0.0 @ /Library/Application Support/Titanium/modules/iphone/de.appwerft.view360/1.0.0
+[DEBUG]  Detected iphone module: de.marcelpociot.circularprogress 1.1 @ /Library/Application Support/Titanium/modules/iphone/de.marcelpociot.circularprogress/1.1
+[DEBUG]  Detected iphone module: de.marcelpociot.circularslider 1.1.0 @ /Library/Application Support/Titanium/modules/iphone/de.marcelpociot.circularslider/1.1.0
+[DEBUG]  Detected iphone module: de.marcelpociot.transitioncontroller 1.0.0 @ /Library/Application Support/Titanium/modules/iphone/de.marcelpociot.transitioncontroller/1.0.0
+[DEBUG]  Detected iphone module: dk.napp.drawer 1.1.6 @ /Library/Application Support/Titanium/modules/iphone/dk.napp.drawer/1.1.6
+[DEBUG]  Detected iphone module: dk.napp.imageview 1.0.1 @ /Library/Application Support/Titanium/modules/iphone/dk.napp.imageview/1.0.1
+[DEBUG]  Detected iphone module: dk.napp.slidemenu 1.4.2 @ /Library/Application Support/Titanium/modules/iphone/dk.napp.slidemenu/1.4.2
+[DEBUG]  Detected iphone module: dk.napp.social 1.7.9 @ /Library/Application Support/Titanium/modules/iphone/dk.napp.social/1.7.9
+[DEBUG]  Detected iphone module: dk.napp.ui 1.2.3 @ /Library/Application Support/Titanium/modules/iphone/dk.napp.ui/1.2.3
+[DEBUG]  Detected iphone module: facebook 3.1.1 @ /Library/Application Support/Titanium/modules/iphone/facebook/3.1.1
+[DEBUG]  Detected iphone module: facebook 3.1.2 @ /Library/Application Support/Titanium/modules/iphone/facebook/3.1.2
+[DEBUG]  Detected iphone module: facebook 3.2.0 @ /Library/Application Support/Titanium/modules/iphone/facebook/3.2.0
+[DEBUG]  Detected iphone module: facebook 4.0.0 @ /Library/Application Support/Titanium/modules/iphone/facebook/4.0.0
+[DEBUG]  Detected iphone module: facebook 4.0.3 @ /Library/Application Support/Titanium/modules/iphone/facebook/4.0.3
+[DEBUG]  Detected iphone module: facebook 4.0.4 @ /Library/Application Support/Titanium/modules/iphone/facebook/4.0.4
+[DEBUG]  Detected iphone module: facebook 4.0.5 @ /Library/Application Support/Titanium/modules/iphone/facebook/4.0.5
+[DEBUG]  Detected iphone module: io.platino 3.0.0 @ /Library/Application Support/Titanium/modules/iphone/io.platino/3.0.0
+[DEBUG]  Detected iphone module: me.izen.tabbar 1.0 @ /Library/Application Support/Titanium/modules/iphone/me.izen.tabbar/1.0
+[DEBUG]  Detected iphone module: net.iamyellow.tiws 0.3 @ /Library/Application Support/Titanium/modules/iphone/net.iamyellow.tiws/0.3
+[DEBUG]  Detected iphone module: net.iamyellow.tiws 0.5 @ /Library/Application Support/Titanium/modules/iphone/net.iamyellow.tiws/0.5
+[DEBUG]  Detected iphone module: org.bcbhh.iosflipview 1.0.12 @ /Library/Application Support/Titanium/modules/iphone/org.bcbhh.iosflipview/1.0.12
+[DEBUG]  Detected iphone module: org.bcbhh.iosflipview 1.0.13 @ /Library/Application Support/Titanium/modules/iphone/org.bcbhh.iosflipview/1.0.13
+[DEBUG]  Detected iphone module: org.bcbhh.iosflipview 1.0.14 @ /Library/Application Support/Titanium/modules/iphone/org.bcbhh.iosflipview/1.0.14
+[DEBUG]  Detected iphone module: org.bcbhh.iosflipview 1.0.15 @ /Library/Application Support/Titanium/modules/iphone/org.bcbhh.iosflipview/1.0.15
+[DEBUG]  Detected iphone module: org.beuckman.tibeacons 0.82 @ /Library/Application Support/Titanium/modules/iphone/org.beuckman.tibeacons/0.82
+[DEBUG]  Detected iphone module: path.animator 1.0 @ /Library/Application Support/Titanium/modules/iphone/path.animator/1.0
+[DEBUG]  Detected iphone module: ti.airprint 1.2 @ /Library/Application Support/Titanium/modules/iphone/ti.airprint/1.2
+[DEBUG]  Detected iphone module: ti.barcode 1.8.1 @ /Library/Application Support/Titanium/modules/iphone/ti.barcode/1.8.1
+[DEBUG]  Detected iphone module: ti.box2d 0.9 @ /Library/Application Support/Titanium/modules/iphone/ti.box2d/0.9
+[DEBUG]  Detected iphone module: ti.charts 1.4 @ /Library/Application Support/Titanium/modules/iphone/ti.charts/1.4
+[DEBUG]  Detected iphone module: ti.columns 1.2 @ /Library/Application Support/Titanium/modules/iphone/ti.columns/1.2
+[DEBUG]  Detected iphone module: ti.compression 1.0 @ /Library/Application Support/Titanium/modules/iphone/ti.compression/1.0
+[DEBUG]  Detected iphone module: ti.coremotion 1.0.1 @ /Library/Application Support/Titanium/modules/iphone/ti.coremotion/1.0.1
+[DEBUG]  Detected iphone module: ti.coremotion 1.1.0 @ /Library/Application Support/Titanium/modules/iphone/ti.coremotion/1.1.0
+[DEBUG]  Detected iphone module: ti.draggable 2.0.4 @ /Library/Application Support/Titanium/modules/iphone/ti.draggable/2.0.4
+[DEBUG]  Detected iphone module: ti.flurry 1.5 @ /Library/Application Support/Titanium/modules/iphone/ti.flurry/1.5
+[DEBUG]  Detected iphone module: ti.ga 1.0.1 @ /Library/Application Support/Titanium/modules/iphone/ti.ga/1.0.1
+[DEBUG]  Detected iphone module: ti.gamekit 1.4 @ /Library/Application Support/Titanium/modules/iphone/ti.gamekit/1.4
+[DEBUG]  Detected iphone module: ti.googleanalytics 1.2 @ /Library/Application Support/Titanium/modules/iphone/ti.googleanalytics/1.2
+[DEBUG]  Detected iphone module: ti.googleanalytics 1.4 @ /Library/Application Support/Titanium/modules/iphone/ti.googleanalytics/1.4
+[DEBUG]  Detected iphone module: ti.imagefactory 1.1 @ /Library/Application Support/Titanium/modules/iphone/ti.imagefactory/1.1
+[DEBUG]  Detected iphone module: ti.light 0.1 @ /Library/Application Support/Titanium/modules/iphone/ti.light/0.1
+[DEBUG]  Detected iphone module: ti.map 2.2.0 @ /Library/Application Support/Titanium/modules/iphone/ti.map/2.2.0
+[DEBUG]  Detected iphone module: ti.map 2.2.1 @ /Library/Application Support/Titanium/modules/iphone/ti.map/2.2.1
+[DEBUG]  Detected iphone module: ti.map 2.2.2 @ /Library/Application Support/Titanium/modules/iphone/ti.map/2.2.2
+[DEBUG]  Detected iphone module: ti.map 2.3.1 @ /Library/Application Support/Titanium/modules/iphone/ti.map/2.3.1
+[DEBUG]  Detected iphone module: ti.mely 0.1 @ /Library/Application Support/Titanium/modules/iphone/ti.mely/0.1
+[DEBUG]  Detected iphone module: ti.pageflip 1.8.3 @ /Library/Application Support/Titanium/modules/iphone/ti.pageflip/1.8.3
+[DEBUG]  Detected iphone module: ti.paint 1.0 @ /Library/Application Support/Titanium/modules/iphone/ti.paint/1.0
+[DEBUG]  Detected iphone module: ti.paint 1.1 @ /Library/Application Support/Titanium/modules/iphone/ti.paint/1.1
+[DEBUG]  Detected iphone module: ti.paint 1.3 @ /Library/Application Support/Titanium/modules/iphone/ti.paint/1.3
+[DEBUG]  Detected iphone module: ti.paypal 1.3 @ /Library/Application Support/Titanium/modules/iphone/ti.paypal/1.3
+[DEBUG]  Detected iphone module: ti.quicklook 1.2 @ /Library/Application Support/Titanium/modules/iphone/ti.quicklook/1.2
+[DEBUG]  Detected iphone module: ti.sms 1.0 @ /Library/Application Support/Titanium/modules/iphone/ti.sms/1.0
+[DEBUG]  Detected iphone module: ti.soundsampler 1.0 @ /Library/Application Support/Titanium/modules/iphone/ti.soundsampler/1.0
+[DEBUG]  Detected iphone module: ti.sq 0.4 @ /Library/Application Support/Titanium/modules/iphone/ti.sq/0.4
+[DEBUG]  Detected iphone module: ti.storekit 1.2 @ /Library/Application Support/Titanium/modules/iphone/ti.storekit/1.2
+[DEBUG]  Detected iphone module: ti.styledlabel 1.5.1 @ /Library/Application Support/Titanium/modules/iphone/ti.styledlabel/1.5.1
+[DEBUG]  Detected iphone module: ti.touchid 1.0 @ /Library/Application Support/Titanium/modules/iphone/ti.touchid/1.0
+[DEBUG]  Detected iphone module: ti.touchid 1.1.0 @ /Library/Application Support/Titanium/modules/iphone/ti.touchid/1.1.0
+[DEBUG]  Detected iphone module: ti.tvout 1.1 @ /Library/Application Support/Titanium/modules/iphone/ti.tvout/1.1
+[DEBUG]  Detected iphone module: tibar 0.4.1 @ /Library/Application Support/Titanium/modules/iphone/tibar/0.4.1
+[DEBUG]  Detected iphone module: tibar 0.4.2 @ /Library/Application Support/Titanium/modules/iphone/tibar/0.4.2
+[DEBUG]  Detected tizen module: tizen 3.0.0 @ /Library/Application Support/Titanium/modules/tizen/tizen/3.0.0
+[DEBUG]  Looking for Titanium module id=com.alcoapps.actionbarextras version=latest platform=android deploy-type=test
+[INFO]   Found Titanium module id=com.alcoapps.actionbarextras version=1.6.8 platform=android deploy-type=test path=/Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.8
+[DEBUG]  No project level plugins to load
+[TRACE]  Snapshotting build directory
+[DEBUG]  Titanium SDK Android directory: /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android
+[INFO]   Deploy type: test
+[INFO]   Building for target: device
+[INFO]   Building for device: 0621ed32229928e7
+[INFO]   Targeting Android SDK API: 23
+[INFO]   Building for the following architectures: armeabi, armeabi-v7a, x86
+[INFO]   Signing with keystore: /Users/fuerst/.android.keystore (googlekey)
+[DEBUG]  App ID: de.appwerft.tierstimmenarchiv
+[DEBUG]  Classname: Tierstimmenarchiv
+[INFO]   Debugging disabled
+[INFO]   Profiler disabled
+[INFO]   Forcing rebuild: JavaScript files need to be re-encrypted
+[TRACE]  offline build file /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/build-7c83e82aa1d037f76a17eda420a6696192b8cbd4.json
+[TRACE]  online 1
+[TRACE]  sending request {"json":{"username":"titanium@webmasterei-hamburg.de","session":"5dea3781ea8749b4cc49b581eb3d4a7a5f6536ed VLmzaCntThz0X1LSwB/abKOIqy78WhTvP0hOfUZ3KBGiiQfctM8O8kOwWzJBEeZBIq3+kzvY7OWTku38lBtPT0zr31crLk0lTe6YFFUvUHoxenxhceVTBGPSWq16KTuLiy6Ud46C+lyGr8vGZzk8ufhN/0KN2Bti0XsufbgwTQI9IhUCaUHnnvbbenCMm3b3i/59Q/cYXbWN5jZLJQyscqpUjp3SK4Int3YPAkFCjOpkYBJ9leYuIyZZrdLedTHugPFip3DbJpD3OU5OMUAI6Ousuw+1dY8Nyf3yiBDM2NL1R4jSQJ0ERG8ROewj3pxWE6nlm7V66ulbmIx0y6cnKCUaPSJK3IOqSObsfKhPNPgERZw4vjJaS1JalOpIjOxI8hoMgEGPbhQgKeqOqIuEVPzontS+fNYM5hLXMgtV6CzL6pWZ0q0+GfAVZwt+H4sMEdFyF366R/AA8xUzcJZ11ZyTyyBNtOr+bo9AE1sWGOPE0b5K8bLO8hKIfSDAOh8L86Ao53N33/d6GWmDsCMiKXRv3uIbnLT3PDzdRLcStTfeoRN4GiOIqoLIyUz9MK0s0oJycR3kv/Y4K1IDaMQ/1jK95xtAUHef170k8qU+t5zWVnsdN8kUB58yAK/3Nu9vikM1C/Ji0ko5H7GJcwpIscscIte0jbadmHM0cdbXD5dzG7N+SdcEK/Oa8t4eWs0ESYnr46IgRC5QmeUoB6IiaQ0a9Qq4KHtQL7C3AP2Kb9Ecbco3E1REF5c6IXzl+vdQiFYN17wjAN6P66h0nh0Lg9U1nvKbrdZKyIYf5EGfG5f7mRYqmK8YHoa1ImttQBfe","ipaddress":"192.168.178.24","fingerprint":"dcbd3b65700cbb36167e7d380384a58c64e9a7ce","fingerprint_description":"Mac OSX Serial Number: C02NDEXRG3QJ","guid":"b863b9b5-0a29-4237-9999-97926a75e590","appid":"de.appwerft.tierstimmenarchiv","name":"Tierstimmenarchiv","org_id":100001896,"deploytype":"test","tiappxml":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ti:app \n  xmlns:ti=\"http://ti.appcelerator.org\">\n  <id>de.appwerft.tierstimmenarchiv</id>\n  <name>Tierstimmenarchiv</name>\n  <version>1.0.4</version>\n  <publisher>fuerst</publisher>\n  <url>http://hamburger-appwerft.de</url>\n  <description/>\n  <copyright>2016 by fuerst</copyright>\n  <icon>appicon.png</icon>\n  <fullscreen>false</fullscreen>\n  <navbar-hidden>false</navbar-hidden>\n  <analytics>false</analytics>\n  <guid>b863b9b5-0a29-4237-9999-97926a75e590</guid>\n  <property name=\"ti.ui.defaultunit\" type=\"string\">dp</property>\n  <android \n    xmlns:android=\"http://schemas.android.com/apk/res/android\"/>\n    <modules>\n      <module platform=\"android\">com.alcoapps.actionbarextras</module>\n    </modules>\n    <deployment-targets>\n      <target device=\"android\">true</target>\n      <target device=\"ipad\">false</target>\n      <target device=\"iphone\">false</target>\n      <target device=\"mobileweb\">false</target>\n    </deployment-targets>\n    <sdk-version>5.1.0.GA</sdk-version>\n  </ti:app>","modules":[{"id":"com.alcoapps.actionbarextras","platform":["android"],"deployType":["test"],"modulePath":"/Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.8","version":"1.6.8","manifest":{"version":"1.6.8","apiversion":"2","description":"Allows to set extra properties on the ActionBar","author":"Ricardo Alcocer","license":"MIT License - http://alco.mit-license.org","copyright":"2013","name":"actionbarextras","moduleid":"com.alcoapps.actionbarextras","guid":"84008311-4ed7-45ba-b2ea-a4cb5b5bb692","platform":"android","minsdk":"3.4.0.GA","architectures":"armeabi;armeabi-v7a;x86"},"native":true,"jarName":"actionbarextras.jar","jarFile":"/Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.8/actionbarextras.jar","hash":"b4cba56d8cd2804c8fb9a5d15c1957a4","abis":["armeabi","armeabi-v7a","x86"],"bindings":{"modules":{"com.alcoapps.actionbarextras.ActionbarextrasModule":{"apiName":"Actionbarextras","createProxies":[{"proxyClassName":"com.alcoapps.actionbarextras.DropdownProxy","id":"com.alcoapps.actionbarextras.DropdownProxy","propertyAccessors":["activeItem"],"isTopLevel":false,"name":"Dropdown","parentModule":"org.appcelerator.kroll.annotations.Kroll.DEFAULT","creatableInModule":"com.alcoapps.actionbarextras.ActionbarextrasModule","fullAPIName":"Actionbarextras.Dropdown"}]}},"proxies":{"com.alcoapps.actionbarextras.DropdownProxy":{"methods":{"remove":{"hasInvocation":false,"apiName":"remove","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setActiveItem":{"hasInvocation":false,"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","apiName":"setActiveItem","runOnUiThread":false,"converter":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"activeItem","name":"activeItem","type":"int"}],"name":"__default_name__","returnType":"void"}},"proxyClassName":"DropdownProxy","superProxyClassName":"KrollProxy","proxyAttrs":{"proxyClassName":"com.alcoapps.actionbarextras.DropdownProxy","id":"com.alcoapps.actionbarextras.DropdownProxy","propertyAccessors":["activeItem"],"isTopLevel":false,"name":"Dropdown","parentModule":"org.appcelerator.kroll.annotations.Kroll.DEFAULT","creatableInModule":"com.alcoapps.actionbarextras.ActionbarextrasModule","fullAPIName":"Actionbarextras.Dropdown"},"superProxyBindingClassName":"org.appcelerator.kroll.KrollProxyBindingGen","packageName":"com.alcoapps.actionbarextras","dynamicProperties":{"activeItem":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"activeItem","name":"activeItem","type":"int"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"activeItem","retain":true,"setMethodName":"setActiveItem","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false}},"sourceName":"com.alcoapps.actionbarextras.DropdownProxyBindingGen","genClassName":"DropdownProxyBindingGen","isModule":false,"superPackageName":"org.appcelerator.kroll"},"com.alcoapps.actionbarextras.ActionbarextrasModule":{"methods":{"setLogo":{"hasInvocation":false,"apiName":"setLogo","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"hideLogo":{"hasInvocation":false,"apiName":"hideLogo","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setSubtitleFont":{"hasInvocation":false,"apiName":"setSubtitleFont","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"obj","name":"obj","type":"java.lang.Object"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setNavigationbarColor":{"hasInvocation":false,"apiName":"setNavigationbarColor","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"color","name":"color","type":"java.lang.String"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setElevation":{"hasInvocation":false,"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","apiName":"setElevation","runOnUiThread":false,"converter":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"name":"__default_name__","returnType":"void"},"addShareAction":{"hasInvocation":false,"apiName":"addShareAction","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"args","name":"args","type":"org.appcelerator.kroll.KrollDict"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setColor":{"hasInvocation":false,"apiName":"setColor","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"color","name":"color","type":"java.lang.String"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setDisplayUseLogoEnabled":{"hasInvocation":false,"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","apiName":"setDisplayUseLogoEnabled","runOnUiThread":false,"converter":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"useLogo","name":"useLogo","type":"boolean"}],"name":"__default_name__","returnType":"void"},"setSearchView":{"hasInvocation":false,"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","apiName":"setSearchView","runOnUiThread":false,"converter":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"name":"__default_name__","returnType":"void"},"setStatusbarColor":{"hasInvocation":false,"apiName":"setStatusbarColor","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"color","name":"color","type":"java.lang.String"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setSubtitle":{"hasInvocation":false,"apiName":"setSubtitle","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"obj","name":"obj","type":"java.lang.Object"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"getTitle":{"hasInvocation":false,"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","apiName":"getTitle","runOnUiThread":false,"converter":"org.appcelerator.kroll.KrollConverter","args":[],"name":"__default_name__","returnType":"java.lang.String"},"setHomeAsUpIcon":{"hasInvocation":false,"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","apiName":"setHomeAsUpIcon","runOnUiThread":false,"converter":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"name":"__default_name__","returnType":"void"},"setTitleFont":{"hasInvocation":false,"apiName":"setTitleFont","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"obj","name":"obj","type":"java.lang.Object"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setFont":{"hasInvocation":false,"apiName":"setFont","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"value","name":"value","type":"java.lang.Object"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setMenuItemIcon":{"hasInvocation":false,"apiName":"setMenuItemIcon","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setExtras":{"hasInvocation":false,"apiName":"setExtras","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"args","name":"args","type":"org.appcelerator.kroll.KrollDict"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"getActionbarHeight":{"hasInvocation":false,"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","apiName":"getActionbarHeight","runOnUiThread":false,"converter":"org.appcelerator.kroll.KrollConverter","args":[],"name":"__default_name__","returnType":"int"},"setBackgroundColor":{"hasInvocation":false,"apiName":"setBackgroundColor","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"color","name":"color","type":"java.lang.String"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setSearchViewBackgroundColor":{"hasInvocation":false,"apiName":"setSearchViewBackgroundColor","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setHideOffset":{"hasInvocation":false,"apiName":"setHideOffset","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setDisableIcon":{"hasInvocation":false,"apiName":"setDisableIcon","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","optional":true,"type":"java.lang.Boolean"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setDisplayShowTitleEnabled":{"hasInvocation":false,"apiName":"setDisplayShowTitleEnabled","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"showTitle","name":"showTitle","type":"boolean"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setWindow":{"hasInvocation":false,"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","apiName":"setWindow","runOnUiThread":false,"converter":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"name":"__default_name__","returnType":"void"},"setUpColor":{"hasInvocation":false,"apiName":"setUpColor","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"color","name":"color","type":"java.lang.String"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setTitle":{"hasInvocation":false,"apiName":"setTitle","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"obj","name":"obj","type":"java.lang.Object"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setDisplayShowHomeEnabled":{"hasInvocation":false,"apiName":"setDisplayShowHomeEnabled","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"showHome","name":"showHome","type":"boolean"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setTitleColor":{"hasInvocation":false,"apiName":"setTitleColor","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"color","name":"color","type":"java.lang.String"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"},"setSubtitleColor":{"hasInvocation":false,"apiName":"setSubtitleColor","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","args":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"color","name":"color","type":"java.lang.String"}],"converter":"org.appcelerator.kroll.KrollConverter","runOnUiThread":false,"name":"__default_name__","returnType":"void"}},"proxyClassName":"ActionbarextrasModule","superProxyClassName":"KrollModule","proxyAttrs":{"proxyClassName":"com.alcoapps.actionbarextras.ActionbarextrasModule","id":"com.alcoapps.actionbarextras","propertyAccessors":[],"isTopLevel":false,"name":"Actionbarextras","fullAPIName":"Actionbarextras"},"superProxyBindingClassName":"org.appcelerator.kroll.KrollModuleBindingGen","packageName":"com.alcoapps.actionbarextras","dynamicProperties":{"actionbarHeight":{"javascriptConverter":"org.appcelerator.kroll.KrollConverter","getMethodArgs":[],"getDefaultProviders":[],"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","get":true,"converter":"org.appcelerator.kroll.KrollConverter","getMethodName":"getActionbarHeight","getHasInvocation":false,"set":false,"runOnUiThread":false,"name":"actionbarHeight","getReturnType":"int","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"logo":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"logo","retain":true,"setMethodName":"setLogo","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"displayShowHomeEnabled":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"showHome","name":"showHome","type":"boolean"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"displayShowHomeEnabled","retain":true,"setMethodName":"setDisplayShowHomeEnabled","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"searchView":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"searchView","retain":true,"setMethodName":"setSearchView","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"backgroundColor":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"color","name":"color","type":"java.lang.String"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"backgroundColor","retain":true,"setMethodName":"setBackgroundColor","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"font":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"value","name":"value","type":"java.lang.Object"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"font","retain":true,"setMethodName":"setFont","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"elevation":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"elevation","retain":true,"setMethodName":"setElevation","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"navigationbarColor":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"color","name":"color","type":"java.lang.String"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"navigationbarColor","retain":true,"setMethodName":"setNavigationbarColor","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"titleColor":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"color","name":"color","type":"java.lang.String"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"titleColor","retain":true,"setMethodName":"setTitleColor","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"homeAsUpIcon":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"homeAsUpIcon","retain":true,"setMethodName":"setHomeAsUpIcon","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"hideOffset":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"hideOffset","retain":true,"setMethodName":"setHideOffset","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"titleFont":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"obj","name":"obj","type":"java.lang.Object"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"titleFont","retain":true,"setMethodName":"setTitleFont","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"title":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"getMethodArgs":[],"get":true,"getMethodName":"getTitle","runOnUiThread":false,"set":true,"getHasInvocation":false,"getReturnType":"java.lang.String","setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"obj","name":"obj","type":"java.lang.Object"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","getDefaultProviders":[],"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"title","retain":true,"setMethodName":"setTitle","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"displayShowTitleEnabled":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"showTitle","name":"showTitle","type":"boolean"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"displayShowTitleEnabled","retain":true,"setMethodName":"setDisplayShowTitleEnabled","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"upColor":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"color","name":"color","type":"java.lang.String"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"upColor","retain":true,"setMethodName":"setUpColor","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"window":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"window","retain":true,"setMethodName":"setWindow","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"color":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"color","name":"color","type":"java.lang.String"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"color","retain":true,"setMethodName":"setColor","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"menuItemIcon":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"menuItemIcon","retain":true,"setMethodName":"setMenuItemIcon","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"disableIcon":{"setDefaultProviders":[null],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","optional":true,"type":"java.lang.Boolean"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"disableIcon","retain":true,"setMethodName":"setDisableIcon","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"searchViewBackgroundColor":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"arg","name":"arg","type":"java.lang.Object"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"searchViewBackgroundColor","retain":true,"setMethodName":"setSearchViewBackgroundColor","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"subtitleFont":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"obj","name":"obj","type":"java.lang.Object"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"subtitleFont","retain":true,"setMethodName":"setSubtitleFont","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"subtitle":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"obj","name":"obj","type":"java.lang.Object"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"subtitle","retain":true,"setMethodName":"setSubtitle","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"statusbarColor":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"color","name":"color","type":"java.lang.String"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"statusbarColor","retain":true,"setMethodName":"setStatusbarColor","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"subtitleColor":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"color","name":"color","type":"java.lang.String"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"subtitleColor","retain":true,"setMethodName":"setSubtitleColor","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false},"displayUseLogoEnabled":{"setDefaultProviders":["org.appcelerator.kroll.KrollConverter"],"get":false,"runOnUiThread":false,"set":true,"getHasInvocation":false,"setMethodArgs":[{"defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","sourceName":"useLogo","name":"useLogo","type":"boolean"}],"setReturnType":"void","javascriptConverter":"org.appcelerator.kroll.KrollConverter","defaultValueProvider":"org.appcelerator.kroll.KrollConverter","converter":"org.appcelerator.kroll.KrollConverter","name":"displayUseLogoEnabled","retain":true,"setMethodName":"setDisplayUseLogoEnabled","nativeConverter":"org.appcelerator.kroll.KrollConverter","setHasInvocation":false}},"sourceName":"com.alcoapps.actionbarextras.ActionbarextrasModuleBindingGen","genClassName":"ActionbarextrasModuleBindingGen","isModule":true,"superPackageName":"org.appcelerator.kroll","onAppCreate":"onAppCreate"}}}}]},"gzip":true,"followAllRedirects":true,"url":"https://security.appcelerator.com/build-verify"}
+[TRACE]  result from /build-verify=> {"key":"ALOEbPDoRUWfTo9f4AEFOA==","pepper":"O3BJAE1w8MNwF8FGh2W2Aw==","hmacKey":"Wf4W5Yj7IW1soBieYd0DiQ==","o":100001896,"u":"128f7fa0-a54c-43c4-ba7d-7681dceb4c15","p":"starter","i":"568c48b26d7c6009310058a6","success":true}, err=null
+[INFO]   JavaScript files need to be encrypted
+[DEBUG]  Copying /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources
+[DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/.DS_Store
+[DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/android
+[DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/assets/.DS_Store
+[WARN]   Overwriting file /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets/Resources/fonts/FontAwesome.ttf
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/fonts/FontAwesome.ttf => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets/Resources/fonts/FontAwesome.ttf
+[WARN]   Overwriting file /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets/Resources/fonts/Helvetica-Bold.otf
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/fonts/Helvetica-Bold.otf => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets/Resources/fonts/Helvetica-Bold.otf
+[DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/iphone
+[DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/model/.DS_Store
+[WARN]   Overwriting file /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets/Resources/model/recordslist.text
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/model/recordslist.text => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets/Resources/model/recordslist.text
+[DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/vendor/.DS_Store
+[DEBUG]  Copying /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/android
+[DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/android/.DS_Store
+[WARN]   Overwriting file /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets/Resources/512.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/android/512.png => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets/Resources/512.png
+[WARN]   Overwriting file /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets/Resources/appicon.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/android/appicon.png => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets/Resources/appicon.png
+[WARN]   Overwriting file /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets/Resources/bigbanner.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/android/bigbanner.png => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets/Resources/bigbanner.png
+[DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/android/images/.DS_Store
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/android/images/res-long-land-hdpi/default.png => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/drawable-long-land-hdpi/background.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/android/images/res-long-port-hdpi/default.png => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/drawable-long-port-hdpi/background.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/android/images/res-notlong-land-hdpi/default.png => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/drawable-notlong-land-hdpi/background.png
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/android/images/res-notlong-port-hdpi/default.png => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/drawable-notlong-port-hdpi/background.png
+[DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/platform/android/.DS_Store
+[WARN]   Overwriting file /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/AndroidManifest.xml
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/platform/android/AndroidManifest.xml => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/AndroidManifest.xml
+[DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/platform/android/res/.DS_Store
+[DEBUG]  Ignoring /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/platform/android/res/values/.DS_Store
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/platform/android/res/values/customtheme.xml => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/values/customtheme.xml
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets/Resources/appicon.png => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/drawable/appicon.png
+[DEBUG]  Symlinking /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/templates/app/default/template/Resources/android/default.png => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/drawable/background.png
+[INFO]   Processing JavaScript files
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/TEMPLATES.js => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/assets/TEMPLATES.js
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/app.js => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/assets/app.js
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/model/frogsounds.adapter.js => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/assets/model/frogsounds.adapter.js
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/ui/actionbar.js => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/assets/ui/actionbar.js
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/ui/main.window.js => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/assets/ui/main.window.js
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/ui/player.window.js => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/assets/ui/player.window.js
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/ui/search.window.js => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/assets/ui/search.window.js
+[DEBUG]  Symlinking /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/vendor/versionsreminder.js => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/assets/vendor/versionsreminder.js
+[INFO]   Encrypting JavaScript files: /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/titanium_prep.macos "de.appwerft.tierstimmenarchiv" "/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/assets" "TEMPLATES.js" "app.js" "model/frogsounds.adapter.js" "ui/actionbar.js" "ui/main.window.js" "ui/player.window.js" "ui/search.window.js" "vendor/versionsreminder.js" "_app_props_.json"
+[DEBUG]  Adding library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/kroll-v8.jar
+[DEBUG]  Adding library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-analytics.jar
+[DEBUG]  Adding dependency library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/aps-analytics.jar
+[DEBUG]  Adding library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-android.jar
+[DEBUG]  Adding dependency library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/jaxen-1.1.1.jar
+[DEBUG]  Adding dependency library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/ti-commons-codec-1.3.jar
+[DEBUG]  Adding dependency library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/kroll-common.jar
+[DEBUG]  Adding dependency library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/titanium.jar
+[DEBUG]  Adding library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-app.jar
+[DEBUG]  Adding library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-ui.jar
+[DEBUG]  Adding dependency library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/nineoldandroids-appc-2.4.0.jar
+[DEBUG]  Adding library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-filesystem.jar
+[DEBUG]  Adding library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-media.jar
+[DEBUG]  Adding library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-appcompat.jar
+[DEBUG]  Adding dependency library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/android-support-v4.jar
+[DEBUG]  Adding dependency library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/android-support-v7-appcompat.jar
+[DEBUG]  Adding library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-cardview.jar
+[DEBUG]  Adding dependency library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/cardview-v7-23.0.1.jar
+[DEBUG]  Adding library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-locale.jar
+[DEBUG]  Adding library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-network.jar
+[DEBUG]  Adding library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-xml.jar
+[DEBUG]  Unknown namespace android.currentactivity, skipping
+[DEBUG]  Unknown namespace app.android.r.drawable, skipping
+[DEBUG]  Unknown namespace app.android.r, skipping
+[DEBUG]  Adding library /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-platform.jar
+[INFO]   Writing /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets/app.json
+[INFO]   Extracting module resources: /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-analytics.res.zip
+[DEBUG]  Copying /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/11605-95774-1khsi2q/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-android.res.zip
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/11605-95774-m1iirz/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-app.res.zip
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/11605-95774-r8zp5d/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-filesystem.res.zip
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/11605-95774-1ytfzr4/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-media.res.zip
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/11605-95774-cov633/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-locale.res.zip
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/11605-95774-1h3tubv/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-network.res.zip
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/11605-95774-1p5i3o1/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-xml.res.zip
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/11605-95774-k46os/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-platform.res.zip
+[DEBUG]  Merging /var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/11605-95774-1n9isvc/res/values/strings.xml => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/values/strings.xml
+[DEBUG]  Removing old file: /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/.classpath
+[DEBUG]  Removing old file: /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/.gitignore
+[DEBUG]  Removing old file: /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/.project
+[DEBUG]  Removing old file: /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/default.properties
+[DEBUG]  Removing old file: /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/java-sources.txt
+[DEBUG]  Copying template /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/templates/build/AppInfo.java => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/gen/de/appwerft/tierstimmenarchiv/TierstimmenarchivAppInfo.java
+[DEBUG]  Copying template /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/templates/build/App.java => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/gen/de/appwerft/tierstimmenarchiv/TierstimmenarchivApplication.java
+[DEBUG]  Copying template /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/templates/build/Activity.java => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/gen/de/appwerft/tierstimmenarchiv/TierstimmenarchivActivity.java
+[DEBUG]  Copying template /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/templates/build/project => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/.project
+[DEBUG]  Copying template /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/templates/build/default.properties => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/default.properties
+[DEBUG]  Copying /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/templates/build/gitignore => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/.gitignore
+[DEBUG]  Copying /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/templates/build/classpath => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/.classpath
+[INFO]   No aidl files to compile, continuing
+[INFO]   Generating i18n files
+[DEBUG]  Merging en strings => /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/values/strings.xml
+[INFO]   Generating /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res/values/theme.xml
+[INFO]   Writing unmerged custom AndroidManifest.xml
+[INFO]   Packaging application: /Users/fuerst/Library/android-sdk-macosx/build-tools/21.0.0/aapt "package" "-f" "-m" "-J" "/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/gen" "-M" "/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/AndroidManifest.xml" "-A" "/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/assets" "-S" "/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/res" "-I" "/Users/fuerst/Library/android-sdk-macosx/platforms/android-23/android.jar" "-F" "/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/app.ap_" "--auto-add-overlay" "--extra-packages" "ti.modules.titanium.ui:android.support.v7.appcompat:android.support.v7.cardview" "-S" "/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/11605-95774-1lnf28l/res" "-S" "/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/11605-95774-1q18rff/res" "-S" "/var/folders/25/yvdn9h053sv3htdkzq8558k40000gn/T/11605-95774-1ee9c74/res"
+[INFO]   Building Java source files: /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/bin/javac "-J-Xmx1024M" "-encoding" "utf8" "-bootclasspath" "/Users/fuerst/Library/android-sdk-macosx/platforms/android-23/android.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/kroll-v8.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-analytics.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/aps-analytics.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-android.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/jaxen-1.1.1.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/ti-commons-codec-1.3.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/kroll-common.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/titanium.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-app.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-ui.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/nineoldandroids-appc-2.4.0.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-filesystem.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-media.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-appcompat.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/android-support-v4.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/android-support-v7-appcompat.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-cardview.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/cardview-v7-23.0.1.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-locale.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-network.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-xml.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-platform.jar:/Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.8/actionbarextras.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/kroll-apt.jar:/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/lib/titanium-verify.jar:R.class:AssetCryptImpl.class:TierstimmenarchivActivity.class:TierstimmenarchivAppInfo.class:TierstimmenarchivApplication.class" "-d" "/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/classes" "-proc:none" "-target" "1.6" "-source" "1.6" "@/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/java-sources.txt"
+[INFO]   Running dexer: /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/bin/java "-Xmx2024M" "-XX:-UseGCOverheadLimit" "-Djava.ext.dirs=/Users/fuerst/Library/android-sdk-macosx/platform-tools" "-jar" "/Users/fuerst/Library/android-sdk-macosx/build-tools/21.0.0/lib/dx.jar" "--dex" "--output=/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/classes.dex" "/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/classes" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/lib/titanium-verify.jar" "/Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.8/actionbarextras.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/kroll-v8.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-analytics.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/aps-analytics.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-android.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/jaxen-1.1.1.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/ti-commons-codec-1.3.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/kroll-common.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/titanium.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-app.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-ui.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/nineoldandroids-appc-2.4.0.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-filesystem.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-media.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-appcompat.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/android-support-v4.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/android-support-v7-appcompat.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-cardview.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/cardview-v7-23.0.1.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-locale.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-network.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-xml.jar" "/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-platform.jar"
+[INFO]   Creating unsigned apk
+[DEBUG]  Processing /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/app.ap_
+[DEBUG]  Deflating AndroidManifest.xml
+[DEBUG]  Adding assets/Resources/512.png
+[DEBUG]  Adding assets/Resources/appicon.png
+[DEBUG]  Adding assets/Resources/bigbanner.png
+[DEBUG]  Deflating assets/Resources/fonts/FontAwesome.ttf
+[DEBUG]  Deflating assets/Resources/fonts/Helvetica-Bold.otf
+[DEBUG]  Deflating assets/Resources/model/recordslist.text
+[DEBUG]  Deflating assets/app.json
+[DEBUG]  Deflating assets/index.json
+[DEBUG]  Deflating res/anim/abc_fade_in.xml
+[DEBUG]  Deflating res/anim/abc_fade_out.xml
+[DEBUG]  Deflating res/anim/abc_grow_fade_in_from_bottom.xml
+[DEBUG]  Deflating res/anim/abc_popup_enter.xml
+[DEBUG]  Deflating res/anim/abc_popup_exit.xml
+[DEBUG]  Deflating res/anim/abc_shrink_fade_out_from_bottom.xml
+[DEBUG]  Deflating res/anim/abc_slide_in_bottom.xml
+[DEBUG]  Deflating res/anim/abc_slide_in_top.xml
+[DEBUG]  Deflating res/anim/abc_slide_out_bottom.xml
+[DEBUG]  Deflating res/anim/abc_slide_out_top.xml
+[DEBUG]  Deflating res/color-v11/abc_background_cache_hint_selector_material_dark.xml
+[DEBUG]  Deflating res/color-v11/abc_background_cache_hint_selector_material_light.xml
+[DEBUG]  Deflating res/color-v23/abc_color_highlight_material.xml
+[DEBUG]  Deflating res/color/abc_background_cache_hint_selector_material_dark.xml
+[DEBUG]  Deflating res/color/abc_background_cache_hint_selector_material_light.xml
+[DEBUG]  Deflating res/color/abc_primary_text_disable_only_material_dark.xml
+[DEBUG]  Deflating res/color/abc_primary_text_disable_only_material_light.xml
+[DEBUG]  Deflating res/color/abc_primary_text_material_dark.xml
+[DEBUG]  Deflating res/color/abc_primary_text_material_light.xml
+[DEBUG]  Deflating res/color/abc_search_url_text.xml
+[DEBUG]  Deflating res/color/abc_secondary_text_material_dark.xml
+[DEBUG]  Deflating res/color/abc_secondary_text_material_light.xml
+[DEBUG]  Deflating res/color/switch_thumb_material_dark.xml
+[DEBUG]  Deflating res/color/switch_thumb_material_light.xml
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_focused_holo.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-long-land-hdpi-v4/background.png
+[DEBUG]  Adding res/drawable-long-port-hdpi-v4/background.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_focused_holo.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-notlong-land-hdpi-v4/background.png
+[DEBUG]  Adding res/drawable-notlong-port-hdpi-v4/background.png
+[DEBUG]  Deflating res/drawable-v21/abc_action_bar_item_background_material.xml
+[DEBUG]  Deflating res/drawable-v21/abc_btn_colored_material.xml
+[DEBUG]  Deflating res/drawable-v23/abc_control_background_material.xml
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_focused_holo.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_popup_background_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Deflating res/drawable/abc_btn_borderless_material.xml
+[DEBUG]  Deflating res/drawable/abc_btn_check_material.xml
+[DEBUG]  Deflating res/drawable/abc_btn_colored_material.xml
+[DEBUG]  Deflating res/drawable/abc_btn_default_mtrl_shape.xml
+[DEBUG]  Deflating res/drawable/abc_btn_radio_material.xml
+[DEBUG]  Deflating res/drawable/abc_cab_background_internal_bg.xml
+[DEBUG]  Deflating res/drawable/abc_cab_background_top_material.xml
+[DEBUG]  Deflating res/drawable/abc_dialog_material_background_dark.xml
+[DEBUG]  Deflating res/drawable/abc_dialog_material_background_light.xml
+[DEBUG]  Deflating res/drawable/abc_edit_text_material.xml
+[DEBUG]  Deflating res/drawable/abc_item_background_holo_dark.xml
+[DEBUG]  Deflating res/drawable/abc_item_background_holo_light.xml
+[DEBUG]  Deflating res/drawable/abc_list_selector_background_transition_holo_dark.xml
+[DEBUG]  Deflating res/drawable/abc_list_selector_background_transition_holo_light.xml
+[DEBUG]  Deflating res/drawable/abc_list_selector_holo_dark.xml
+[DEBUG]  Deflating res/drawable/abc_list_selector_holo_light.xml
+[DEBUG]  Deflating res/drawable/abc_ratingbar_full_material.xml
+[DEBUG]  Deflating res/drawable/abc_spinner_textfield_background_material.xml
+[DEBUG]  Deflating res/drawable/abc_switch_thumb_material.xml
+[DEBUG]  Deflating res/drawable/abc_tab_indicator_material.xml
+[DEBUG]  Deflating res/drawable/abc_text_cursor_material.xml
+[DEBUG]  Deflating res/drawable/abc_textfield_search_material.xml
+[DEBUG]  Adding res/drawable/appicon.png
+[DEBUG]  Adding res/drawable/background.png
+[DEBUG]  Adding res/drawable/btn_check_buttonless_on_64.png
+[DEBUG]  Adding res/drawable/btn_more_64.png
+[DEBUG]  Adding res/drawable/disclosure_64.png
+[DEBUG]  Deflating res/layout-v21/abc_screen_toolbar.xml
+[DEBUG]  Deflating res/layout-v21/titanium_ui_date_picker_spinner.xml
+[DEBUG]  Deflating res/layout-v21/titanium_ui_time_picker_spinner.xml
+[DEBUG]  Deflating res/layout/abc_action_bar_title_item.xml
+[DEBUG]  Deflating res/layout/abc_action_bar_up_container.xml
+[DEBUG]  Deflating res/layout/abc_action_bar_view_list_nav_layout.xml
+[DEBUG]  Deflating res/layout/abc_action_menu_item_layout.xml
+[DEBUG]  Deflating res/layout/abc_action_menu_layout.xml
+[DEBUG]  Deflating res/layout/abc_action_mode_bar.xml
+[DEBUG]  Deflating res/layout/abc_action_mode_close_item_material.xml
+[DEBUG]  Deflating res/layout/abc_activity_chooser_view.xml
+[DEBUG]  Deflating res/layout/abc_activity_chooser_view_list_item.xml
+[DEBUG]  Deflating res/layout/abc_alert_dialog_material.xml
+[DEBUG]  Deflating res/layout/abc_dialog_title_material.xml
+[DEBUG]  Deflating res/layout/abc_expanded_menu_layout.xml
+[DEBUG]  Deflating res/layout/abc_list_menu_item_checkbox.xml
+[DEBUG]  Deflating res/layout/abc_list_menu_item_icon.xml
+[DEBUG]  Deflating res/layout/abc_list_menu_item_layout.xml
+[DEBUG]  Deflating res/layout/abc_list_menu_item_radio.xml
+[DEBUG]  Deflating res/layout/abc_popup_menu_item_layout.xml
+[DEBUG]  Deflating res/layout/abc_screen_content_include.xml
+[DEBUG]  Deflating res/layout/abc_screen_simple.xml
+[DEBUG]  Deflating res/layout/abc_screen_simple_overlay_action_mode.xml
+[DEBUG]  Deflating res/layout/abc_screen_toolbar.xml
+[DEBUG]  Deflating res/layout/abc_search_dropdown_item_icons_2line.xml
+[DEBUG]  Deflating res/layout/abc_search_view.xml
+[DEBUG]  Deflating res/layout/abc_select_dialog_material.xml
+[DEBUG]  Deflating res/layout/notification_media_action.xml
+[DEBUG]  Deflating res/layout/notification_media_cancel_action.xml
+[DEBUG]  Deflating res/layout/notification_template_big_media.xml
+[DEBUG]  Deflating res/layout/notification_template_big_media_narrow.xml
+[DEBUG]  Deflating res/layout/notification_template_lines.xml
+[DEBUG]  Deflating res/layout/notification_template_media.xml
+[DEBUG]  Deflating res/layout/notification_template_part_chronometer.xml
+[DEBUG]  Deflating res/layout/notification_template_part_time.xml
+[DEBUG]  Deflating res/layout/select_dialog_item_material.xml
+[DEBUG]  Deflating res/layout/select_dialog_multichoice_material.xml
+[DEBUG]  Deflating res/layout/select_dialog_singlechoice_material.xml
+[DEBUG]  Deflating res/layout/support_simple_spinner_dropdown_item.xml
+[DEBUG]  Deflating res/layout/titanium_tabgroup.xml
+[DEBUG]  Deflating res/layout/titanium_ui_checkbox.xml
+[DEBUG]  Deflating res/layout/titanium_ui_date_picker_spinner.xml
+[DEBUG]  Deflating res/layout/titanium_ui_edittext.xml
+[DEBUG]  Deflating res/layout/titanium_ui_list_header_or_footer.xml
+[DEBUG]  Deflating res/layout/titanium_ui_list_item.xml
+[DEBUG]  Deflating res/layout/titanium_ui_spinner.xml
+[DEBUG]  Deflating res/layout/titanium_ui_switchcompat.xml
+[DEBUG]  Deflating res/layout/titanium_ui_time_picker_spinner.xml
+[DEBUG]  Deflating resources.arsc
+[DEBUG]  Processing /Library/Application Support/Titanium/modules/android/com.alcoapps.actionbarextras/1.6.8/actionbarextras.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/kroll-v8.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-analytics.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/aps-analytics.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-android.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/jaxen-1.1.1.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/ti-commons-codec-1.3.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/kroll-common.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/titanium.jar
+[DEBUG]  Deflating org/appcelerator/titanium/build.properties
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/background.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_100.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_64.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_100.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_18.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_48.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_64.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/default_icon.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/photoDefault.png
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-app.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-ui.jar
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/binding.js
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/binding.min.js
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/json2.js
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/polling.js
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/polling.min.js
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/nineoldandroids-appc-2.4.0.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-filesystem.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-media.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-appcompat.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/android-support-v4.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/android-support-v7-appcompat.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-cardview.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/cardview-v7-23.0.1.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-locale.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-network.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-xml.jar
+[DEBUG]  Processing /Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android/modules/titanium-platform.jar
+[DEBUG]  Adding classes.dex
+[INFO]   Processing /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/src
+[DEBUG]  Adding lib/armeabi/libkroll-v8.so
+[DEBUG]  Adding lib/armeabi/libstlport_shared.so
+[DEBUG]  Adding lib/armeabi/libtiverify.so
+[DEBUG]  Adding lib/armeabi-v7a/libkroll-v8.so
+[DEBUG]  Adding lib/armeabi-v7a/libstlport_shared.so
+[DEBUG]  Adding lib/armeabi-v7a/libtiverify.so
+[DEBUG]  Adding lib/x86/libkroll-v8.so
+[DEBUG]  Adding lib/x86/libstlport_shared.so
+[DEBUG]  Adding lib/x86/libtiverify.so
+[DEBUG]  Adding lib/armeabi/libcom.alcoapps.actionbarextras.so
+[DEBUG]  Adding lib/armeabi-v7a/libcom.alcoapps.actionbarextras.so
+[DEBUG]  Adding lib/x86/libcom.alcoapps.actionbarextras.so
+[INFO]   Writing unsigned apk: /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/app-unsigned.apk
+[INFO]   Using SHA1withRSA signature algorithm
+[INFO]   Signing apk: /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/bin/jarsigner "-sigalg" "SHA1withRSA" "-digestalg" "SHA1" "-keystore" "/Users/fuerst/.android.keystore" "-storepass" "*******" "-signedjar" "/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/Tierstimmenarchiv.apk" "/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/app-unsigned.apk" "googlekey"
+[INFO]   Aligning zip file: /Users/fuerst/Library/android-sdk-macosx/build-tools/21.0.0/zipalign "-v" "4" "/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/Tierstimmenarchiv.apk" "/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/Tierstimmenarchiv.apkz"
+[INFO]   Writing build manifest: /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/build-manifest.json
+[INFO]   Making sure the adb server is running
+[INFO]   Installing apk: /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/Tierstimmenarchiv.apk
+[INFO]   Installing app on device: Nexus 5
+[TRACE]  Checking if package manager service is started
+[TRACE]  Package manager has started
+[TRACE]  Executing: /Users/fuerst/Library/android-sdk-macosx/platform-tools/adb -s 0621ed32229928e7 install -r /Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/build/android/bin/Tierstimmenarchiv.apk
+[INFO]   App successfully installed
+[INFO]   Starting app: de.appwerft.tierstimmenarchiv/.TierstimmenarchivActivity
+[DEBUG]  Trying to start the app...
+[INFO]   Application pid: 554
+[INFO]   Project built successfully in 40s 378ms
