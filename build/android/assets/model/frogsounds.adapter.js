@@ -1,1 +1,0 @@
-/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/model/frogsounds.adapter.js

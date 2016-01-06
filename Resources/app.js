@@ -1,5 +1,11 @@
+const COLOR = {
+	LIGHTGREEN : '#D5E3CB',
+	DARKGREEN : '#174122',
+	BROWN : '#B87C25'
+};
 
 var $ = require('ui/search.window')();
+
 $.addEventListener("android:back", function(_e) {
 	_e.cancelBubble = true;
 	var intent = Ti.Android.createIntent({

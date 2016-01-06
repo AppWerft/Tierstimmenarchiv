@@ -1,10 +1,6 @@
 var FrogSounds = require('model/recordings.adapter');
 var АктйонБар = require('com.alcoapps.actionbarextras');
-const COLOR = {
-	LIGHTGREEN : '#D5E3CB',
-	DARKGREEN : '#174122',
-	BROWN : '#B87C25'
-};
+
 
 module.exports = function(id) {
 	var timer;
