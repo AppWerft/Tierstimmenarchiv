@@ -38,7 +38,12 @@ table "recordings"
 - filename,
 - unique_identifier,
 - notes
+~~~
+Every dataset has a size of ca. 300 Bytes. If we have 18000 recordings the whole table has ca. 5.5 Mbytes. If the transfer is gzipped, then 500kBytes are runs thrue net.
+On start of app we test with filesize or etag if a new version is available.
 
+To realize a taxo-tree we need the following tables:
+~~~
 
 table "taxonomy_species"
 - id 
