@@ -1,4 +1,4 @@
-var FrogSounds = require('model/frogsounds.adapter');
+var FrogSounds = require('model/recordings.adapter');
 var АктйонБар = require('com.alcoapps.actionbarextras');
 const COLOR = {
 	LIGHTGREEN : '#D5E3CB',
