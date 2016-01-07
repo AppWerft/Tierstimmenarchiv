@@ -1,6 +1,5 @@
-var FrogSounds = require('model/recordings.adapter');
+var TSA = new (require('model/tsa.adapter'))();
 var АктйонБар = require('com.alcoapps.actionbarextras');
-
 
 module.exports = function(id) {
 	var timer;
@@ -21,9 +20,9 @@ module.exports = function(id) {
 		},
 		width : '90%',
 		borderRadius : 5,
-		autocorrect:false,
+		autocorrect : false,
 		color : COLOR.DARKGREEN,
-		
+
 		zIndex : 999,
 		hintText : "Suchbegriff, beispielsweise „Esel“",
 		softKeyboardOnFocus : Ti.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
@@ -44,18 +43,16 @@ module.exports = function(id) {
 			top : 90,
 			duration : 1000
 		}, function() {
-			
-				Ti.UI.createNotification({
-					message : 'Geben Sie einen Suchbegriff ein.'
-				}).show();
-				$.searchView.focus();
-			
+
+			Ti.UI.createNotification({
+				message : 'Geben Sie einen Suchbegriff ein.'
+			}).show();
+			$.searchView.focus();
+
 		});
 	});
 
 	$.listView = Ti.UI.createListView({
-		sections : [Ti.UI.createListSection({
-		})],
 		templates : {
 			'template' : require('TEMPLATES').animalsounds
 		},
@@ -67,31 +64,47 @@ module.exports = function(id) {
 	$.searchView.addEventListener('change', function(_e) {
 		var needle = _e.source.getValue();
 		if (needle.length == 0) {
-			$.listView.sections[0].items = [];
+			$.listView.sections= [];
 			$.listView.backgroundColor = 'transparent';
 			_e.source.blur();
 		} else if (needle.length > 2) {
-			
+
 			if (timer)
 				clearTimeout(timer);
 			timer = setTimeout(function() {
-				var items = FrogSounds.searchAnimals(needle).map(function(sound) {
-					return {
-						properties : {
-							itemId : JSON.stringify(sound),
-							accessoryType : Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
-						},
-						title : {
-							text : sound.title,
-							color : COLOR.DARKGREEN
-						},
-						spectrogram : {
-							image : sound.spectrogram
-						}
-					};
+				var species = TSA.searchAnimals(needle);
+				var lastndx;
+				var sections = [];
+				Object.getOwnPropertyNames(species).forEach(function(spec, ndx) {
+					sections[ndx] = Ti.UI.createListSection({
+						headerTitle : spec
+					});
+					sections[ndx].items = species[spec].map(function(sound) {
+						return {
+							properties : {
+								itemId : JSON.stringify(sound),
+								accessoryType : Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
+							},
+							deutscher_name : {
+								text : sound.deutscher_name,
+								color : COLOR.DARKGREEN
+							},
+							autor : {
+								text : sound.autor,
+
+							},
+							beschreibung : {
+								text : sound.beschreibung,
+								color : COLOR.DARKGREEN
+							},
+							spectrogram : {
+								image : sound.spectrogram
+							}
+						};
+					});
+
 				});
-				
-				$.listView.sections[0].items = items;
+				$.listView.sections= sections;
 				$.listView.backgroundColor = COLOR.BROWN;
 				setTimeout(function() {
 					$.searchView.blur();

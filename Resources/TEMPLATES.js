@@ -24,12 +24,15 @@ exports.animalsounds = {
 		type : 'Ti.UI.View',
 		properties : {
 			left : 110,
+			top : 5,
+			bottom : 5,
 			width : Ti.UI.FILL,
-			height : Ti.UI.SIZE
+			height : Ti.UI.SIZE,
+			layout : 'vertical'
 		},
 		childTemplates : [{
 			type : 'Ti.UI.Label',
-			bindId : 'title',
+			bindId : 'deutscher_name',
 			properties : {
 				font : {
 					fontSize : 20,
@@ -37,8 +40,39 @@ exports.animalsounds = {
 				},
 				color : COLOR.BROWN,
 				left : 0,
+				top : 0,
 				right : 15,
-				height: Ti.UI.SIZE,
+				height : Ti.UI.SIZE,
+				width : Ti.UI.FILL,
+			}
+		}, {
+			type : 'Ti.UI.Label',
+			bindId : 'beschreibung',
+			properties : {
+				font : {
+					fontSize : 14,
+					fontFamily : 'Helvetica'
+				},
+				color : COLOR.BROWN,
+				left : 0,
+				top : 0,
+				right : 25,
+				height : Ti.UI.SIZE,
+				width : Ti.UI.FILL,
+			}
+		}, {
+			type : 'Ti.UI.Label',
+			bindId : 'autor',
+			properties : {
+				font : {
+					fontSize : 14,
+					fontFamily : 'Helvetica-Bold'
+				},
+				color : COLOR.BROWN,
+				left : 0,
+				top : 0,
+				right : 15,
+				height : Ti.UI.SIZE,
 				width : Ti.UI.FILL,
 			}
 		}]

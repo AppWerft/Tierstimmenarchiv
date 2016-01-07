@@ -13,7 +13,7 @@
 	"analytics": false,
 	"publisher": "fuerst",
 	"url": "http://hamburger-appwerft.de",
-	"version": "1.1.0",
+	"version": "2.0.1",
 	"description": "undefined",
 	"copyright": "2016 by fuerst",
 	"guid": "b863b9b5-0a29-4237-9999-97926a75e590",
@@ -28,5 +28,5 @@
 	"propertiesHash": "320857e9943785652fbd60df5a0c4a1a",
 	"activitiesHash": "d41d8cd98f00b204e9800998ecf8427e",
 	"servicesHash": "d41d8cd98f00b204e9800998ecf8427e",
-	"jarLibHash": "98e84be1540d95ddcb54434aed351e06"
+	"jarLibHash": "492cc5457e661672bdded0277bc4ef87"
 }
