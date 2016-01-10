@@ -1,54 +1,223 @@
-const DBNAME = 'TSA0';
+const DBNAME = 'TSA42';
 
 var Module = function() {
-	if (!Ti.App.Properties.hasProperty(DBNAME)) {
-		var TSA = JSON.parse(Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'tsa.json').read().text);
-		var recordfields = "species TEXT, erstbeschreibung TEXT, subspecies TEXT, deutscher_name TEXT, english_name TEXT, ort TEXT, country TEXT,latitude NUMBER,longitude NUMBER,altitude NUMBER,recording_date TEXT,recording_time TEXT,sex TEXT,age TEXT,Beschreibung TEXT,Description TEXT,sound_type TEXT,Autor TEXT,filename TEXT,mp3_Datei TEXT,Copyright TEXT";
-		var rows = TSA.Workbook.Worksheet.Table.Row;
-		Ti.UI.createNotification({
-			top : '60%',
-			message : 'Starte initialen Import der Tierstimmendatenbank\n' + rows.length + ' Aufnahmen …'
-		}).show();
+
+};
+
+Module.prototype.import = {
+	isImported : function() {
+		return Ti.App.Properties.hasProperty(DBNAME);
+	},
+	doInit : function() {
+		this.TSA = JSON.parse(Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'tsa.json').read().text);
+		this.rows = this.TSA.Workbook.Worksheet.Table.Row;
+	},
+	Taxo : function() {
 		var link = Ti.Database.open(DBNAME);
-		this.eventhandlers = [];
-		link.execute('CREATE TABLE IF NOT EXISTS records (' + recordfields + ')');
-		link.close();
-		console.log('DB initiated');
-		var link = Ti.Database.open(DBNAME);
+		Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'init.sql').read().text.split('\n').forEach(function(sql) {
+			if (sql.length > 1) {
+				console.log(sql);
+				link.execute(sql);
+			}
+		});
 		link.execute('PRAGMA synchronous = OFF');
-		link.execute('DELETE FROM records');
 		link.execute('BEGIN TRANSACTION');
-		console.log('DB transaction started');
 		var ndx = 0,
 		    total = 0;
 		var that = this;
-		rows.forEach(function(row, count) {
-			if (!(count % 500)) {
-				that.fireEvent('progress', {
-					progress : count,
-					total : rows.length
-				});
-				console.log(count + '/' + rows.length);
-			}
+		this.rows.forEach(function(row, count) {
 			if (count > 0 && Array.isArray(row.C) && row.C.length == 30) {
-				link.execute("INSERT OR REPLACE INTO records VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", //
-				row.C[0], row.C[1], row.C[2], row.C[4],row.C[5], //
-				row.C[14], row.C[15], row.C[16], row.C[17], row.C[18], row.C[19], row.C[20], row.C[21], row.C[22], row.C[23], row.C[24], row.C[25], row.C[26], row.C[27], row.C[28], row.C[29]);
+				var _ = row.C;
+				link.execute("INSERT OR REPLACE INTO species VALUES (?,?,?,?)", _[0], _[6], _[5], _[4]);
+				link.execute("INSERT OR REPLACE INTO families VALUES (?,?,?,?)", _[6], _[9], _[8], _[7]);
+				link.execute("INSERT OR REPLACE INTO orders VALUES (?,?,?,?)", _[9], _[11], '', _[10]);
+				link.execute("INSERT OR REPLACE INTO classes VALUES (?,?,?)", _[11], '', '');
 			}
 		});
 		link.execute('COMMIT');
 		console.log('DB transaction finished');
 		link.close();
+		this.fireEvent('ready', {
+			duration : new Date().getTime() - start
+		});
+		Ti.App.Properties.setBool(DBNAME + 'TAXO', true);
+		return true;
 
-		this.fireEvent('ready', {});
-		Ti.App.Properties.setBool('TSA', true);
+	},
+	Records : function() {
+		var link = Ti.Database.open(DBNAME);
+		console.log(link.file);
+		this.eventhandlers = [];
+		link.execute('PRAGMA synchronous = OFF');
+		link.execute('BEGIN TRANSACTION');
+		var ndx = 0,
+		    total = 0;
+		var that = this;
+		this.rows.forEach(function(row, count) {
+			if (count > 0 && Array.isArray(row.C) && row.C.length == 30) {
+				var _ = row.C;
+				if (!(count % 50)) {
+					that.fireEvent('progress', {
+						progress : count / rows.length
+					});
+				}
+				link.execute("INSERT OR REPLACE INTO records VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", _[0], _[1], _[2], _[4], _[5], _[14], _[15], _[16], _[17], _[18], _[19], _[20], _[21], _[22], _[23], _[24], _[25], _[26], _[27], _[28], _[29]);
+			}
+		});
+		link.execute('COMMIT');
+		console.log('DB transaction finished');
+		link.close();
+		this.fireEvent('ready', {
+			duration : new Date().getTime() - start
+		});
+		Ti.App.Properties.setBool(DBNAME, true);
+		return true;
 	}
 };
 
 Module.prototype = {
+	getClasses : function() {
+		var link = Ti.Database.open(DBNAME);
+		console.log(link.file);
+		var res = link.execute('SELECT * FROM classes WHERE latin <> ""');
+		var classes = [];
+		while (res.isValidRow()) {
+			var item = {
+				latin : res.fieldByName('latin'),
+				de : res.fieldByName('de'),
+				en : res.fieldByName('en'),
+				image : '/assets/' + res.fieldByName('latin').toLowerCase() + '.png'
+
+			};
+			classes.push(item);
+			res.next();
+		}
+		res.close();
+		link.close();
+		console.log(classes);
+		return classes.sort(function(a, b) {
+			return a.latin > b.latin ? true : false;
+		});
+	},
+	getOrders : function(id) {
+		var link = Ti.Database.open(DBNAME);
+		console.log(link.file);
+		var res = link.execute('SELECT * FROM orders WHERE classes = ?', id);
+		var classes = [];
+		while (res.isValidRow()) {
+			var item = {
+				latin : res.fieldByName('latin'),
+				de : res.fieldByName('de'),
+				en : res.fieldByName('en'),
+				image : '/assets/' + res.fieldByName('latin').toLowerCase() + '.png'
+
+			};
+			classes.push(item);
+			res.next();
+		}
+		res.close();
+		link.close();
+		console.log(classes);
+		return classes.sort(function(a, b) {
+			return a.latin > b.latin ? true : false;
+		});
+	},
+	getFamilies : function(id) {
+		var link = Ti.Database.open(DBNAME);
+		console.log(id);
+		var res = link.execute('SELECT * FROM families WHERE orders = ?', id);
+		var families = [];
+		while (res.isValidRow()) {
+			var item = {
+				latin : res.fieldByName('latin'),
+				de : res.fieldByName('de'),
+				en : res.fieldByName('en'),
+				image : '/assets/' + res.fieldByName('latin').toLowerCase() + '.png'
+
+			};
+			families.push(item);
+			res.next();
+		}
+		res.close();
+		link.close();
+		console.log(families);
+		return families.sort(function(a, b) {
+			return a.latin > b.latin ? true : false;
+		});
+	},
+	getSpecies : function(id) {
+		var link = Ti.Database.open(DBNAME);
+
+		var res = link.execute('SELECT * FROM species WHERE families = ?', id);
+		var species = [];
+		while (res.isValidRow()) {
+			var item = {
+				latin : res.fieldByName('latin'),
+				de : res.fieldByName('de'),
+				en : res.fieldByName('en'),
+				image : '/assets/' + res.fieldByName('latin').toLowerCase() + '.png'
+
+			};
+			species.push(item);
+			res.next();
+		}
+		res.close();
+		link.close();
+
+		return species.sort(function(a, b) {
+			return a.latin > b.latin ? true : false;
+		});
+	},
+	getRecords : function(id) {
+		var link = Ti.Database.open(DBNAME);
+		var res = link.execute('SELECT * FROM records WHERE species = ?', id);
+		var records = [];
+		while (res.isValidRow()) {
+			var ID = res.fieldByName('filename');
+			var record = {
+				species : res.fieldByName('species'),
+				deutscher_name : res.fieldByName('deutscher_name') || res.fieldByName('species'),
+				beschreibung : res.fieldByName('Beschreibung'),
+				gps : res.fieldByName('latitude') + ',' + res.fieldByName('longitude'),
+				mp3 : 'http://www.tierstimmenarchiv.de/recordings/' + ID + '_short.mp3',
+				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + ID + '_short.mp3.wav.png.jpg',
+				autor : res.fieldByName('autor'),
+
+				copyright : res.fieldByName("Copyright")
+			};
+			records.push(record);
+			res.next();
+		}
+		res.close();
+		link.close();
+		return records;
+
+	},
+	getRecordsWithLatLng : function() {
+		var link = Ti.Database.open(DBNAME);
+		var res = link.execute('SELECT * FROM records WHERE latitude <> 0 AND longitude <>0');
+		var records = [];
+		while (res.isValidRow()) {
+			var ID = res.fieldByName('filename');
+			var record = {
+				species : res.fieldByName('species'),
+				deutscher_name : res.fieldByName('deutscher_name') || res.fieldByName('species'),
+				beschreibung : res.fieldByName('Beschreibung'),
+				gps : res.fieldByName('latitude') + ',' + res.fieldByName('longitude'),
+				mp3 : 'http://www.tierstimmenarchiv.de/recordings/' + ID + '_short.mp3',
+				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + ID + '_short.mp3.wav.png.jpg',
+				autor : res.fieldByName('autor'),
+			};
+			records.push(record);
+			res.next();
+		}
+		res.close();
+		console.log(records.length);
+		return records;
+	},
 	searchAnimals : function(needle) {
 		var link = Ti.Database.open(DBNAME);
-		var res = link.execute('SELECT * FROM records WHERE deutscher_name LIKE "%' + needle + '%" ORDER BY species LIMIT 200');
+		var res = link.execute('SELECT * FROM records WHERE deutscher_name LIKE "%' + needle + '%" ORDER BY species LIMIT 500');
 		var records = [];
 		while (res.isValidRow()) {
 			var ID = res.fieldByName('filename');
@@ -77,6 +246,8 @@ Module.prototype = {
 		return species;
 	},
 	fireEvent : function(_event, _payload) {
+		if (!this.eventhandlers)
+			this.eventhandlers = {};
 		if (this.eventhandlers[_event]) {
 			for (var i = 0; i < this.eventhandlers[_event].length; i++) {
 				this.eventhandlers[_event][i].call(this, _payload);
@@ -84,11 +255,15 @@ Module.prototype = {
 		}
 	},
 	addEventListener : function(_event, _callback) {
+		if (!this.eventhandlers)
+			this.eventhandlers = {};
 		if (!this.eventhandlers[_event])
 			this.eventhandlers[_event] = [];
 		this.eventhandlers[_event].push(_callback);
 	},
 	removeEventListener : function(_event, _callback) {
+		if (!this.eventhandlers)
+			this.eventhandlers = {};
 		if (!this.eventhandlers[_event])
 			return;
 		var newArray = this.eventhandlers[_event].filter(function(element) {

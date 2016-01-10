@@ -1,19 +1,12 @@
-var TSA = new (require('model/tsa.adapter'))();
-var АктйонБар = require('com.alcoapps.actionbarextras');
-
 module.exports = function(id) {
 	var timer;
 	var $ = Ti.UI.createWindow({
-		fullscreen : false,
-		theme : "Theme.WithActionBar",
-		backgroundColor : 'transparent'
+		backgroundColor : COLOR.LIGHTGREEN
 	});
-	$.add(Ti.UI.createView({
-		backgroundColor : '#80ffffff'
-	}));
+
 	$.searchView = Ti.UI.createTextField({
 		height : 40,
-		top : 0,
+		top : -50,
 		font : {
 			fontFamily : 'Helvetica-Bold',
 			fontSize : 18
@@ -22,49 +15,31 @@ module.exports = function(id) {
 		borderRadius : 5,
 		autocorrect : false,
 		color : COLOR.DARKGREEN,
-
+		borderRadius : 5,
+		borderWidth : Ti.Android ? 0 : 1,
+		borderColor : 'silver',
 		zIndex : 999,
 		hintText : "Suchbegriff, beispielsweise „Esel“",
-		softKeyboardOnFocus : Ti.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
-	});
-	$.addEventListener('open', function(_event) {
-		function onCloseFn() {
-			$.close();
-		};
-		АктйонБар.setTitle('Tierstimmenarchiv');
-		АктйонБар.setFont('Helvetica-Bold');
-		АктйонБар.setSubtitle('Naturkundemuseum Berlin');
-		АктйонБар.displayUseLogoEnabled = false;
-		АктйонБар.setStatusbarColor(COLOR.BROWN);
-		_event.source.getActivity().actionBar.displayHomeAsUp = false;
-		var activity = _event.source.getActivity();
-		АктйонБар.backgroundColor = COLOR.DARKGREEN;
-		$.searchView.animate({
-			top : 90,
-			duration : 1000
-		}, function() {
-
-			Ti.UI.createNotification({
-				message : 'Geben Sie einen Suchbegriff ein.'
-			}).show();
-			$.searchView.focus();
-
-		});
+		softKeyboardOnFocus : Ti.Android ? Ti.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS : undefined
 	});
 
 	$.listView = Ti.UI.createListView({
+		sections : [],
 		templates : {
 			'template' : require('TEMPLATES').animalsounds
 		},
 		defaultItemTemplate : 'template',
-		top : 120
+		top : Ti.Android ? 50 : 50
 	});
+	console.log('DB was imported ==> ready');
 	$.add($.listView);
 	$.add($.searchView);
+	
+	var TSA = new (require('model/tsa.adapter'))();
 	$.searchView.addEventListener('change', function(_e) {
 		var needle = _e.source.getValue();
 		if (needle.length == 0) {
-			$.listView.sections= [];
+			$.listView.setSections([]);
 			$.listView.backgroundColor = 'transparent';
 			_e.source.blur();
 		} else if (needle.length > 2) {
@@ -104,7 +79,7 @@ module.exports = function(id) {
 					});
 
 				});
-				$.listView.sections= sections;
+				$.listView.setSections(sections);
 				$.listView.backgroundColor = COLOR.BROWN;
 				setTimeout(function() {
 					$.searchView.blur();
@@ -116,9 +91,24 @@ module.exports = function(id) {
 		var sound = JSON.parse(_e.itemId);
 		require('ui/player.window')(sound).open();
 	});
+	$.addEventListener('focus', function(_e) {
+		if ($ && $.searchView)
+			$.searchView.animate({
+				top : 0
+			}, function() {
+
+				Ti.Android && Ti.UI.createNotification({
+					message : 'Geben Sie einen Suchbegriff ein.'
+				}).show();
+				$.searchView.focus();
+			});
+	});
 	$.addEventListener('close', function(_e) {
-		if ($ && $.listView)
-			$.listView = null;
+
+	});
+	$.addEventListener('blur', function(_e) {
+		
+
 	});
 	require('vendor/versionsreminder')();
 	return $;

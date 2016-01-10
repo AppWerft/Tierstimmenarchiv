@@ -3,18 +3,35 @@ const COLOR = {
 	DARKGREEN : '#174122',
 	BROWN : '#B87C25'
 };
-
-var $ = require('ui/search.window')();
-
-$.addEventListener("android:back", function(_e) {
-	_e.cancelBubble = true;
-	var intent = Ti.Android.createIntent({
-		action : Ti.Android.ACTION_MAIN,
-		flags : Ti.Android.FLAG_ACTIVITY_NEW_TASK
+var logo = Ti.UI.createImageView({
+		image : '/assets/foxes.png',
+		top : '20%',
+		transform : Ti.UI.create2DMatrix({
+			scale : 0.01
+		}),
+		width : Ti.UI.FILL,
+		height : 'auto'
 	});
-	intent.addCategory(Ti.Android.CATEGORY_HOME);
-	Ti.Android.currentActivity.startActivity(intent);
-	return false;
+var $ = Ti.UI.createWindow({
+	fullscreen : false,
+	theme : "Theme.WithActionBar",
+	title : 'Tierstimmenarchiv',
+	backgroundColor : Ti.Android ? 'transparent' : 'white',
+	/*rightNavButtons : [Ti.UI.createButton({
+	 title : 'Karte'
+	 }), Ti.UI.createButton({
+	 title : 'Taxo'
+	 })]*/
 });
-$.open();
+
+var TSA = new (require('model/tsa.adapter'))();
+if (TSA.importDB.isImported()) {
+	var tabgroup =require('ui/tabgroup')();
+		tabgroup.open();
+} else {
+	TSA.importDB.doInit();
+	TSA.importDB.Taxo();
+	require('ui/tabgroup')().open();
+	TSA.doImport.Records();
+}
 
