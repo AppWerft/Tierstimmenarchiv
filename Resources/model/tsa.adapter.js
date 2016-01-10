@@ -1,4 +1,4 @@
-const DBNAME = 'TSA42';
+const DBNAME = 'TSA';
 
 var Module = function() {
 	this.eventhandlers = [];
@@ -9,29 +9,42 @@ Module.prototype = {
 		return Ti.App.Properties.hasProperty(DBNAME);
 	},
 	Import_Init : function() {
+		var start = new Date().getTime();
 		this.rows = JSON.parse(Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'tsa.json').read().text).Workbook.Worksheet.Table.Row;
+		console.log('durationJSONparsing :' + (new Date().getTime() - start));
 	},
 	Import_loadTaxo : function() {
+		const SPECIES = 0,
+		    FAMILY = 6,
+		    ORDER = 9,
+		    CLASS = 11;
 		var start = new Date().getTime();
+		var insertedspecies = {};
+		var insertedfamilies = {};
+
+		// daves inserted species
 		var link = Ti.Database.open(DBNAME);
 		Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'init.sql').read().text.split('\n').forEach(function(sql) {
 			if (sql.length > 1) {
-				console.log(sql);
 				link.execute(sql);
 			}
 		});
+		console.log('durationCREATING TABLES :' + (new Date().getTime() - start));
+		start = new Date().getTime();
 		link.execute('PRAGMA synchronous = OFF');
 		link.execute('BEGIN TRANSACTION');
 		var ndx = 0,
 		    total = 0;
 		var that = this;
 		this.rows.forEach(function(row, count) {
-			if (count > 0 && Array.isArray(row.C) && row.C.length == 30) {
+			if (count > 0 && Array.isArray(row.C) && row.C.length == 30 && !insertedspecies[row.C[SPECIES]] && !insertedfamilies[row.C[FAMILY]]) {
 				var _ = row.C;
-				link.execute("INSERT OR REPLACE INTO species VALUES (?,?,?,?)", _[0], _[6], _[5], _[4]);
-				link.execute("INSERT OR REPLACE INTO families VALUES (?,?,?,?)", _[6], _[9], _[8], _[7]);
-				link.execute("INSERT OR REPLACE INTO orders VALUES (?,?,?,?)", _[9], _[11], '', _[10]);
-				link.execute("INSERT OR REPLACE INTO classes VALUES (?,?,?)", _[11], '', '');
+				link.execute("INSERT INTO species VALUES (?,?,?,?)", _[SPECIES], _[6], _[5], _[4]);
+				link.execute("INSERT INTO families VALUES (?,?,?,?)", _[FAMILY], _[9], _[8], _[7]);
+				link.execute("INSERT OR REPLACE INTO orders VALUES (?,?,?,?)", _[ORDER], _[11], '', _[10]);
+				link.execute("INSERT OR REPLACE INTO classes VALUES (?,?,?)", _[CLASS], '', '');
+				insertedspecies[_[SPECIES]] = true;
+				insertedfamilies[_[FAMILY]] = true;
 			}
 		});
 		link.execute('COMMIT');
@@ -58,7 +71,7 @@ Module.prototype = {
 						progress : count / that.rows.length
 					});
 				}
-				link.execute("INSERT OR REPLACE INTO records VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", _[0], _[1], _[2], _[4], _[5], _[14], _[15], _[16], _[17], _[18], _[19], _[20], _[21], _[22], _[23], _[24], _[25], _[26], _[27], _[28], _[29]);
+				link.execute("INSERT INTO records VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", _[0], _[1], _[2], _[4], _[5], _[14], _[15], _[16], _[17], _[18], _[19], _[20], _[21], _[22], _[23], _[24], _[25], _[26], _[27], _[28], _[29]);
 			}
 		});
 		link.execute('COMMIT');
@@ -69,7 +82,7 @@ Module.prototype = {
 		return true;
 
 	},
-	getClasses : function() {
+	getAllClasses : function() {
 		var link = Ti.Database.open(DBNAME);
 		console.log(link.file);
 		var res = link.execute('SELECT * FROM classes WHERE latin <> ""');
@@ -92,7 +105,7 @@ Module.prototype = {
 			return a.latin > b.latin ? true : false;
 		});
 	},
-	getOrders : function(id) {
+	getOrdersByClass : function(id) {
 		var link = Ti.Database.open(DBNAME);
 		console.log(link.file);
 		var res = link.execute('SELECT * FROM orders WHERE classes = ?', id);
@@ -115,7 +128,7 @@ Module.prototype = {
 			return a.latin > b.latin ? true : false;
 		});
 	},
-	getFamilies : function(id) {
+	getFamiliesByOrdo : function(id) {
 		var link = Ti.Database.open(DBNAME);
 		console.log(id);
 		var res = link.execute('SELECT * FROM families WHERE orders = ?', id);
@@ -138,7 +151,7 @@ Module.prototype = {
 			return a.latin > b.latin ? true : false;
 		});
 	},
-	getSpecies : function(id) {
+	getSpeciesByFamily : function(id) {
 		var link = Ti.Database.open(DBNAME);
 
 		var res = link.execute('SELECT * FROM species WHERE families = ?', id);
@@ -161,7 +174,7 @@ Module.prototype = {
 			return a.latin > b.latin ? true : false;
 		});
 	},
-	getRecords : function(id) {
+	getRecordsBySpecies : function(id) {
 		var link = Ti.Database.open(DBNAME);
 		var res = link.execute('SELECT * FROM records WHERE species = ?', id);
 		var records = [];

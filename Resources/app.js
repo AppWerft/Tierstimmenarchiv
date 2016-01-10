@@ -4,14 +4,14 @@ const COLOR = {
 	BROWN : '#B87C25'
 };
 var logo = Ti.UI.createImageView({
-		image : '/assets/foxes.png',
-		top : '20%',
-		transform : Ti.UI.create2DMatrix({
-			scale : 0.01
-		}),
-		width : Ti.UI.FILL,
-		height : 'auto'
-	});
+	image : '/assets/foxes.png',
+	top : '20%',
+	transform : Ti.UI.create2DMatrix({
+		scale : 0.01
+	}),
+	width : Ti.UI.FILL,
+	height : 'auto'
+});
 var $ = Ti.UI.createWindow({
 	fullscreen : false,
 	theme : "Theme.WithActionBar",
@@ -26,12 +26,15 @@ var $ = Ti.UI.createWindow({
 
 var TSA = new (require('model/tsa.adapter'))();
 if (TSA.Import_isDone()) {
-	var tabgroup =require('ui/tabgroup')();
-		tabgroup.open();
+	var tabgroup = require('ui/tabgroup')();
+	tabgroup.open();
 } else {
 	TSA.Import_Init();
 	TSA.Import_loadTaxo();
+	setTimeout(function() {
+		TSA.Import_loadRecords();
+	}, 1000);
 	require('ui/tabgroup')().open();
-	TSA.Import_loadRecords();
+
 }
 

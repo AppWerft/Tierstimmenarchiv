@@ -12,7 +12,7 @@ module.exports = function(id) {
 	});
 	$.add($.listView);
 	var TSA = new (require('model/tsa.adapter'))();
-	var records = TSA.getRecords(id);
+	var records = TSA.getRecordsBySpecies(id);
 	var lastndx;
 
 	$.listView.sections[0].items = records.map(function(sound) {

@@ -4,7 +4,7 @@ module.exports = function(id) {
 		backgroundColor : COLOR.LIGHTGREEN
 	});
 	var TSA = new (require('model/tsa.adapter'))();
-	var rows = TSA.getFamilies(id).map(function(c) {
+	var rows = TSA.getFamiliesByOrdo(id).map(function(c) {
 		var row = Ti.UI.createTableViewRow({
 			height : Ti.UI.SIZE,
 			hasChild : true,
@@ -22,7 +22,7 @@ module.exports = function(id) {
 			left : 120,
 			text : c.latin,
 			top : 10,
-			color : COLOR.BROWN,
+			color : COLOR.DARKGREEN,
 			height : Ti.UI.SIZE,
 			font : {
 				fontSize : 22,

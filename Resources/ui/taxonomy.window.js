@@ -10,7 +10,7 @@ module.exports = function(id) {
 	$.add($.list);
 	$.addEventListener('focus', function(_e) {
         $.list.data=[];
-		TSA.getClasses().forEach(function(c) {
+		TSA.getAllClasses().forEach(function(c) {
 			var image = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, c.image).read();
 			console.log(image.width + 'x'+image.height);
 			var row = Ti.UI.createTableViewRow({

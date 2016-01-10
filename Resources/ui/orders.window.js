@@ -4,7 +4,7 @@ module.exports = function(id) {
 		backgroundColor : COLOR.LIGHTGREEN
 	});
 	var TSA = new (require('model/tsa.adapter'))();
-	var rows = TSA.getOrders(id).map(function(c) {
+	var rows = TSA.getOrdersByClass(id).map(function(c) {
 		var row = Ti.UI.createTableViewRow({
 			height : Ti.UI.SIZE,
 			hasChild : true,
@@ -22,7 +22,7 @@ module.exports = function(id) {
 			left : 120,
 			text : c.latin,
 			top : 10,
-			color : COLOR.BROWN,
+			color : COLOR.DARKGREEN,
 			height : Ti.UI.SIZE,
 			font : {
 				fontSize : 22,
@@ -59,7 +59,7 @@ module.exports = function(id) {
 			};
 			АктйонБар.setTitle('Tierstimmenarchiv');
 			АктйонБар.setFont('Helvetica-Bold');
-			АктйонБар.setSubtitle('Ordo: ' +id);
+			АктйонБар.setSubtitle('Class: ' +id);
 			АктйонБар.displayUseLogoEnabled = false;
 			АктйонБар.setStatusbarColor(COLOR.BROWN);
 			_event.source.getActivity().actionBar.displayHomeAsUp = true;
