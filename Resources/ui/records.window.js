@@ -60,6 +60,24 @@ module.exports = function(id) {
 	});
 	$.addEventListener('blur', function(_e) {
 	});
+	$.addEventListener('open', function(_event) {
+		if (Ti.Android) {
+			var АктйонБар = require('com.alcoapps.actionbarextras');
+			АктйонБар.setTitle('Tierstimmenarchiv');
+			АктйонБар.setFont('Helvetica-Bold');
+			АктйонБар.setSubtitle('Species: ' + id);
+			АктйонБар.displayUseLogoEnabled = false;
+			АктйонБар.setStatusbarColor(COLOR.BROWN);
+			АктйонБар.backgroundColor = COLOR.DARKGREEN;
+			_event.source.getActivity().actionBar.displayHomeAsUp = true;
+			var activity = _event.source.getActivity();
+			activity.actionBar.onHomeIconItemSelected = function() {
+				$.close();
+			};
+			
+		}
+
+	});
 	require('vendor/versionsreminder')();
 	return $;
 };

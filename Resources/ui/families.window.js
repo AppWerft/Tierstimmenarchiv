@@ -58,7 +58,7 @@ module.exports = function(id) {
 			};
 			АктйонБар.setTitle('Tierstimmenarchiv');
 			АктйонБар.setFont('Helvetica-Bold');
-			АктйонБар.setSubtitle('Familia: '+id);
+			АктйонБар.setSubtitle('Ordo: '+id);
 			АктйонБар.displayUseLogoEnabled = false;
 			АктйонБар.setStatusbarColor(COLOR.BROWN);
 			_event.source.getActivity().actionBar.displayHomeAsUp = true;

@@ -1,18 +1,18 @@
 const DBNAME = 'TSA42';
 
 var Module = function() {
-
+	this.eventhandlers = [];
 };
 
-Module.prototype.import = {
-	isImported : function() {
+Module.prototype = {
+	Import_isDone : function() {
 		return Ti.App.Properties.hasProperty(DBNAME);
 	},
-	doInit : function() {
-		this.TSA = JSON.parse(Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'tsa.json').read().text);
-		this.rows = this.TSA.Workbook.Worksheet.Table.Row;
+	Import_Init : function() {
+		this.rows = JSON.parse(Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'tsa.json').read().text).Workbook.Worksheet.Table.Row;
 	},
-	Taxo : function() {
+	Import_loadTaxo : function() {
+		var start = new Date().getTime();
 		var link = Ti.Database.open(DBNAME);
 		Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'init.sql').read().text.split('\n').forEach(function(sql) {
 			if (sql.length > 1) {
@@ -35,19 +35,16 @@ Module.prototype.import = {
 			}
 		});
 		link.execute('COMMIT');
-		console.log('DB transaction finished');
+		console.log('DB TAXO transaction finished');
 		link.close();
-		this.fireEvent('ready', {
-			duration : new Date().getTime() - start
-		});
+		console.log('durationTaxo :' + (new Date().getTime() - start));
 		Ti.App.Properties.setBool(DBNAME + 'TAXO', true);
 		return true;
 
 	},
-	Records : function() {
+	Import_loadRecords : function() {
+		var start = new Date().getTime();
 		var link = Ti.Database.open(DBNAME);
-		console.log(link.file);
-		this.eventhandlers = [];
 		link.execute('PRAGMA synchronous = OFF');
 		link.execute('BEGIN TRANSACTION');
 		var ndx = 0,
@@ -58,7 +55,7 @@ Module.prototype.import = {
 				var _ = row.C;
 				if (!(count % 50)) {
 					that.fireEvent('progress', {
-						progress : count / rows.length
+						progress : count / that.rows.length
 					});
 				}
 				link.execute("INSERT OR REPLACE INTO records VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", _[0], _[1], _[2], _[4], _[5], _[14], _[15], _[16], _[17], _[18], _[19], _[20], _[21], _[22], _[23], _[24], _[25], _[26], _[27], _[28], _[29]);
@@ -67,15 +64,11 @@ Module.prototype.import = {
 		link.execute('COMMIT');
 		console.log('DB transaction finished');
 		link.close();
-		this.fireEvent('ready', {
-			duration : new Date().getTime() - start
-		});
+		console.log('durationRecords :' + (new Date().getTime() - start) + ' ms.');
 		Ti.App.Properties.setBool(DBNAME, true);
 		return true;
-	}
-};
 
-Module.prototype = {
+	},
 	getClasses : function() {
 		var link = Ti.Database.open(DBNAME);
 		console.log(link.file);

@@ -25,13 +25,13 @@ var $ = Ti.UI.createWindow({
 });
 
 var TSA = new (require('model/tsa.adapter'))();
-if (TSA.importDB.isImported()) {
+if (TSA.Import_isDone()) {
 	var tabgroup =require('ui/tabgroup')();
 		tabgroup.open();
 } else {
-	TSA.importDB.doInit();
-	TSA.importDB.Taxo();
+	TSA.Import_Init();
+	TSA.Import_loadTaxo();
 	require('ui/tabgroup')().open();
-	TSA.doImport.Records();
+	TSA.Import_loadRecords();
 }
 

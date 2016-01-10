@@ -55,7 +55,7 @@ module.exports = function(id) {
 			var АктйонБар = require('com.alcoapps.actionbarextras');
 			АктйонБар.setTitle('Tierstimmenarchiv');
 			АктйонБар.setFont('Helvetica-Bold');
-			АктйонБар.setSubtitle('Species: ' + id);
+			АктйонБар.setSubtitle('Class: ' + id);
 			АктйонБар.displayUseLogoEnabled = false;
 			АктйонБар.setStatusbarColor(COLOR.BROWN);
 			АктйонБар.backgroundColor = COLOR.DARKGREEN;
