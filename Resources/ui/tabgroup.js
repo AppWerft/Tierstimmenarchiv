@@ -6,7 +6,7 @@ module.exports = function() {
 		backgroundColor : COLOR.DARKGRREEN,
 		backgroundSelectedColor : COLOR.BROWN,
 		activeTabIconTint : COLOR.BROWN,
-		smoothScrollOnTabClick : true,
+		smoothScrollOnTabClick : false,
 		tintColor : COLOR.BROWN,
 		theme : 'Theme.WithActionBar',
 		tabs : [Ti.UI.createTab({
@@ -19,15 +19,14 @@ module.exports = function() {
 			title : 'Taxonomie',
 			icon : '/assets/orgchart.png',
 			backgroundColor : '#092B55'
+		}), Ti.UI.createTab({
+			window : require('ui/map.window')(),
+			title : 'Karte',
+			icon : '/assets/map.png',
+			backgroundColor : '#092B55'
 		})]
 	});
 
-	self.addTab(Ti.UI.createTab({
-		window : require('ui/map.window')(),
-		title : 'Karte',
-		icon : '/assets/map.png',
-		backgroundColor : '#092B55'
-	}));
 	self.addEventListener('open', function(_event) {
 		if (Ti.Android) {
 			var АктйонБар = require('com.alcoapps.actionbarextras');

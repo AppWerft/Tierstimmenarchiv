@@ -34,7 +34,9 @@ if (TSA.Import_isDone()) {
 	setTimeout(function() {
 		TSA.Import_loadRecords();
 	}, 1000);
+	console.log('Info:  tabgroup open ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈');
 	require('ui/tabgroup')().open();
+	console.log('Info:  tabgroup opened ≈≈≈≈≈≈≈≈≈≈≈≈≈≈');
 
 }
 

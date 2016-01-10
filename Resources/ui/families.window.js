@@ -55,6 +55,7 @@ module.exports = function(id) {
 			var АктйонБар = require('com.alcoapps.actionbarextras');
 			function onCloseFn() {
 				$.close();
+				$ = null;
 			};
 			АктйонБар.setTitle('Tierstimmenarchiv');
 			АктйонБар.setFont('Helvetica-Bold');
@@ -63,9 +64,7 @@ module.exports = function(id) {
 			АктйонБар.setStatusbarColor(COLOR.BROWN);
 			_event.source.getActivity().actionBar.displayHomeAsUp = true;
 			var activity = _event.source.getActivity();
-			activity.actionBar.onHomeIconItemSelected = function() {
-				$.close();
-			};
+			activity.actionBar.onHomeIconItemSelected = onCloseFn;
 			АктйонБар.backgroundColor = COLOR.DARKGREEN;
 		}
 

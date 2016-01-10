@@ -1,4 +1,4 @@
-const DBNAME = 'TSA';
+const DBNAME = 'TSAxx';
 
 var Module = function() {
 	this.eventhandlers = [];
@@ -84,7 +84,6 @@ Module.prototype = {
 	},
 	getAllClasses : function() {
 		var link = Ti.Database.open(DBNAME);
-		console.log(link.file);
 		var res = link.execute('SELECT * FROM classes WHERE latin <> ""');
 		var classes = [];
 		while (res.isValidRow()) {
@@ -100,14 +99,12 @@ Module.prototype = {
 		}
 		res.close();
 		link.close();
-		console.log(classes);
 		return classes.sort(function(a, b) {
 			return a.latin > b.latin ? true : false;
 		});
 	},
 	getOrdersByClass : function(id) {
 		var link = Ti.Database.open(DBNAME);
-		console.log(link.file);
 		var res = link.execute('SELECT * FROM orders WHERE classes = ?', id);
 		var classes = [];
 		while (res.isValidRow()) {
@@ -123,7 +120,6 @@ Module.prototype = {
 		}
 		res.close();
 		link.close();
-		console.log(classes);
 		return classes.sort(function(a, b) {
 			return a.latin > b.latin ? true : false;
 		});
@@ -201,24 +197,25 @@ Module.prototype = {
 	},
 	getRecordsWithLatLng : function() {
 		var link = Ti.Database.open(DBNAME);
+		console.log('getRecordsWithLatLng ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈');
 		var res = link.execute('SELECT * FROM records WHERE latitude <> 0 AND longitude <>0');
 		var records = [];
 		while (res.isValidRow()) {
 			var ID = res.fieldByName('filename');
 			var record = {
-				species : res.fieldByName('species'),
-				deutscher_name : res.fieldByName('deutscher_name') || res.fieldByName('species'),
-				beschreibung : res.fieldByName('Beschreibung'),
-				gps : res.fieldByName('latitude') + ',' + res.fieldByName('longitude'),
-				mp3 : 'http://www.tierstimmenarchiv.de/recordings/' + ID + '_short.mp3',
-				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + ID + '_short.mp3.wav.png.jpg',
-				autor : res.fieldByName('autor'),
+				itemId :  'http://www.tierstimmenarchiv.de/recordings/' + ID + '_short.mp3',
+				id :   ID,
+				image : '/assets/point.png',
+				title : res.fieldByName('species'),
+				subtitle : res.fieldByName('Beschreibung'),
+				lat : res.fieldByName('latitude'),
+				lng : res.fieldByName('longitude'),
 			};
 			records.push(record);
 			res.next();
 		}
 		res.close();
-		console.log(records.length);
+		console.log('~~~~~~~~~POIs:'+ records.length);
 		return records;
 	},
 	searchAnimals : function(needle) {
