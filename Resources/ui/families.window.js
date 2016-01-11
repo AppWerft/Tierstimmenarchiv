@@ -11,7 +11,6 @@ module.exports = function(id) {
 			itemId : c.latin
 		});
 		row.add(Ti.UI.createImageView({
-			image : c.image,
 			defaultImage : '/assets/default.png',
 			top : 0,
 			left : 0,
@@ -30,7 +29,7 @@ module.exports = function(id) {
 			}
 		}));
 		row.add(Ti.UI.createLabel({
-			left : 150,
+			left : 120,
 			top : 40,
 			text : c.de,
 			color : COLOR.BROWN,
@@ -40,6 +39,12 @@ module.exports = function(id) {
 
 			}
 		}));
+		require('vendor/wikimedia.adapter').getSpeciesImage(c.latin, function(_imageblob) {
+			row.children[0].setImage(_imageblob);
+			row.children[0].setHeight(_imageblob.height * 100 / _imageblob.width);
+			row.children[0].setWidth(100);
+
+		});
 		return row;
 	});
 	$.list = Ti.UI.createTableView({
@@ -59,7 +64,7 @@ module.exports = function(id) {
 			};
 			АктйонБар.setTitle('Tierstimmenarchiv');
 			АктйонБар.setFont('Helvetica-Bold');
-			АктйонБар.setSubtitle('Ordo: '+id);
+			АктйонБар.setSubtitle('Ordo: ' + id);
 			АктйонБар.displayUseLogoEnabled = false;
 			АктйонБар.setStatusbarColor(COLOR.BROWN);
 			_event.source.getActivity().actionBar.displayHomeAsUp = true;

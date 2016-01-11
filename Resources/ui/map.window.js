@@ -1,6 +1,6 @@
 var Map = require('ti.map');
 var TSA = new (require('model/tsa.adapter'))();
-var Overlay;
+var Overlays = {};
 module.exports = function() {
 	var $ = Ti.UI.createWindow();
 	if (require('gms.test')()) {
@@ -25,13 +25,17 @@ module.exports = function() {
 		});
 	}
 	$.addEventListener('focus', function(_event) {
-		
-		if (Overlay) return;
-			Overlay = new (require('ti.markermanager'))({
-				name : 'TSA',
-				points : TSA.getRecordsWithLatLng(),
+		var MarkerManager = require('ti.markermanager');
+		if (Overlays == {})
+			return;
+		var records = TSA.getRecordsWithLatLng();
+		Object.getOwnPropertyNames(records).forEach(function(classname) {
+			Overlays[classname] = new MarkerManager({
+				name : classname,
+				points : records[classname],
 				map : $.mapView
 			});
+		});
 	});
 	return $;
 };

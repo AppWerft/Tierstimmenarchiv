@@ -11,17 +11,22 @@ module.exports = function(id) {
 			itemId : c.latin
 		});
 		row.add(Ti.UI.createImageView({
-			image : c.image,
+			
 			defaultImage : '/assets/default.png',
 			top : 0,
 			left : 0,
-			width : 90,
+			width : 110,
 			height : 'auto'
 		}));
-		row.add(Ti.UI.createLabel({
-			left : 100,
-			text : c.latin,
+		row.add(Ti.UI.createView({
+			left : 120,
 			top : 10,
+			layout : 'vertical'
+		}));
+		row.children[1].add(Ti.UI.createLabel({
+			left : 0,
+			text : c.latin,
+			top : 0,
 			color : COLOR.DARKGREEN,
 			height : Ti.UI.SIZE,
 			font : {
@@ -29,9 +34,9 @@ module.exports = function(id) {
 				fontWeight : 'bold'
 			}
 		}));
-		row.add(Ti.UI.createLabel({
-			left : 150,
-			top : 40,
+		row.children[1].add(Ti.UI.createLabel({
+			left : 0,
+			top : 5,
 			text : c.de,
 			color : COLOR.BROWN,
 			height : Ti.UI.SIZE,
@@ -40,6 +45,12 @@ module.exports = function(id) {
 
 			}
 		}));
+		require('vendor/wikimedia.adapter').getSpeciesImage(c.latin, function(_imageblob) {
+				row.children[0].setHeight(_imageblob.height * 110 / _imageblob.width);
+				row.children[0].setWidth(110);
+
+			row.children[0].setImage(_imageblob);
+		});
 		return row;
 	});
 	$.list = Ti.UI.createTableView({
@@ -64,7 +75,7 @@ module.exports = function(id) {
 			activity.actionBar.onHomeIconItemSelected = function() {
 				$.close();
 			};
-			
+
 		}
 
 	});

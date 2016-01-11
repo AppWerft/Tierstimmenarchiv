@@ -198,24 +198,25 @@ Module.prototype = {
 	getRecordsWithLatLng : function() {
 		var link = Ti.Database.open(DBNAME);
 		console.log('getRecordsWithLatLng ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈');
-		var res = link.execute('SELECT * FROM records WHERE latitude <> 0 AND longitude <>0');
-		var records = [];
+		var res = link.execute('SELECT classes.latin AS class,records.* FROM classes,records,species,families,orders WHERE records.latitude <> 0 AND records.longitude <>0 AND records.species=species.latin AND species.families=families.latin AND families.orders=orders.latin AND orders.classes=classes.latin');
+		var records = {};
 		while (res.isValidRow()) {
 			var ID = res.fieldByName('filename');
+			var Class = res.fieldByName('class');
+			if (!records[Class]) records[Class] =[];
 			var record = {
 				itemId :  'http://www.tierstimmenarchiv.de/recordings/' + ID + '_short.mp3',
 				id :   ID,
-				image : '/assets/point.png',
+				image : '/images/'+Class+'.png',
 				title : res.fieldByName('species'),
 				subtitle : res.fieldByName('Beschreibung'),
 				lat : res.fieldByName('latitude'),
 				lng : res.fieldByName('longitude'),
 			};
-			records.push(record);
+			records[Class].push(record);
 			res.next();
 		}
 		res.close();
-		console.log('~~~~~~~~~POIs:'+ records.length);
 		return records;
 	},
 	searchAnimals : function(needle) {
