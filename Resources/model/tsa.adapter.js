@@ -1,8 +1,14 @@
-const DBNAME = 'TSAxx';
+const DBNAME = 'TSAx2';
+
+const SPECIES = 0,
+		    FAMILY = 6,
+		    ORDER = 9,
+		    CLASS = 11;
 
 var Module = function() {
 	this.eventhandlers = [];
 };
+
 
 Module.prototype = {
 	Import_isDone : function() {
@@ -14,10 +20,7 @@ Module.prototype = {
 		console.log('durationJSONparsing :' + (new Date().getTime() - start));
 	},
 	Import_loadTaxo : function() {
-		const SPECIES = 0,
-		    FAMILY = 6,
-		    ORDER = 9,
-		    CLASS = 11;
+		
 		var start = new Date().getTime();
 		var insertedspecies = {};
 		var insertedfamilies = {};
@@ -40,9 +43,9 @@ Module.prototype = {
 			if (count > 0 && Array.isArray(row.C) && row.C.length == 30 && !insertedspecies[row.C[SPECIES]] && !insertedfamilies[row.C[FAMILY]]) {
 				var _ = row.C;
 				link.execute("INSERT INTO species VALUES (?,?,?,?)", _[SPECIES], _[6], _[5], _[4]);
-				link.execute("INSERT INTO families VALUES (?,?,?,?)", _[FAMILY], _[9], _[8], _[7]);
-				link.execute("INSERT OR REPLACE INTO orders VALUES (?,?,?,?)", _[ORDER], _[11], '', _[10]);
-				link.execute("INSERT OR REPLACE INTO classes VALUES (?,?,?)", _[CLASS], '', '');
+				link.execute("INSERT INTO families VALUES (?,?,?,?)", _[FAMILY].replace(' ',''), _[9], _[8], _[7]);
+				link.execute("INSERT OR REPLACE INTO orders VALUES (?,?,?,?)", _[ORDER].replace(' ',''), _[11], '', _[10]);
+				link.execute("INSERT OR REPLACE INTO classes VALUES (?,?,?)", _[CLASS].replace(' ',''), '', '');
 				insertedspecies[_[SPECIES]] = true;
 				insertedfamilies[_[FAMILY]] = true;
 			}
@@ -71,7 +74,7 @@ Module.prototype = {
 						progress : count / that.rows.length
 					});
 				}
-				link.execute("INSERT INTO records VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", _[0], _[1], _[2], _[4], _[5], _[14], _[15], _[16], _[17], _[18], _[19], _[20], _[21], _[22], _[23], _[24], _[25], _[26], _[27], _[28], _[29]);
+				link.execute("INSERT INTO records VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", _[SPECIES], _[1], _[2], _[4], _[5], _[14], _[15], _[16], _[17], _[18], _[19], _[20], _[21], _[22], _[23], _[24], _[25], _[26], _[27], _[28], _[29]);
 			}
 		});
 		link.execute('COMMIT');

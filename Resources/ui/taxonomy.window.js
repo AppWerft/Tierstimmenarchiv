@@ -31,7 +31,7 @@ module.exports = function(id) {
 				left : 120,
 				text : c.latin,
 				touchEnabled : false,
-				color : COLOR.BROWN,
+				color : COLOR.DARKGREEN,
 				font : {
 					fontSize : 22,
 					fontWeight : 'bold'
