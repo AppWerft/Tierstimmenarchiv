@@ -28,9 +28,8 @@ module.exports = function(id) {
 			АктйонБар.backgroundColor = COLOR.DARKGREEN;
 		}
 		var TSA = new (require('model/tsa.adapter'))();
-		var rows = TSA.getOrdersByClass(id).map(require('ui/taxo.row')(c));
 		$.list = Ti.UI.createTableView({
-			data : rows
+			data : TSA.getOrdersByClass(id).map(require('ui/taxo.row'))
 		});
 		$.add($.list);
 		$.list.addEventListener('click', function(_e) {

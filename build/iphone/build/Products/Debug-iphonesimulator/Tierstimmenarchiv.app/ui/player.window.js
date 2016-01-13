@@ -1,9 +1,14 @@
-
 const DURATION = 20000;
+var TSA = new (require('model/tsa.adapter'))();
 
-module.exports = function(sound) {
+module.exports = function(_e) {
+	var record = TSA.getRecordById(_e.itemId);
+	console.log('RECORDS');
+	console.log(record);
+	if (!record)
+		return;
 	var audioPlayer = Ti.Media.createAudioPlayer({
-		url : sound.mp3,
+		url : record.audio,
 		allowBackground : true,
 		volume : 1
 	});
@@ -28,18 +33,10 @@ module.exports = function(sound) {
 		$.close();
 	});
 	var $ = Ti.UI.createWindow({
-		backgroundColor : 'transparent',
-		title : '',
-		theme : 'Theme.NoActionBar',
-		fullscreen : true,
-		screenOrientations : [Ti.UI.PORTRAIT]
+		backgroundColor : 'transparent'
 	});
-	$.darker = Ti.UI.createView({
-		backgroundColor : '#a030'
-	});
-	$.add($.darker);
-	$.addEventListener('click', function() {
-		$.close();
+	$.listView = Ti.UI.createTableView({
+		bottom : 200
 	});
 	$.playerView = Ti.UI.createView({
 		backgroundColor : 'black',
@@ -49,7 +46,7 @@ module.exports = function(sound) {
 	$.playerView.add(Ti.UI.createImageView({
 		width : Ti.UI.FILL,
 		height : Ti.UI.FILL,
-		image : sound.spectrogram
+		image : record.spectrogram
 	}));
 	$.playerView.darker = Ti.UI.createView({
 		backgroundColor : '#e000',
@@ -57,21 +54,10 @@ module.exports = function(sound) {
 		right : 0
 	});
 	$.playerView.add($.playerView.darker);
-	$.playerView.add(Ti.UI.createLabel({
-		text : sound.title,
-		color : COLOR.LIGHTGREEN,
-		bottom : 160,
-		opacity : 0.4,
-		height : 33,
-		wordWrap : false,
-		ellipsize : Ti.UI.TEXT_ELLIPSIZE_TRUNCATE_MARQUEE,
-		font : {
-			fontSize : 24,
-			fontWeight : 'bold'
-		}
-	}));
 
 	$.add($.playerView);
+	$.add($.listView);
+
 	$.addEventListener('close', function() {
 		audioPlayer.pause();
 		audioPlayer.stop();
@@ -79,5 +65,23 @@ module.exports = function(sound) {
 		audioPlayer = null;
 	});
 	audioPlayer.start();
-	return $;
+	$.addEventListener('open', function(_event) {
+		if (Ti.Android) {
+			var АктйонБар = require('com.alcoapps.actionbarextras');
+			АктйонБар.setTitle('Tierstimmenarchiv');
+			АктйонБар.setFont('Helvetica-Bold');
+			АктйонБар.setSubtitle('Aufnahme von: ' + record.Autor);
+			АктйонБар.displayUseLogoEnabled = false;
+			АктйонБар.setStatusbarColor(COLOR.BROWN);
+			АктйонБар.backgroundColor = COLOR.DARKGREEN;
+			_event.source.getActivity().actionBar.displayHomeAsUp = true;
+			var activity = _event.source.getActivity();
+			activity.actionBar.onHomeIconItemSelected = function() {
+				$.close();
+			};
+
+		}
+
+	});
+	$.open();
 };

@@ -1,6 +1,6 @@
 Ti.UI.backgroundColor = COLOR.BROWN;
 module.exports = function() {
-	var self = Ti.UI.createTabGroup({
+	var $ = Ti.UI.createTabGroup({
 		fullscreen : false,
 		swipeable : true,
 		backgroundColor : COLOR.DARKGRREEN,
@@ -24,8 +24,9 @@ module.exports = function() {
 			backgroundColor : '#092B55'
 		})]
 	});
-
-	self.addEventListener('open', function(_event) {
+	$.addEventListener('open', function(_event) {
+		$.tabs[0].window = require('ui/search.window')();
+		$.tabs[2].window = require('ui/map.window')();
 		if (Ti.Android) {
 			var АктйонБар = require('com.alcoapps.actionbarextras');
 			function onCloseFn() {
@@ -40,9 +41,8 @@ module.exports = function() {
 			var activity = _event.source.getActivity();
 			АктйонБар.backgroundColor = COLOR.DARKGREEN;
 		}
-		self.tabs[0].window = require('ui/search.window')();
-		self.tabs[2].window = require('ui/map.window')();
 	});
-	self.activeTab = 1;
-	self.open();
+	if (Ti.Android) $.activeTab = 1;
+	console.log($.apiName);
+	$.open();
 };

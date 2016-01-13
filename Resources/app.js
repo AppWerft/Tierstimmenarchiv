@@ -34,7 +34,7 @@ if (TSA.Import_isDone()) {
 	TSA.Import_loadTaxo();
 	setTimeout(function() {
 		TSA.Import_loadRecords();
-		Ti.UI.createNotification({message:'Tierstimmenarchiv importiert'}).show();
+		Ti.Android && Ti.UI.createNotification({message:'Tierstimmenarchiv importiert'}).show();
 	}, 1000);
 	console.log('Info:  tabgroup open ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈');
 	require('ui/tabgroup')();

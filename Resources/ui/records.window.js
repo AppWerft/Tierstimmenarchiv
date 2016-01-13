@@ -14,11 +14,11 @@ module.exports = function(id) {
 	var TSA = new (require('model/tsa.adapter'))();
 	var records = TSA.getRecordsBySpecies(id);
 	var lastndx;
-
+    console.log(records);
 	$.listView.sections[0].items = records.map(function(sound) {
 		return {
 			properties : {
-				itemId : JSON.stringify(sound),
+				itemId : sound.itemId,
 				accessoryType : Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
 			},
 			deutscher_name : {
@@ -40,10 +40,8 @@ module.exports = function(id) {
 
 	});
 	
-	$.listView.addEventListener('itemclick', function(_e) {
-		var sound = JSON.parse(_e.itemId);
-		require('ui/player.window')(sound).open();
-	});
+	$.listView.addEventListener('itemclick',require('ui/player.window'));
+	
 	$.addEventListener('focus', function(_e) {
 		if ($ && $.searchView)
 			$.searchView.animate({

@@ -1,4 +1,19 @@
-const DBNAME = 'TSAxy';
+const DBNAME = 'TSAx6';
+
+if (!String.prototype.trim) {
+  (function() {
+    // Make sure we trim BOM and NBSP
+    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+    String.prototype.trim = function() {
+      return this.replace(rtrim, '');
+    };
+  })();
+}
+
+const SPECIES = 0,
+    FAMILY = 6,
+    ORDER = 9,
+    CLASS = 11;
 
 var Module = function() {
 	this.eventhandlers = [];
@@ -14,10 +29,7 @@ Module.prototype = {
 		console.log('durationJSONparsing :' + (new Date().getTime() - start));
 	},
 	Import_loadTaxo : function() {
-		const SPECIES = 0,
-		    FAMILY = 6,
-		    ORDER = 9,
-		    CLASS = 11;
+		
 		var start = new Date().getTime();
 		var insertedspecies = {};
 		var insertedfamilies = {};
@@ -36,13 +48,14 @@ Module.prototype = {
 		var ndx = 0,
 		    total = 0;
 		var that = this;
+		
 		this.rows.forEach(function(row, count) {
 			if (count > 0 && Array.isArray(row.C) && row.C.length == 30 && !insertedspecies[row.C[SPECIES]] && !insertedfamilies[row.C[FAMILY]]) {
 				var _ = row.C;
-				link.execute("INSERT INTO species VALUES (?,?,?,?)", _[SPECIES], _[6], _[5], _[4]);
-				link.execute("INSERT INTO families VALUES (?,?,?,?)", _[FAMILY].replace(' ',''), _[9], _[8], _[7]);
-				link.execute("INSERT OR REPLACE INTO orders VALUES (?,?,?,?)", _[ORDER].replace(' ',''), _[11], '', _[10]);
-				link.execute("INSERT OR REPLACE INTO classes VALUES (?,?,?)", _[CLASS].replace(' ',''), '', '');
+				link.execute("INSERT INTO species VALUES (?,?,?,?)", _[SPECIES].trim(), _[6].trim(), _[5].trim(), _[4].trim());
+				link.execute("INSERT INTO families VALUES (?,?,?,?)", _[FAMILY].trim(), _[9].trim(), _[8].trim(), _[7].trim());
+				link.execute("INSERT OR REPLACE INTO orders VALUES (?,?,?,?)", _[ORDER].trim(), _[11].trim(), '', _[10].trim());
+				link.execute("INSERT OR REPLACE INTO classes VALUES (?,?,?)", _[CLASS].trim(), '', '');
 				insertedspecies[_[SPECIES]] = true;
 				insertedfamilies[_[FAMILY]] = true;
 			}
@@ -58,6 +71,7 @@ Module.prototype = {
 	Import_loadRecords : function() {
 		var start = new Date().getTime();
 		var link = Ti.Database.open(DBNAME);
+		console.log('DatabaseFile=\n'+ link.file.nativePath);
 		link.execute('PRAGMA synchronous = OFF');
 		link.execute('BEGIN TRANSACTION');
 		var ndx = 0,
@@ -71,7 +85,7 @@ Module.prototype = {
 						progress : count / that.rows.length
 					});
 				}
-				link.execute("INSERT INTO records VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", _[0], _[1], _[2], _[4], _[5], _[14], _[15], _[16], _[17], _[18], _[19], _[20], _[21], _[22], _[23], _[24], _[25], _[26], _[27], _[28], _[29]);
+				link.execute("INSERT INTO records VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", _[SPECIES], _[1].trim(), _[2].trim(), _[4].trim(), _[5].trim(), _[14], _[15], _[16], _[17], _[18], _[19], _[20], _[21], _[22], _[23], _[24], _[25], _[26], _[27], _[28], _[29]);
 			}
 		});
 		link.execute('COMMIT');
@@ -109,7 +123,7 @@ Module.prototype = {
 		var classes = [];
 		while (res.isValidRow()) {
 			var item = {
-				latin : res.fieldByName('latin').replace(' ',''),
+				latin : res.fieldByName('latin'),
 				de : res.fieldByName('de'),
 				en : res.fieldByName('en'),
 				image : '/assets/' + res.fieldByName('latin').toLowerCase() + '.png'
@@ -131,7 +145,7 @@ Module.prototype = {
 		var families = [];
 		while (res.isValidRow()) {
 			var item = {
-				latin : res.fieldByName('latin').replace(' ',''),
+				latin : res.fieldByName('latin'),
 				de : res.fieldByName('de'),
 				en : res.fieldByName('en'),
 				image : '/assets/' + res.fieldByName('latin').toLowerCase() + '.png'
@@ -184,7 +198,7 @@ Module.prototype = {
 				mp3 : 'http://www.tierstimmenarchiv.de/recordings/' + ID + '_short.mp3',
 				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + ID + '_short.mp3.wav.png.jpg',
 				autor : res.fieldByName('autor'),
-
+				itemId : ID,
 				copyright : res.fieldByName("Copyright")
 			};
 			records.push(record);
@@ -203,11 +217,12 @@ Module.prototype = {
 		while (res.isValidRow()) {
 			var ID = res.fieldByName('filename');
 			var Class = res.fieldByName('class');
-			if (!records[Class]) records[Class] =[];
+			if (!records[Class])
+				records[Class] = [];
 			var record = {
-				itemId :  'http://www.tierstimmenarchiv.de/recordings/' + ID + '_short.mp3',
-				id :   ID,
-				image : '/images/'+Class+'.png',
+				itemId : 'http://www.tierstimmenarchiv.de/recordings/' + ID + '_short.mp3',
+				id : ID,
+				image : '/images/' + Class + '.png',
 				title : res.fieldByName('species'),
 				subtitle : res.fieldByName('Beschreibung'),
 				lat : res.fieldByName('latitude'),
@@ -219,21 +234,61 @@ Module.prototype = {
 		res.close();
 		return records;
 	},
+	getRecordById : function(id) {
+		if (!id)
+			return {};
+		var link = Ti.Database.open(DBNAME);
+		console.log('getRecordById≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ "' + id+ '"');
+		var sql= //
+		'SELECT records.*,  '//
+		+ 'species.latin species_latin, species.de species_de, '//
+		+ 'families.latin families_latin, families.de families_de, '//
+		+ 'orders.latin orders_latin,orders.de orders_de, '//
+		+ 'classes.latin classes_latin '//
+		+ 'FROM '//
+		+ 'classes,orders,families,species,records '//
+		+ 'WHERE '//
+		+ 'records.filename="'+id+'" AND '//
+		+ 'records.species=species.latin AND species.families=families.latin AND families.orders=orders.latin AND orders.classes=classes.latin';
+		console.log(sql);
+		console.log('≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈');
+		var res = link.execute(sql);
+		
+		var fieldnames = [];
+		for (var i = 0; i < res.getFieldCount(); i++) {
+			fieldnames.push(res.getFieldName(i));
+		}
+		var record = {};
+		if (res.isValidRow()) {
+			console.log('Info: valide entry for recording found');
+			record = {
+				audio : 'http://www.tierstimmenarchiv.de/recordings/' + id + '_short.mp3',
+				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + id + '_short.mp3.wav.png.jpg'
+			};
+			fieldnames.forEach(function(fieldname) {
+				console.log(fieldname + ' = ' + res.fieldByName(fieldname));
+				record[fieldname] = res.fieldByName(fieldname);
+			});
+		}  else console.log('Warning: no recording found');
+		res.close();
+		link.close();
+		console.log(record);
+		return record || null;
+	},
 	searchAnimals : function(needle) {
 		var link = Ti.Database.open(DBNAME);
 		var res = link.execute('SELECT * FROM records WHERE deutscher_name LIKE "%' + needle + '%" ORDER BY species LIMIT 500');
 		var records = [];
 		while (res.isValidRow()) {
-			var ID = res.fieldByName('filename');
+			var itemId = res.fieldByName('filename');
 			var record = {
 				species : res.fieldByName('species'),
 				deutscher_name : res.fieldByName('deutscher_name') || res.fieldByName('species'),
 				beschreibung : res.fieldByName('Beschreibung'),
-				gps : res.fieldByName('latitude') + ',' + res.fieldByName('longitude'),
-				mp3 : 'http://www.tierstimmenarchiv.de/recordings/' + ID + '_short.mp3',
-				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + ID + '_short.mp3.wav.png.jpg',
+				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + itemId + '_short.mp3.wav.png.jpg',
 				autor : res.fieldByName('autor'),
-
+				audio : 'http://www.tierstimmenarchiv.de/recordings/' + itemId + '_short.mp3',
+				itemId : itemId,
 				copyright : res.fieldByName("Copyright")
 			};
 			records.push(record);

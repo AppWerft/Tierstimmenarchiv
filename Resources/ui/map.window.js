@@ -16,6 +16,7 @@ module.exports = function() {
 			compassEnabled : false,
 			userLocation : false,
 			userLocationButton : false,
+			mapToolbarEnabled : false
 		});
 		$.add($.mapView);
 		$.mapView.addEventListener('click', function(_e) {

@@ -1,7 +1,7 @@
 {
 	"files": {
 		"Info.plist": {
-			"hash": "2b1d11129d12fdc522a86a0182174528",
+			"hash": "f96c22d1e3cc8e579aae1de892a65645",
 			"mtime": 0,
 			"size": 1559
 		},
@@ -3107,7 +3107,7 @@
 		},
 		"model/init.sql": {
 			"hash": "29fac2780f5f86e9b190baab9b8b6dd2",
-			"mtime": "2016-01-10T12:29:10.000Z",
+			"mtime": "2016-01-12T15:30:43.000Z",
 			"size": 826
 		},
 		"model/tsa.json": {
@@ -3210,7 +3210,7 @@
 	"analytics": false,
 	"publisher": "fuerst",
 	"url": "http://hamburger-appwerft.de",
-	"version": "2.1.2",
+	"version": "2.1.4",
 	"description": "undefined",
 	"copyright": "2016 by fuerst",
 	"guid": "64cba34f-da45-41c4-9111-97926a75e590",

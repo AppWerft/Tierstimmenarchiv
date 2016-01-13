@@ -31,10 +31,9 @@ module.exports = function(id) {
 		defaultItemTemplate : 'template',
 		top : Ti.Android ? 50 : 50
 	});
-	console.log('DB was imported ==> ready');
+
 	$.add($.listView);
 	$.add($.searchView);
-	
 	var TSA = new (require('model/tsa.adapter'))();
 	$.searchView.addEventListener('change', function(_e) {
 		var needle = _e.source.getValue();
@@ -43,7 +42,6 @@ module.exports = function(id) {
 			$.listView.backgroundColor = 'transparent';
 			_e.source.blur();
 		} else if (needle.length > 2) {
-
 			if (timer)
 				clearTimeout(timer);
 			timer = setTimeout(function() {
@@ -54,26 +52,27 @@ module.exports = function(id) {
 					sections[ndx] = Ti.UI.createListSection({
 						headerTitle : spec
 					});
-					sections[ndx].items = species[spec].map(function(sound) {
+					sections[ndx].items = species[spec].map(function(record) {
+						console.log(record);
 						return {
 							properties : {
-								itemId : JSON.stringify(sound),
+								itemId : record.itemId,
 								accessoryType : Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
 							},
 							deutscher_name : {
-								text : sound.deutscher_name,
+								text : record.deutscher_name,
 								color : COLOR.DARKGREEN
 							},
 							autor : {
-								text : sound.autor,
+								text : record.autor,
 
 							},
 							beschreibung : {
-								text : sound.beschreibung,
+								text : record.beschreibung,
 								color : COLOR.DARKGREEN
 							},
 							spectrogram : {
-								image : sound.spectrogram
+								image : record.spectrogram
 							}
 						};
 					});
@@ -87,28 +86,22 @@ module.exports = function(id) {
 			}, 600);
 		}
 	});
-	$.listView.addEventListener('itemclick', function(_e) {
-		var sound = JSON.parse(_e.itemId);
-		require('ui/player.window')(sound).open();
-	});
-	$.addEventListener('focus', function(_e) {
+	$.listView.addEventListener('itemclick', require('ui/player.window'));
+	var onFocusFn = function(_e) {
+		$.removeEventListener('focus', onFocusFn);
 		if ($ && $.searchView)
 			$.searchView.animate({
 				top : 0
 			}, function() {
-
 				Ti.Android && Ti.UI.createNotification({
-					message : 'Geben Sie einen Suchbegriff ein.'
+					message : 'Geben Sie einen Suchbegriff ein.',
+					duration : 100
 				}).show();
 				$.searchView.focus();
 			});
-	});
-	$.addEventListener('close', function(_e) {
-
-	});
+	};
+	$.addEventListener('focus', onFocusFn);
 	$.addEventListener('blur', function(_e) {
-		
-
 	});
 	require('vendor/versionsreminder')();
 	return $;

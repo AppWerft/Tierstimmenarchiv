@@ -20,7 +20,6 @@ module.exports = function(id) {
 			row.add(Ti.UI.createImageView({
 				image : image,
 				top : 10,
-				//defaultImage : '/assets/default.png',
 				bottom : 10,
 				touchEnabled : false,
 				left : 5,
@@ -39,10 +38,8 @@ module.exports = function(id) {
 			}));
 			return row;
 		});
-
 	});
 	$.list.addEventListener('click', function(_e) {
-		console.log('clicked on ordo in classes ≈≈≈≈≈≈≈≈≈≈≈≈');
 		require('ui/orders.window')(_e.row.itemId).open();
 	});
 	return $;
