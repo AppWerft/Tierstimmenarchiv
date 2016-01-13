@@ -1,4 +1,5 @@
-const DURATION = 20000;
+const DURATION = 20000,
+    HEIGHT = 150;
 var TSA = new (require('model/tsa.adapter'))();
 
 module.exports = function(_e) {
@@ -31,15 +32,36 @@ module.exports = function(_e) {
 		$.close();
 	});
 	var $ = Ti.UI.createWindow({
-		backgroundColor : 'transparent'
+		backgroundColor : 'transparent',
+		orientationModes : [Titanium.UI.PORTRAIT]
 	});
+	$.container = Ti.UI.createView({
+		top : 0,
+		bottom : HEIGHT,
+		layout : 'vertical'
+	});
+	$.add($.container);
 	$.listView = Ti.UI.createTableView({
-		bottom : 200,backgroundColor:'#80ffffff'
+		top : 0,
+		backgroundColor : '#ccffffff'
 	});
+	$.imageView = Ti.UI.createImageView({
+		top : 0,
+		width : Ti.UI.FILL
+	});
+	require('vendor/wikimedia.adapter').getSpeciesImage(record.species_latin, function(blob) {
+		$.imageView.setImage(blob);
+		var height =  parseFloat(blob.height) /  parseFloat(blob.width) * parseFloat(Ti.Platform.displayCaps.platformWidth) / parseFloat(Ti.Platform.displayCaps.logicalDensityFactor);
+		console.log(blob.width + 'x' + blob.height + '   ' + height);
+		$.imageView.setHeight(height);
+		$.listView.setTop(height);
+	});
+	$.container.add($.imageView);
+
 	$.playerView = Ti.UI.createView({
 		backgroundColor : 'black',
 		bottom : 0,
-		height : 200
+		height : HEIGHT
 	});
 	$.playerView.add(Ti.UI.createImageView({
 		width : Ti.UI.FILL,
@@ -54,7 +76,7 @@ module.exports = function(_e) {
 	$.playerView.add($.playerView.darker);
 
 	$.add($.playerView);
-	$.add($.listView);
+	$.container.add($.listView);
 
 	$.addEventListener('close', function() {
 		audioPlayer.pause();

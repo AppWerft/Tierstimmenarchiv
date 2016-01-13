@@ -17,7 +17,7 @@
     <modules>
         <module platform="android">com.alcoapps.actionbarextras</module>
         <module platform="iphone">ti.map</module>
-        <module platform="android" version="2.3.1">ti.map</module>
+        <module platform="android" version="2.3.7">ti.map</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>

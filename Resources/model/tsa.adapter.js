@@ -101,7 +101,7 @@ Module.prototype = {
 	},
 	getAllClasses : function() {
 		var link = Ti.Database.open(DBNAME);
-		var res = link.execute('SELECT * FROM classes WHERE latin <> ""');
+		var res = link.execute('SELECT * FROM classes WHERE latin <> "" AND latin <> "Klasse"');
 		var classes = [];
 		while (res.isValidRow()) {
 			var item = {

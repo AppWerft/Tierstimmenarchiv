@@ -6,10 +6,10 @@ module.exports = function() {
 	if (require('gms.test')()) {
 		$.mapView = Map.createView({
 			region : {
-				latitude : 13,
+				latitude : 43,
 				longitude : 10,
-				latitudeDelta : 130,
-				longitudeDelta : 130
+				latitudeDelta : 50,
+				longitudeDelta : 50
 			},
 			mapType : Map.TERRAIN_TYPE,
 			enableZoomControls : false,
@@ -33,6 +33,7 @@ module.exports = function() {
 		Object.getOwnPropertyNames(records).forEach(function(classname) {
 			Overlays[classname] = new MarkerManager({
 				name : classname,
+				maxannotations : 50,
 				points : records[classname],
 				map : $.mapView
 			});

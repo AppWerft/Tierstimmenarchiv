@@ -106,9 +106,7 @@ exports.getSpeciesImage = function(_latin, _callback) {
 		folder.createDirectory();
 	}
 	var file = Ti.Filesystem.getFile(DEPOT, FOLDER, _latin +'.jpg');
-	console.log(file.nativePath);
 	if (file.exists()) {
-		console.log('file exists');
 		var image = file.read();
 		_callback(image);
 	} else {

@@ -1,5 +1,4 @@
 module.exports = function() {
-	console.log(arguments);
 	var c = arguments[0];
 	var row = Ti.UI.createTableViewRow({
 		height : Ti.UI.SIZE,

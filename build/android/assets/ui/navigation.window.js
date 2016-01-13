@@ -1,1 +1,1 @@
-var navigationWindow=navigationWindow;exports.create=function(e){return Ti.Android?void 0:navigationWindow=Ti.UI.iOS.createNavigationWindow({window:e?e:Ti.UI.createWindow({backgroundColor:"transparent",title:"Tierstimmenarchiv"}),width:Ti.UI.FILL})},exports.open=function(e,t){Ti.Android?e.open():navigationWindow.openWindow(e,{animated:t,duration:.2})},exports.close=function(e){Ti.Android?(e.removeAllChildren(),e.close(),e=null):(e.removeAllChildren(),e.close(),e=null)};
+/Users/fuerst/Documents/APPC_WORKSPACE/Tierstimmenarchiv/Resources/ui/navigation.window.js
