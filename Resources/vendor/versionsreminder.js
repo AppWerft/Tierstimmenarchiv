@@ -61,7 +61,7 @@ module.exports = function() {
 					buttonNames : ["Zum Playstore", "Abbruch"],
 					message : "Es gibt eine neue Version in Playstore.\n\nDiese App auf Deinem " + Ti.Platform.model 
 					+ ' ist in Version  ' + Ti.App.getVersion() + "\n\nIm Playstore  gibt es schon  " + storeversion + " und wartet auf Dich.\n\nWillst Du erneuern?",
-					title : "Neue Froschzählerversion"
+					title : "Neues Tierstimmenarchiv"
 				});
 				dialog.show();
 				dialog.addEventListener("click", function(e) {
