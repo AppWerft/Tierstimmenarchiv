@@ -3,6 +3,13 @@ var CanvasObject = require('com.wwl.canvas');
 var audioRecorder = require('titutorial.audiorecorder');
 var LDF = Ti.Platform.displayCaps.logicalDensityFactor;
 var CANVASHEIGHT = 320 / LDF;
+var MAXDURATION = 60000;
+var TICK = 50;
+
+Math.log10 = Math.log10 ||
+function(x) {
+	return Math.log(x) / Math.LN10;
+};
 
 var canvasready = false;
 
@@ -12,9 +19,9 @@ module.exports = function() {
 	});
 	$.canvascontainer = Ti.UI.createScrollView({
 		scrollType : 'horizontal',
-		width:Ti.UI.FILL,
-		contentWidth:Ti.UI.SIZE,
-		top:0,
+		width : Ti.UI.FILL,
+		contentWidth : 3000,
+		top : 0,
 		height : CANVASHEIGHT / LDF,
 		contentHeight : CANVASHEIGHT / LDF
 	});
@@ -22,13 +29,25 @@ module.exports = function() {
 		backgroundColor : 'black',
 		top : 0,
 		left : 0,
-		width : 3000,
+		width : Ti.UI.FILL,
 		height : Ti.UI.FILL,
 	});
 	$.canvascontainer.add($.canvas);
 	$.add($.canvascontainer);
 	$.canvas.addEventListener('load', function() {
 		$.canvas.lineWidth = LDF;
+		/* time grid: */
+		for (var i = 0; i < MAXDURATION; i++) {
+			if (i % (10000 / TICK) == 0) {
+				$.canvas.strokeStyle = '#555555';
+				$.canvas.beginPath();
+				$.canvas.moveTo(i, CANVASHEIGHT);
+				$.canvas.lineTo(i, 0);
+				$.canvas.closePath();
+				$.canvas.stroke();
+
+			}
+		}
 		$.canvas.strokeStyle = '#3BFC34';
 		$.canvas.antiAliasing = true;
 		canvasready = true;
@@ -38,7 +57,7 @@ module.exports = function() {
 		audioEncoder : audioRecorder.AudioEncoder_AAC,
 		directoryName : "recordings",
 
-		maxDuration : 60000,
+		maxDuration : MAXDURATION,
 		success : function(e) {
 			clearInterval(cron);
 		},
@@ -47,11 +66,12 @@ module.exports = function() {
 			Ti.API.info("error is => " + JSON.stringify(d));
 		}
 	});
-	var cron = setInterval(getLevel, 50);
+	var cron = setInterval(getLevel, TICK	);
 	var tick = 0;
 	function getLevel() {
 		if (audioRecorder.isRecording() && $.canvas && canvasready == true) {
 			var level = audioRecorder.getMaxAmplitude() / 6000;
+			console.log(Math.log10(level*6000));
 			$.canvas.beginPath();
 			$.canvas.moveTo(tick, CANVASHEIGHT / 2 - level * CANVASHEIGHT);
 			$.canvas.lineTo(tick, CANVASHEIGHT / 2 + level * CANVASHEIGHT);

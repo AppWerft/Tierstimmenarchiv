@@ -40,6 +40,7 @@ module.exports = function(_e) {
 	$.listView.appendRow(Row('Familie:', record.families_de + ' (' + record.families_latin + ')'));
 	$.listView.appendRow(Row('Ordnung:', record.orders_de + ' (' + record.orders_latin + ')'));
 	record.Beschreibung && $.listView.appendRow(Row(record.Beschreibung, ''));
+	record.copyright && $.listView.appendRow(Row('Copyright', record.copyright));
 
 	$.listView.addEventListener('click', function(_e) {
 		if (_e.row.itemId) {

@@ -13,6 +13,8 @@ const SPECIES = 0,
     ORDER = 9,
     CLASS = 11;
 
+const ENDPOINT = 'http://www.tierstimmen.org/';
+
 var Module = function() {
 	this.eventhandlers = [];
 };
@@ -195,7 +197,7 @@ Module.prototype = {
 				deutscher_name : res.fieldByName('deutscher_name') || res.fieldByName('species'),
 				beschreibung : res.fieldByName('Beschreibung'),
 				gps : res.fieldByName('latitude') + ',' + res.fieldByName('longitude'),
-				mp3 : 'http://www.tierstimmenarchiv.de/recordings/' + ID + '_short.mp3',
+				mp3 : ENDPOINT + 'recordings/' + ID + '_short.mp3',
 				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + ID + '_short.mp3.wav.png.jpg',
 				autor : res.fieldByName('autor'),
 				itemId : ID,
@@ -220,7 +222,7 @@ Module.prototype = {
 			if (!records[Class])
 				records[Class] = [];
 			var record = {
-				itemId : 'http://www.tierstimmenarchiv.de/recordings/' + ID + '_short.mp3',
+				itemId : ENDPOINT +'recordings/' + ID + '_short.mp3',
 				id : ID,
 				image : '/images/' + Class + '.png',
 				title : res.fieldByName('species'),
