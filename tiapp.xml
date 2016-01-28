@@ -16,7 +16,6 @@
     <android xmlns:android="http://schemas.android.com/apk/res/android"/>
     <modules>
         <module platform="android">com.alcoapps.actionbarextras</module>
-        <module platform="iphone">ti.map</module>
         <module platform="android" version="2.3.7">ti.map</module>
         <module platform="android">com.gbaldera.titouchgallery</module>
         <module platform="android">titutorial.audiorecorder</module>
@@ -25,9 +24,8 @@
     <deployment-targets>
         <target device="android">true</target>
         <target device="ipad">false</target>
-        <target device="iphone">true</target>
+        <target device="iphone">false</target>
         <target device="mobileweb">false</target>
     </deployment-targets>
-    <sdk-version>5.1.1.GA</sdk-version>
-    <property name="appc-app-id" type="string">56925f3e76626ff30ab834c9</property>
+    <sdk-version>5.1.2.GA</sdk-version>
 </ti:app>
