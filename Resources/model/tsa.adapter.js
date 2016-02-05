@@ -198,7 +198,7 @@ Module.prototype = {
 				beschreibung : res.fieldByName('Beschreibung'),
 				gps : res.fieldByName('latitude') + ',' + res.fieldByName('longitude'),
 				mp3 : ENDPOINT + 'recordings/' + ID + '_short.mp3',
-				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + ID + '_short.mp3.wav.png.jpg',
+				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + ID + '_short.mp3.wav.png.jpg?1',
 				autor : res.fieldByName('autor'),
 				itemId : ID,
 				copyright : res.fieldByName("Copyright")
@@ -222,7 +222,7 @@ Module.prototype = {
 			if (!records[Class])
 				records[Class] = [];
 			var record = {
-				itemId : ENDPOINT +'recordings/' + ID + '_short.mp3',
+				itemId : ENDPOINT + 'recordings/' + ID + '_short.mp3',
 				id : ID,
 				image : '/images/' + Class + '.png',
 				title : res.fieldByName('species'),
@@ -235,6 +235,60 @@ Module.prototype = {
 		}
 		res.close();
 		return records;
+	},
+	getRecordsBySpeciesWithLatLng : function(_species) {
+		var link = Ti.Database.open(DBNAME);
+		var records = [];
+		var ndx = 0;
+		var maxlat,
+		    maxlng,
+		    minlat,
+		    minlng,
+		    sumlat = 0,
+		    sumlng = 0;
+		var res = link.execute('SELECT classes.latin AS class,records.* FROM classes,records,species,families,orders WHERE records.latitude <> 0 AND records.species="' + _species + '" AND records.longitude <>0 AND records.species=species.latin AND species.families=families.latin AND families.orders=orders.latin AND orders.classes=classes.latin');
+		while (res.isValidRow()) {
+			var ID = res.fieldByName('filename');
+			var Class = res.fieldByName('class');
+			
+			var lat = parseFloat(res.fieldByName('latitude'), 10) + Math.random() * 0.001 + 0.0005;
+			var lng = parseFloat(res.fieldByName('longitude'), 10) + Math.random() * 0.001 + 0.0005;
+			if (ndx == 0) {
+				maxlat = lat;
+				maxlng = lng;
+				minlat = lat;
+				minlng = lng;
+			}
+			maxlat = Math.max(lat, maxlat);
+			maxlng = Math.max(lng, maxlng);
+			minlat = Math.min(lat, minlat);
+			minlng = Math.min(lng, minlng);
+			sumlat += lat;
+			sumlng += lng;
+			var record = {
+				itemId : ENDPOINT + 'recordings/' + ID + '_short.mp3',
+				id : ID,
+				image : '/images/' + Class + '.png',
+				title : res.fieldByName('species'),
+				subtitle : res.fieldByName('Beschreibung'),
+				latitude : lat,
+				longitude : lng,
+			};
+			records[ndx] = record;
+			ndx += 1;
+			res.next();
+		}
+		res.close();
+		var region = {
+			latitude : sumlat / ndx,
+			longitude : sumlng / ndx,
+			latitudeDelta : (maxlat - minlat + 0.05) * 1.2,
+			longitudeDelta : (maxlng - minlng + 0.05) * 1.2
+		};
+		return {
+			records : records,
+			region : region
+		};
 	},
 	getRecordById : function(id) {
 		if (!id)
@@ -262,7 +316,8 @@ Module.prototype = {
 			console.log('Info: valide entry for recording found');
 			record = {
 				audio : 'http://www.tierstimmenarchiv.de/recordings/' + id + '_short.mp3',
-				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + id + '_short.mp3.wav.png.jpg'
+				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + id + '_short.mp3.wav.png.jpg',
+				allRecordsOfSpeciesWithLatLng : this.getRecordsBySpeciesWithLatLng(res.fieldByName('species'))
 			};
 			fieldnames.forEach(function(fieldname) {
 				console.log(fieldname + ' = ' + res.fieldByName(fieldname));
@@ -276,7 +331,6 @@ Module.prototype = {
 		}
 		res.close();
 		link.close();
-		console.log(record);
 		return record || null;
 	},
 	searchAnimals : function(needle) {
@@ -289,7 +343,7 @@ Module.prototype = {
 				species : res.fieldByName('species'),
 				deutscher_name : res.fieldByName('deutscher_name') || res.fieldByName('species'),
 				beschreibung : res.fieldByName('Beschreibung'),
-				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + itemId + '_short.mp3.wav.png.jpg',
+				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + itemId + '_short.mp3.wav.png.jpg?1',
 				autor : res.fieldByName('autor'),
 				audio : 'http://www.tierstimmenarchiv.de/recordings/' + itemId + '_short.mp3',
 				itemId : itemId,
@@ -313,7 +367,8 @@ Module.prototype = {
 		var res = link.execute('SELECT image from species WHERE latin=?', _id);
 		if (res.isValidRow()) {
 			var image = res.fieldByName("image");
-		} else console.log('Warning: no alrge image found for ' +_id);
+		} else
+			console.log('Warning: no alrge image found for ' + _id);
 		res.close();
 		link.close();
 		return image;

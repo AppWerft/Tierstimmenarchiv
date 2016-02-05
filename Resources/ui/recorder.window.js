@@ -1,8 +1,8 @@
 var TSA = new (require('model/tsa.adapter'))();
 var CanvasObject = require('com.wwl.canvas');
-var audioRecorder = require('titutorial.audiorecorder');
+
 var LDF = Ti.Platform.displayCaps.logicalDensityFactor;
-var CANVASHEIGHT = 320 / LDF;
+var CANVASHEIGHT = 320;
 var MAXDURATION = 60000;
 var TICK = 50;
 
@@ -22,7 +22,7 @@ module.exports = function() {
 		width : Ti.UI.FILL,
 		contentWidth : 3000,
 		top : 0,
-		height : CANVASHEIGHT / LDF,
+		height : CANVASHEIGHT/LDF,
 		contentHeight : CANVASHEIGHT / LDF
 	});
 	$.canvas = CanvasObject.createCanvasView({
@@ -52,6 +52,15 @@ module.exports = function() {
 		$.canvas.antiAliasing = true;
 		canvasready = true;
 	});
+	$.onErrorFn = function(){
+		var intent = Ti.Android.createIntent({
+			action: 'android.settings.APPLICATION_SETTINGS',
+		});
+		intent.addFlags(Ti.Android.FLAG_ACTIVITY_NEW_TASK);
+		Ti.Android.currentActivity.startActivity(intent);
+	};
+	Ti.App.addEventListener('uncaughtException',$.onErrorFn);
+	var audioRecorder = require('titutorial.audiorecorder');
 	audioRecorder.startRecording({
 		outputFormat : audioRecorder.OutputFormat_MPEG_4,
 		audioEncoder : audioRecorder.AudioEncoder_AAC,
@@ -66,11 +75,12 @@ module.exports = function() {
 			Ti.API.info("error is => " + JSON.stringify(d));
 		}
 	});
+	Ti.App.removeEventListener('uncaughtException',$.onErrorFn);
 	var cron = setInterval(getLevel, TICK	);
 	var tick = 0;
 	function getLevel() {
 		if (audioRecorder.isRecording() && $.canvas && canvasready == true) {
-			var level = audioRecorder.getMaxAmplitude() / 6000;
+			var level = audioRecorder.getMaxAmplitude() / 20000;
 			console.log(Math.log10(level*6000));
 			$.canvas.beginPath();
 			$.canvas.moveTo(tick, CANVASHEIGHT / 2 - level * CANVASHEIGHT);

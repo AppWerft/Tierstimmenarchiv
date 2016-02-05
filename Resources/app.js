@@ -3,39 +3,35 @@ const COLOR = {
 	DARKGREEN : '#174122',
 	BROWN : '#B87C25'
 },
-DBNAME = 'TSA11';
+    DBNAME = 'TSA11';
 /*
-var logo = Ti.UI.createImageView({
-	image : '/assets/foxes.png',
-	top : '20%',
-	transform : Ti.UI.create2DMatrix({
-		scale : 0.01
-	}),
-	width : Ti.UI.FILL,
-	height : 'auto'
+ *      intent.setAction(Intent.ACTION_VIEW);
+        intent.setClassName("com.android.settings", "com.android.settings.InstalledAppDetails");
+        intent.putExtra(appPkgName, packageName);
+   
+ * 
+ */
+/*
+var intent = Ti.Android.createIntent({
+	action : 'android.settings.ACTION_VIEW',
+	className: "com.android.settings.InstalledAppDetails",
 });
-var $ = Ti.UI.createWindow({
-	fullscreen : false,
-	theme : "Theme.WithActionBar",
-	title : 'Tierstimmenarchiv',
-	backgroundColor : Ti.Android ? 'transparent' : 'white',
-	rightNavButtons : [Ti.UI.createButton({
-	 title : 'Karte'
-	 }), Ti.UI.createButton({
-	 title : 'Taxo'
-	 })]
-});
+intent.addFlags(Ti.Android.FLAG_ACTIVITY_NEW_TASK);
+intent.putExtra("com.android.settings.ApplicationPkgName", 'de.appwerft.tierstimmenarchiv');
+Ti.Android.currentActivity.startActivity(intent);
 */
 var TSA = new (require('model/tsa.adapter'))();
 if (TSA.Import_isDone()) {
 	require('ui/tabgroup')();
-	
+
 } else {
 	TSA.Import_Init();
 	TSA.Import_loadTaxo();
 	setTimeout(function() {
 		TSA.Import_loadRecords();
-		Ti.Android && Ti.UI.createNotification({message:'Tierstimmenarchiv importiert'}).show();
+		Ti.Android && Ti.UI.createNotification({
+			message : 'Tierstimmenarchiv importiert'
+		}).show();
 	}, 1000);
 	console.log('Info:  tabgroup open ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈');
 	require('ui/tabgroup')();

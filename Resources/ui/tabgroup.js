@@ -34,7 +34,7 @@ module.exports = function() {
 			};
 			АктйонБар.setTitle('Tierstimmenarchiv');
 			АктйонБар.setFont('Helvetica-Bold');
-			АктйонБар.setSubtitle('Naturkundemuseum Berlin');
+			АктйонБар.setSubtitle('des Museums für Naturkunde Berlin');
 			АктйонБар.displayUseLogoEnabled = false;
 			АктйонБар.setStatusbarColor(COLOR.BROWN);
 			_event.source.getActivity().actionBar.displayHomeAsUp = false;

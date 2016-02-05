@@ -5,19 +5,15 @@ var Row = require('ui/record.row');
 
 module.exports = function(_e) {
 	var record = TSA.getRecordById(_e.itemId);
-	console.log('≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈');
 	if (!record) {
 		console.log('Warning: no record');
 		return;
 	}
-	console.log('Info: record with props found: ' + record.species + ' ' + record.orders_de);
-
 	var $ = Ti.UI.createWindow({
 		backgroundColor : COLOR.DARKGREEN,
 		orientationModes : [Titanium.UI.PORTRAIT]
 	});
 	$.imageView = Ti.UI.createView({
-
 	});
 	var firstRow = Ti.UI.createTableViewRow({
 		height : Ti.UI.SIZE,
@@ -33,15 +29,23 @@ module.exports = function(_e) {
 		height : Ti.UI.FILL,
 		backgroundColor : 'transparent'
 	});
-	$.listView.appendRow(Row('Art', record.species));
-	record.erstbeschreibung && $.listView.appendRow(Row('Erstbeschreibung:', record.erstbeschreibung));
+	$.listView.appendRow(Row('', record.species + ' ' + record.erstbeschreibung));
+
+	record.Beschreibung && $.listView.appendRow(Row(record.Beschreibung, ''));
+	record.ort && $.listView.appendRow(Row('Aufnahmeort:', record.ort));
+	if (record.allRecordsOfSpeciesWithLatLng.records.length > 0) {
+		$.mapView = require('ui/map.row')(record);
+		$.listView.appendRow($.mapView);
+	}
 	record.deutscher_name && $.listView.appendRow(Row('deutscher Name:', record.deutscher_name));
 	record.english_name && $.listView.appendRow(Row('englischer Name:', record.english_name));
 	$.listView.appendRow(Row('Familie:', record.families_de + ' (' + record.families_latin + ')'));
 	$.listView.appendRow(Row('Ordnung:', record.orders_de + ' (' + record.orders_latin + ')'));
-	record.Beschreibung && $.listView.appendRow(Row(record.Beschreibung, ''));
-	record.copyright && $.listView.appendRow(Row('Copyright', record.copyright));
 
+	record.Autor && $.listView.appendRow(Row('Autor:', record.Autor));
+
+	$.listView.appendRow(Row('Copyright:', 'CC BY-NC-SA'));
+	$.listView.appendRow(Row('', '        \n\n\n\n\n\n\n\n\n\n\n'));
 	$.listView.addEventListener('click', function(_e) {
 		if (_e.row.itemId) {
 			var payload = JSON.parse(_e.row.itemId);
@@ -49,7 +53,7 @@ module.exports = function(_e) {
 				require('ui/'+payload.mod)(payload.id).open();
 		}
 	});
-	record.ort && $.listView.appendRow(Row('Aufnahmeort', record.ort));
+
 	record.autor && $.listView.appendRow(Row('Autor', record.Autor));
 
 	new (require('vendor/wikimedia.adapter'))(record.species_latin, {
@@ -81,7 +85,6 @@ module.exports = function(_e) {
 			$.playerView.animate({
 				bottom : 0
 			});
-			console.log(audioPlayer.duration);
 			var duration = audioPlayer.duration || DURATION;
 			$.playerView.darker && $.playerView.darker.animate({
 				width : 0,
@@ -113,7 +116,7 @@ module.exports = function(_e) {
 		image : record.spectrogram
 	}));
 	$.playerView.darker = Ti.UI.createView({
-		backgroundColor : '#c000',
+		backgroundColor : '#cfff',
 		width : '100%',
 		right : 0
 	});
@@ -122,6 +125,9 @@ module.exports = function(_e) {
 	$.add($.listView);
 	$.add($.playerView);
 	$.addEventListener('close', function() {
+		if ($.mapView) {
+			$.mapView.removeAllChildren();
+		}
 		audioPlayer.pause();
 		audioPlayer.stop();
 		audioPlayer.release();
