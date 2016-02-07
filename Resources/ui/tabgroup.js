@@ -52,13 +52,7 @@ module.exports = function() {
 				}).addEventListener("click", function(_e) {
 					require('ui/recorder.window')().open();
 				});
-
-				
-
 			};
-			
-			
-			
 		}
 	});
 	if (Ti.Android) $.activeTab = 1;

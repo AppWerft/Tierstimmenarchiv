@@ -8,6 +8,8 @@ if (!String.prototype.trim) {
 	})();
 }
 
+var Moment = require('vendor/moment');
+Moment.locale('de');
 const SPECIES = 0,
     FAMILY = 6,
     ORDER = 9,
@@ -250,7 +252,7 @@ Module.prototype = {
 		while (res.isValidRow()) {
 			var ID = res.fieldByName('filename');
 			var Class = res.fieldByName('class');
-			
+
 			var lat = parseFloat(res.fieldByName('latitude'), 10) + Math.random() * 0.001 + 0.0005;
 			var lng = parseFloat(res.fieldByName('longitude'), 10) + Math.random() * 0.001 + 0.0005;
 			if (ndx == 0) {
@@ -297,7 +299,7 @@ Module.prototype = {
 
 		var sql = //
 		'SELECT records.*,  '//
-		+ 'species.latin species_latin, species.de species_de, species.image image, '//
+		+ 'species.latin species_latin, species.de species_de, species.image image,records.country, records.recording_date, '//
 		+ 'families.latin families_latin, families.de families_de, '//
 		+ 'orders.latin orders_latin,orders.de orders_de, '//
 		+ 'classes.latin classes_latin '//
@@ -313,9 +315,20 @@ Module.prototype = {
 		}
 		var record = {};
 		if (res.isValidRow()) {
-			console.log('Info: valide entry for recording found');
+			var cdate;
+			var moment = Moment(res.fieldByName('recording_date'));
+			if (moment.isValid())
+				cdate = moment.format('LL');
+			else {
+				if ( moment = res.fieldByName('recording_date').split('_')) {
+					cdate = moment[0];
+				} else
+					cdate = '';
+
+			}
 			record = {
 				audio : 'http://www.tierstimmenarchiv.de/recordings/' + id + '_short.mp3',
+				cdate : cdate,
 				spectrogram : 'http://mm.webmasterei.com/spectrogram/' + id + '_short.mp3.wav.png.jpg',
 				allRecordsOfSpeciesWithLatLng : this.getRecordsBySpeciesWithLatLng(res.fieldByName('species'))
 			};

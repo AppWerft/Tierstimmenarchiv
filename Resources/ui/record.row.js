@@ -25,7 +25,7 @@ module.exports = function(label/*String*/, value/*String*/, children/*Boolean*/)
 	row.add(Ti.UI.createLabel({
 		left : 10,
 		right:10,
-		top : 10,
+		top : 0,
 		bottom : 5,
 		text : value,
 		color : COLOR.BROWN,

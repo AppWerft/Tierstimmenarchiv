@@ -32,7 +32,7 @@ module.exports = function(_e) {
 	$.listView.appendRow(Row('', record.species + ' ' + record.erstbeschreibung));
 
 	record.Beschreibung && $.listView.appendRow(Row(record.Beschreibung, ''));
-	record.ort && $.listView.appendRow(Row('Aufnahmeort:', record.ort));
+	record.ort && $.listView.appendRow(Row('Aufnahme:', record.ort+ ', '+record.country+', '+record.cdate));
 	if (record.allRecordsOfSpeciesWithLatLng.records.length > 0) {
 		$.mapView = require('ui/map.row')(record);
 		$.listView.appendRow($.mapView);

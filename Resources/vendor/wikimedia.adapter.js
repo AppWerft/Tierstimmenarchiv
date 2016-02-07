@@ -7,10 +7,8 @@ var Module = function(_latin, _callback) {
 	var onProgressFn = function() {
 		_callback.onprogress && typeof _callback.onprogress == 'function' && _callback.onprogress(arguments[0]);
 	};
-	if (Ti.Filesystem.isExternalStoragePresent())
-		var DEPOT = Ti.Filesystem.externalStorageDirectory;
-	else
-		var DEPOT = Ti.Filesystem.applicationDataDirectory;
+	
+	var DEPOT = Ti.Filesystem.applicationCacheDirectory;
 	var folder = Ti.Filesystem.getFile(DEPOT, FOLDER);
 	if (!folder.exists()) {
 		folder.createDirectory();
