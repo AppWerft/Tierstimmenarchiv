@@ -168,7 +168,8 @@ module.exports = function(_e) {
 					showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM,
 					icon : Ti.App.Android.R.drawable.ic_action_ringtone
 				}).addEventListener("click", function() {
-					alert('Klingelton ist noch nicht umgesetzt.');
+					require('model/ringtone.adapter')(record);
+					//alert('Klingelton ist noch nicht umgesetzt.');
 				});
 
 			};

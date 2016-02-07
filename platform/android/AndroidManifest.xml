@@ -21,6 +21,7 @@
 	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
 	<uses-permission android:name="android.permission.READ_INTERNAL_STORAGE"/>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"/>
 	<uses-feature android:glEsVersion="0x00020000" android:required="true"/>
 	<permission android:name="de.appwerft.tierstimmenarchiv.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
 </manifest>

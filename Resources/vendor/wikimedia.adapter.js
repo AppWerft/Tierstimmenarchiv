@@ -21,6 +21,7 @@ var Module = function(_latin, _callback) {
 	} else {
 		var xhr = Ti.Network.createHTTPClient({
 			ondatastream : onProgressFn,
+			autoRedirect :true,
 			onload : function() {
 				var regex = /class="thumbimage" srcset="(.*?)"/gi;
 				var res = regex.exec(this.responseText);
