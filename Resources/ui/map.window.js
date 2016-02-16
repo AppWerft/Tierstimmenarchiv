@@ -1,9 +1,12 @@
 var Map = require('ti.map');
 var TSA = new (require('model/tsa.adapter'))();
+var LoadingBar = require('com.rkam.swiperefreshlayout');
 var Overlays = {};
 module.exports = function() {
 	var $ = Ti.UI.createWindow();
+	
 	if (require('gms.test')()) {
+		
 		$.mapView = Map.createView({
 			region : {
 				latitude : 43,
@@ -18,7 +21,11 @@ module.exports = function() {
 			userLocationButton : false,
 			mapToolbarEnabled : false
 		});
-		$.add($.mapView);
+		$.container= LoadingBar.createSwipeRefresh({
+			view :$.mapView
+		});
+		//$.container.setRefreshing(true);
+		$.add($.container);
 		$.mapView.addEventListener('click', function(_e) {
 			Ti.Media.createAudioPlayer({
 				url : _e.annotation.itemId
@@ -36,6 +43,12 @@ module.exports = function() {
 				maxannotations : 50,
 				points : records[classname],
 				map : $.mapView
+			});
+			Overlays[classname].addEventListener('start',function(){
+				$.container.setRefreshing(true);
+			});
+			Overlays[classname].addEventListener('complete',function(){
+				$.container.setRefreshing(false);
 			});
 		});
 	});

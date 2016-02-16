@@ -21,7 +21,7 @@
 
 var Map = require('ti.map');
 
-var Module = function(options) {
+var Overlay = function(options) {
 	this.name = options.name;
 	this.maxannotations = options.maxannotations || Ti.Platform.displayCaps.logicalDensityFactor * 60;
 	if ( typeof options.map == 'object' && options.map.apiName)
@@ -55,7 +55,7 @@ var Module = function(options) {
 	return this;
 };
 
-Module.prototype = {
+Overlay.prototype = {
 	destroy : function() {
 		this.removeRegionChangedHandler();
 		var annotations = [];
@@ -210,4 +210,4 @@ Module.prototype = {
 	}
 };
 
-module.exports = Module;
+module.exports = Overlay;

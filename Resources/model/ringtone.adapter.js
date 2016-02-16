@@ -1,13 +1,12 @@
 module.exports = function(record) {
 	var xhr = Ti.Network.createHTTPClient({
 		onload : function() {
-			var DEPOT = Ti.Filesystem.applicationCacheDirectory;
-			var fn = Ti.Filesystem.getFile(DEPOT, record.filename);
+			var fn = Ti.Filesystem.getFile(Ti.Filesystem.applicationCacheDirectory, record.filename);
 			fn.write(this.responseData);
-			require('de.appwerft.ringtonemanager').setActualDefaultRingtone(fn.nativePath);
+			require('de.appwerft.ringtonmanager').setActualDefaultRingtone(fn.nativePath);
 		}
 	});
-	xhr.open('GET',url.audio);
+	xhr.open('GET',record.audio);
 	xhr.send();
 	
 };
