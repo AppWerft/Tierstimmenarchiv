@@ -1,6 +1,8 @@
 var TSA = new (require('model/tsa.adapter'))();
 var CanvasObject = require('com.wwl.canvas');
 
+var TiPermission = require('ti.permissions');
+
 var LDF = Ti.Platform.displayCaps.logicalDensityFactor;
 var CANVASHEIGHT = 320;
 var MAXDURATION = 60000;
@@ -22,7 +24,7 @@ module.exports = function() {
 		width : Ti.UI.FILL,
 		contentWidth : 3000,
 		top : 0,
-		height : CANVASHEIGHT/LDF,
+		height : CANVASHEIGHT / LDF,
 		contentHeight : CANVASHEIGHT / LDF
 	});
 	$.canvas = CanvasObject.createCanvasView({
@@ -52,43 +54,52 @@ module.exports = function() {
 		$.canvas.antiAliasing = true;
 		canvasready = true;
 	});
-	$.onErrorFn = function(){
-		var intent = Ti.Android.createIntent({
-			action: 'android.settings.APPLICATION_SETTINGS',
-		});
-		intent.addFlags(Ti.Android.FLAG_ACTIVITY_NEW_TASK);
-		Ti.Android.currentActivity.startActivity(intent);
-	};
-	Ti.App.addEventListener('uncaughtException',$.onErrorFn);
-	var audioRecorder = require('titutorial.audiorecorder');
-	audioRecorder.startRecording({
-		outputFormat : audioRecorder.OutputFormat_MPEG_4,
-		audioEncoder : audioRecorder.AudioEncoder_AAC,
-		directoryName : "recordings",
 
-		maxDuration : MAXDURATION,
-		success : function(e) {
-			clearInterval(cron);
-		},
-		error : function(e) {
-			alert("error => " + e.message);
-			Ti.API.info("error is => " + JSON.stringify(e));
+	if (TiPermission.hasPermission('android.permission.MICROPHONE')) {
+		console.log('Info: android.permission.MICROPHONE was true');
+		startRecorder();
+	} else {
+		console.log('Info: android.permission.MICROPHONE was false, we request it');
+		TiPermission.requestPermission('android.permission.MICROPHONE',111, function(e) {
+			console.log(e);
+			if (e.requestCode == 111 && e.success == true) {
+				startRecorder();
+			}
+		});
+	}
+
+	function startRecorder() {
+		var audioRecorder = require('titutorial.audiorecorder');
+		audioRecorder.startRecording({
+			outputFormat : audioRecorder.OutputFormat_MPEG_4,
+			audioEncoder : audioRecorder.AudioEncoder_AAC,
+			directoryName : "recordings",
+
+			maxDuration : MAXDURATION,
+			success : function(e) {
+				clearInterval(cron);
+			},
+			error : function(e) {
+				alert("error => " + e.message);
+				Ti.API.info("error is => " + JSON.stringify(e));
+			}
+		});
+		Ti.App.removeEventListener('uncaughtException', $.onErrorFn);
+		var cron = setInterval(getLevel, TICK);
+		var tick = 0;
+		function getLevel() {
+			if (audioRecorder.isRecording() && $.canvas && canvasready == true) {
+				var level = audioRecorder.getMaxAmplitude() / 20000;
+				console.log(Math.log10(level * 6000));
+				$.canvas.beginPath();
+				$.canvas.moveTo(tick, CANVASHEIGHT / 2 - level * CANVASHEIGHT);
+				$.canvas.lineTo(tick, CANVASHEIGHT / 2 + level * CANVASHEIGHT);
+				tick = tick + LDF;
+				$.canvas.closePath();
+				$.canvas.stroke();
+			}
 		}
-	});
-	Ti.App.removeEventListener('uncaughtException',$.onErrorFn);
-	var cron = setInterval(getLevel, TICK	);
-	var tick = 0;
-	function getLevel() {
-		if (audioRecorder.isRecording() && $.canvas && canvasready == true) {
-			var level = audioRecorder.getMaxAmplitude() / 20000;
-			console.log(Math.log10(level*6000));
-			$.canvas.beginPath();
-			$.canvas.moveTo(tick, CANVASHEIGHT / 2 - level * CANVASHEIGHT);
-			$.canvas.lineTo(tick, CANVASHEIGHT / 2 + level * CANVASHEIGHT);
-			tick = tick + LDF;
-			$.canvas.closePath();
-			$.canvas.stroke();
-		}
+
 	}
 
 
