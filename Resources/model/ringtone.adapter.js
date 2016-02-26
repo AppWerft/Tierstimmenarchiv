@@ -1,3 +1,5 @@
+// http://stackoverflow.com/questions/19944002/change-system-alarm-sound-by-code
+
 module.exports = function(record) {
 	var TiPermission = require('ti.permissions');
 	if (TiPermission.hasPermission('android.permission.SYSTEM_WRITE')) {

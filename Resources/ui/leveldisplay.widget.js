@@ -26,7 +26,6 @@ var Widget = function() {
 	this.view.add(this.canvas);
 	var that = this;
 	this.canvas.addEventListener('load', function() {
-		console.log('Canvas loaded');
 		that.canvas.lineWidth = LDF;
 		/* time grid: */
 		for (var i = 0; i < MAXDURATION; i++) {
@@ -51,7 +50,6 @@ Widget.prototype = {
 		return this.view;
 	},
 	drawLevel : function(level) {
-		console.log('TICK');
 		this.canvas.beginPath();
 		this.canvas.moveTo(this.tick, CANVASHEIGHT / 2 - level * CANVASHEIGHT);
 		this.canvas.lineTo(this.tick, CANVASHEIGHT / 2 + level * CANVASHEIGHT);

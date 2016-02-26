@@ -10,21 +10,25 @@ module.exports = function() {
 		smoothScrollOnTabClick : false,
 		tintColor : COLOR.BROWN,
 		theme : 'Theme.WithActionBar',
-		tabs : [Ti.UI.createTab({
-			title : 'Suche',
-			backgroundColor : '#092B55',
-			window : require('ui/search.window')()
-		}), Ti.UI.createTab({
-			title : 'Taxonomie',
-			window : require('ui/taxonomy.window')(),
-			backgroundColor : '#092B55'
-		}),Ti.UI.createTab({
-			title : 'Karte',
-			window : require('ui/map.window')(),
-			backgroundColor : '#092B55'
-		})],
+		tabs : [],
 		activeTab : 1
 	});
+	$.addTab(Ti.UI.createTab({
+		title : 'Suche',
+		backgroundColor : '#092B55',
+		window : require('ui/search.window')()
+	}));
+	$.addTab(Ti.UI.createTab({
+		title : 'Taxonomie',
+		window : require('ui/taxonomy.window')(),
+		backgroundColor : '#092B55'
+	}));
+	$.addTab(Ti.UI.createTab({
+		title : 'Karte',
+		window : require('ui/map.window')(),
+		backgroundColor : '#092B55'
+	}));
 	$.addEventListener('open', require('ui/tabgroup.actionbar'));
+
 	$.open();
 };
