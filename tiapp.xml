@@ -23,6 +23,7 @@
         <module platform="android">com.boxoutthinkers.reqstorageperm</module>
         <module platform="android">de.appwerft.ringtonmanager</module>
         <module platform="android">com.rkam.swiperefreshlayout</module>
+        <module platform="android">ti.permissions</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>

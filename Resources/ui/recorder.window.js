@@ -70,9 +70,9 @@ module.exports = function() {
 		success : function(e) {
 			clearInterval(cron);
 		},
-		error : function(d) {
+		error : function(e) {
 			alert("error => " + e.message);
-			Ti.API.info("error is => " + JSON.stringify(d));
+			Ti.API.info("error is => " + JSON.stringify(e));
 		}
 	});
 	Ti.App.removeEventListener('uncaughtException',$.onErrorFn);
