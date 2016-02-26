@@ -15,7 +15,7 @@
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <android xmlns:android="http://schemas.android.com/apk/res/android"/>
     <modules>
-        <module platform="android" version="1.6.8">com.alcoapps.actionbarextras</module>
+        <module platform="android">com.alcoapps.actionbarextras</module>
         <module platform="android" version="2.3.6">ti.map</module>
         <module platform="android">com.gbaldera.titouchgallery</module>
         <module platform="android">titutorial.audiorecorder</module>
