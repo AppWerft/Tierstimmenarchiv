@@ -27,6 +27,9 @@ module.exports = function() {
 			if (e.requestCode == 1 && e.success == !0) {
 				TiPermission.requestPermission('android.permission.WRITE_EXTERNAL_STORAGE', 2, function(e) {
 					if (e.requestCode == 2 && e.success == !0) {
+						Ti.UI.createNotification({
+							message : 'Alle Genehmigungen (Aufnahme vom Mikrofon und Abspeichern auf der SD-Karte) sind erteilt.'
+						}).show();
 						startRecorderWithPermission();
 					}
 				});
@@ -35,9 +38,6 @@ module.exports = function() {
 	}
 
 	function startRecorderWithPermission() {
-		Ti.UI.createNotification({
-			message : 'Alle Genehmigungen (Aufnahme vom Mikrofon und Abspeichern auf der SD-Karte) sind erteilt.'
-		}).show();
 
 		function getLevel() {
 			if (audioRecorder && audioRecorder.isRecording() && Canvas) {

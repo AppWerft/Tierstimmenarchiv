@@ -42,10 +42,10 @@ module.exports = function() {
 				map : $.mapView
 			});
 			Overlays[classname].addEventListener('start', function() {
-				$.container.setRefreshing(true);
+				
 			});
 			Overlays[classname].addEventListener('complete', function() {
-				$.container.setRefreshing(false);
+				
 			});
 		});
 	});
