@@ -1,4 +1,5 @@
 Ti.UI.backgroundColor = COLOR.BROWN;
+
 module.exports = function() {
 	var $ = Ti.UI.createTabGroup({
 		fullscreen : false,
@@ -17,11 +18,7 @@ module.exports = function() {
 			title : 'Taxonomie',
 			window : require('ui/taxonomy.window')(),
 			backgroundColor : '#092B55'
-		}), Ti.UI.createTab({
-			title : 'Aufnahme',
-			window : require('ui/recorder.window')(),
-			backgroundColor : '#092B55'
-		}), Ti.UI.createTab({
+		}),Ti.UI.createTab({
 			title : 'Karte',
 			window : require('ui/map.window')(),
 			backgroundColor : '#092B55'
@@ -29,8 +26,7 @@ module.exports = function() {
 		activeTab : 1
 	});
 	$.addEventListener('open', function(_event) {
-		
-		if (Ti.Android) {
+		if (Ti.Platform.osname == 'android') {
 			var АктйонБар = require('com.alcoapps.actionbarextras');
 			АктйонБар.setTitle('Tierstimmenarchiv');
 			АктйонБар.setFont('Helvetica-Bold');
@@ -39,17 +35,20 @@ module.exports = function() {
 			АктйонБар.setStatusbarColor(COLOR.BROWN);
 			АктйонБар.backgroundColor = COLOR.DARKGREEN;
 			var activity = _event.source.getActivity();
-			if (activity) 
+			if (activity) {
 				activity.onCreateOptionsMenu = function(_menuevent) {
-					_menuevent.menu.add({
+					return;
+					var item = _menuevent.menu.add({
 						title : 'Aufnahme',
 						showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM,
 						icon : Ti.App.Android.R.drawable.ic_action_mic
-					}).addEventListener("click", function(_e) {
+					});
+					item.addEventListener("click", function(_e) {
 						require('ui/recorder.window')().open();
 					});
 				};
 				activity.invalidateOptionsMenu();
+			}
 		}
 	});
 

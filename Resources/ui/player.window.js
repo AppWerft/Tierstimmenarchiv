@@ -173,6 +173,7 @@ module.exports = function(_e) {
 				});
 
 			};
+			activity.invalidateOptionsMenu();
 		}
 	});
 	$.open();
