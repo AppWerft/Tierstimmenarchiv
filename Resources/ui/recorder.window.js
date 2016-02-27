@@ -17,10 +17,8 @@ module.exports = function() {
 	var $ = Ti.UI.createWindow({
 		backgroundColor : COLOR.LIGHTGREEN
 	});
-
 	var Canvas = new CanvasModule();
 	$.add(Canvas.createView());
-
 	function requestPermissions() {
 		TiPermission.requestPermission('android.permission.RECORD_AUDIO', 1, function(e) {
 			console.log(e);
@@ -36,19 +34,14 @@ module.exports = function() {
 			}
 		});
 	}
-
 	function startRecorderWithPermission() {
-
-		function getLevel() {
+		function onGetLevelFn() {
 			if (audioRecorder && audioRecorder.isRecording() && Canvas) {
 				var level = audioRecorder.getMaxAmplitude() / 20000;
 				Canvas.drawLevel(level);
-
 			}
 		}
-
 		audioRecorder = require('titutorial.audiorecorder');
-		cron = setInterval(getLevel, TICK);
 		audioRecorder.startRecording({
 			outputFormat : audioRecorder.OutputFormat_MPEG_4,
 			audioEncoder : audioRecorder.AudioEncoder_AAC,
@@ -60,10 +53,8 @@ module.exports = function() {
 			error : function(e) {
 			}
 		});
-
+		cron = setInterval(onGetLevelFn, TICK);
 	}
-
-
 	$.addEventListener('close', function(_event) {
 		// TODO clearCron
 		audioRecorder && audioRecorder.stopRecording();
@@ -86,7 +77,6 @@ module.exports = function() {
 		}
 		requestPermissions();
 	});
-
 	return $;
 };
 
