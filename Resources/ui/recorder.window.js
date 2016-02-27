@@ -19,22 +19,8 @@ module.exports = function() {
 	});
 	var Canvas = new CanvasModule();
 	$.add(Canvas.createView());
-	function requestPermissions() {
-		TiPermission.requestPermission('android.permission.RECORD_AUDIO', 1, function(e) {
-			console.log(e);
-			if (e.requestCode == 1 && e.success == !0) {
-				TiPermission.requestPermission('android.permission.WRITE_EXTERNAL_STORAGE', 2, function(e) {
-					if (e.requestCode == 2 && e.success == !0) {
-						Ti.UI.createNotification({
-							message : 'Alle Genehmigungen (Aufnahme vom Mikrofon und Abspeichern auf der SD-Karte) sind erteilt.'
-						}).show();
-						startRecorderWithPermission();
-					}
-				});
-			}
-		});
-	}
-	function startRecorderWithPermission() {
+
+	function startRecorder() {
 		function onGetLevelFn() {
 			if (audioRecorder && audioRecorder.isRecording() && Canvas) {
 				var level = audioRecorder.getMaxAmplitude() / 20000;
@@ -55,6 +41,8 @@ module.exports = function() {
 		});
 		cron = setInterval(onGetLevelFn, TICK);
 	}
+
+
 	$.addEventListener('close', function(_event) {
 		// TODO clearCron
 		audioRecorder && audioRecorder.stopRecording();
@@ -75,7 +63,11 @@ module.exports = function() {
 				$.close();
 			};
 		}
-		requestPermissions();
+		require('ti.permissions').requestPermissions(['android.permission.RECORD_AUDIO', 'android.permission.WRITE_EXTERNAL_STORAGE'], function(e) {
+			console.log(e);
+			e.success && startRecorder();
+			e.success || alert('Sie müssen für die Aufnahmefunktion zustimmen.');
+		});
 	});
 	return $;
 };
