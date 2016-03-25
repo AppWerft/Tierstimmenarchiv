@@ -24,7 +24,7 @@ module.exports = function(_e) {
 	});
 	firstRow.add($.imageView);
 	$.listView = Ti.UI.createTableView({
-		top : 0,
+		top : TOP,
 		data : [firstRow],
 		height : Ti.UI.FILL,
 		backgroundColor : 'transparent'

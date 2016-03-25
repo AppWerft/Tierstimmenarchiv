@@ -6,7 +6,7 @@ module.exports = function(id) {
 	var TSA = new (require('model/tsa.adapter'))();
 
 	$.list = Ti.UI.createTableView({
-		top : 0,
+		top : TOP,
 		data : TSA.getSpeciesByFamily(id).map(require('ui/taxo.row'))
 	});
 	$.add($.list);

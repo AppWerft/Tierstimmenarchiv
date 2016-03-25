@@ -4,13 +4,19 @@ module.exports = function(id) {
 		backgroundColor : COLOR.LIGHTGREEN
 	});
 	var TSA = new (require('model/tsa.adapter'))();
-	$.list = Ti.UI.createTableView({
-		data : TSA.getFamiliesByOrdo(id).map(require('ui/taxo.row'))
+	require('vendor/permissions').requestPermissions('WRITE_EXTERNAL_STORAGE', function(_success) {
+		if (_success == true) {
+			$.list = Ti.UI.createTableView({top:TOP,
+				data : TSA.getFamiliesByOrdo(id).map(require('ui/taxo.row'))
+			});
+			$.add($.list);
+		} else
+			alert('Die Berechtigung wird für die Zwischenspeicherung der Tierbilder benötigt.');
+		$.list.addEventListener('click', function(_e) {
+			require('ui/species.window')(_e.row.itemId).open();
+		});
 	});
-	$.add($.list);
-	$.list.addEventListener('click', function(_e) {
-		require('ui/species.window')(_e.row.itemId).open();
-	});
+
 	$.addEventListener('open', function(_event) {
 		if (Ti.Android) {
 			var АктйонБар = require('com.alcoapps.actionbarextras');

@@ -1,6 +1,6 @@
 var TSA = new (require('model/tsa.adapter'))();
 
-var TiPermission = require('ti.permissions');
+var TiPermissions = require('ti.permissions');
 
 var CanvasModule = require('ui/leveldisplay.widget');
 var TICK = 50;
@@ -18,7 +18,9 @@ module.exports = function() {
 		backgroundColor : COLOR.LIGHTGREEN
 	});
 	var Canvas = new CanvasModule();
-	$.add(Canvas.createView());
+	var canvasView = Canvas.createView();
+	canvasView.top = BIGTOP;
+	$.add(canvasView);
 
 	function startRecorder() {
 		function onGetLevelFn() {
@@ -27,6 +29,7 @@ module.exports = function() {
 				Canvas.drawLevel(level);
 			}
 		}
+
 		audioRecorder = require('titutorial.audiorecorder');
 		audioRecorder.startRecording({
 			outputFormat : audioRecorder.OutputFormat_MPEG_4,
@@ -42,31 +45,18 @@ module.exports = function() {
 		cron = setInterval(onGetLevelFn, TICK);
 	}
 
-
-	$.addEventListener('close', function(_event) {
+	function onCloseFn(_event) {
 		// TODO clearCron
 		audioRecorder && audioRecorder.stopRecording();
 		Canvas = null;
-	});
-	$.addEventListener('open', function(_event) {
-		if (Ti.Android) {
-			var АктйонБар = require('com.alcoapps.actionbarextras');
-			АктйонБар.setTitle('Tierstimmenarchiv');
-			АктйонБар.setFont('Helvetica-Bold');
-			АктйонБар.setSubtitle('Aufnahme');
-			АктйонБар.displayUseLogoEnabled = !1;
-			АктйонБар.setStatusbarColor(COLOR.BROWN);
-			АктйонБар.backgroundColor = COLOR.DARKGREEN;
-			var activity = _event.source.getActivity();
-			activity.actionBar.displayHomeAsUp = true;
-			activity.actionBar.onHomeIconItemSelected = function() {
-				$.close();
-			};
-		}
-		require('ti.permissions').requestPermissions(['android.permission.RECORD_AUDIO', 'android.permission.WRITE_EXTERNAL_STORAGE'], function(e) {
-			console.log(e);
-			e.success && startRecorder();
-			e.success || alert('Sie müssen für die Aufnahmefunktion zustimmen.');
+	}
+
+
+	$.addEventListener('close', onCloseFn);
+	$.addEventListener('focus', function(_event) {
+		require('vendor/permissions').requestPermissions(['RECORD_AUDIO', 'WRITE_EXTERNAL_STORAGE'], function(_success) {
+			_success && startRecorder();
+			_success || alert('Sie müssen für die Aufnahmefunktion zustimmen.');
 		});
 	});
 	return $;

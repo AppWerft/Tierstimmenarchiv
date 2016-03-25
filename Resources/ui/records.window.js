@@ -8,13 +8,14 @@ module.exports = function(id) {
 		templates : {
 			'template' : require('TEMPLATES').animalsounds
 		},
+		top : TOP,
 		defaultItemTemplate : 'template',
 	});
 	$.add($.listView);
 	var TSA = new (require('model/tsa.adapter'))();
 	var records = TSA.getRecordsBySpecies(id);
 	var lastndx;
-    console.log(records);
+	console.log(records);
 	$.listView.sections[0].items = records.map(function(sound) {
 		return {
 			properties : {
@@ -39,9 +40,9 @@ module.exports = function(id) {
 		};
 
 	});
-	
-	$.listView.addEventListener('itemclick',require('ui/player.window'));
-	
+
+	$.listView.addEventListener('itemclick', require('ui/player.window'));
+
 	$.addEventListener('focus', function(_e) {
 		if ($ && $.searchView)
 			$.searchView.animate({
@@ -72,7 +73,7 @@ module.exports = function(id) {
 			activity.actionBar.onHomeIconItemSelected = function() {
 				$.close();
 			};
-			
+
 		}
 
 	});

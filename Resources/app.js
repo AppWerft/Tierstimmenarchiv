@@ -3,9 +3,16 @@ const COLOR = {
 	DARKGREEN : '#174122',
 	BROWN : '#B87C25'
 },
-    DBNAME = 'TSA11';
+    DBNAME = 'TSA11',
+    TOP = 82.0,
+    BIGTOP = 122;
 
- var TSA = new (require('model/tsa.adapter'))();
+Ti.App.Android.Permissions = require('ti.permissions');
+
+var TSA = new (require('model/tsa.adapter'))();
+
+//require('math.min');
+
 if (TSA.Import_isDone()) {
 	require('ui/tabgroup')();
 

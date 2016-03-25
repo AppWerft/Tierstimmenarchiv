@@ -35,7 +35,7 @@ module.exports = function(species) {
 
 	});
 	function onOrientationchangeFn() {
-		if ($.activity && $.activity.actionBar) {
+		if ($ && $.activity && $.activity.actionBar) {
 			if (Ti.Platform.displayCaps.platformHeight > Ti.Platform.displayCaps.platformWidth)
 				$.activity.actionBar.show();
 			else

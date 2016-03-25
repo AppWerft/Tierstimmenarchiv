@@ -1,32 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<style name="Theme.WithActionBar" parent="@style/Theme.AppCompat.Light.DarkActionBar">
-		<item name="android:colorPrimary">
-			#FF174122
-		</item>
-		<item name="windowActionBar">
-			true
-		</item>
-		<item name="windowNoTitle">
-			false
-		</item>
-		<item name="android:windowIsTranslucent">
-			true
-		</item>
-		<item name="android:windowBackground">
-			@android:color/transparent
-		</item>
-		<item name="android:windowFullscreen">
-			false
-		</item>
-		<item name="android:windowTranslucentNavigation">
-			true
-		</item>
-		<item name="android:windowIsTranslucent">
-			true
-		</item>
-		<item name="android:fitsSystemWindows">
-			false
-		</item>
+		<item name="android:statusBarColor">#B87C25</item>
+		<item name="android:colorPrimary">#FF174122</item>
+		<item name="windowActionBar">true</item>
+		<item name="windowNoTitle">false</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowFullscreen">false</item>
+		<item name="android:windowTranslucentNavigation">true</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:fitsSystemWindows">false</item>
+		<item name="android:navigationBarColor">#80B87C25</item>
 	</style>
 </resources>

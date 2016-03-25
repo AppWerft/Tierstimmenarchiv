@@ -6,7 +6,7 @@ module.exports = function(id) {
 
 	$.searchView = Ti.UI.createTextField({
 		height : 40,
-		top : -50,
+		top : 0,
 		font : {
 			fontFamily : 'Helvetica-Bold',
 			fontSize : 18
@@ -29,7 +29,7 @@ module.exports = function(id) {
 			'template' : require('TEMPLATES').animalsounds
 		},
 		defaultItemTemplate : 'template',
-		top : Ti.Android ? 50 : 50
+		top : BIGTOP + 50
 	});
 
 	$.add($.listView);
@@ -91,7 +91,7 @@ module.exports = function(id) {
 		$.removeEventListener('focus', onFocusFn);
 		if ($ && $.searchView)
 			$.searchView.animate({
-				top : 0
+				top : BIGTOP+10
 			}, function() {
 				Ti.Android && Ti.UI.createNotification({
 					message : 'Geben Sie einen Suchbegriff ein.',

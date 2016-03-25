@@ -28,6 +28,11 @@ module.exports = function() {
 		window : require('ui/map.window')(),
 		backgroundColor : '#092B55'
 	}));
+	$.addTab(Ti.UI.createTab({
+		title : 'Aufnahme(n)',
+		window : require('ui/recorder.window')(),
+		backgroundColor : '#092B55'
+	}));
 	$.addEventListener('open', require('ui/tabgroup.actionbar'));
 
 	$.open();

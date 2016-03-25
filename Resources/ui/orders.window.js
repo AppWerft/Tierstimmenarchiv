@@ -28,12 +28,17 @@ module.exports = function(id) {
 			АктйонБар.backgroundColor = COLOR.DARKGREEN;
 		}
 		var TSA = new (require('model/tsa.adapter'))();
-		$.list = Ti.UI.createTableView({
-			data : TSA.getOrdersByClass(id).map(require('ui/taxo.row'))
-		});
-		$.add($.list);
-		$.list.addEventListener('click', function(_e) {
-			require('ui/families.window')(_e.row.itemId).open();
+		require('vendor/permissions').requestPermissions('WRITE_EXTERNAL_STORAGE', function(_success) {
+			if (_success == true) {
+				$.list = Ti.UI.createTableView({
+					top:TOP,
+					data : TSA.getOrdersByClass(id).map(require('ui/taxo.row'))
+				});
+				$.add($.list);
+				$.list.addEventListener('click', function(_e) {
+					require('ui/families.window')(_e.row.itemId).open();
+				});
+			}
 		});
 	});
 	return $;
