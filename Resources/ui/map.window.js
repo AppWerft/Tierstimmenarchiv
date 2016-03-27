@@ -8,7 +8,6 @@ module.exports = function() {
 		backgroundColor : COLOR.LIGHTGREEN
 	});
 	//if (require('gms.test')()) {
-	console.log('gms.test was succsessful');
 	$.mapView = Map.createView({
 		region : {
 			latitude : 43,

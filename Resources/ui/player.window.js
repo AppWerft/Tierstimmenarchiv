@@ -63,7 +63,7 @@ module.exports = function(_e) {
 			var height = parseFloat(blob.height) / parseFloat(blob.width) * parseFloat(Ti.Platform.displayCaps.platformWidth) / parseFloat(Ti.Platform.displayCaps.logicalDensityFactor);
 			$.imageView.setHeight(height);
 			$.listView.data[0].setHeight(height);
-			$.listView.setTop(0);
+			$.listView.setTop(TOP);
 			$.imageView.add(Ti.UI.createImageView({
 				image : '/assets/wikispecies.png',
 				top : 0,
@@ -151,6 +151,7 @@ module.exports = function(_e) {
 
 			activity.onCreateOptionsMenu = function(_menuevent) {
 				_menuevent.menu.clear();
+				
 				_menuevent.menu.add({
 					title : 'Favorite',
 					itemId : 1,

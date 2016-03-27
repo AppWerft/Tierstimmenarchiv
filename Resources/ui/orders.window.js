@@ -28,7 +28,7 @@ module.exports = function(id) {
 			АктйонБар.backgroundColor = COLOR.DARKGREEN;
 		}
 		var TSA = new (require('model/tsa.adapter'))();
-		require('vendor/permissions').requestPermissions('WRITE_EXTERNAL_STORAGE', function(_success) {
+		require('vendor/permissions').requestPermissions(['WRITE_EXTERNAL_STORAGE','READ_EXTERNAL_STORAGE'], function(_success) {
 			if (_success == true) {
 				$.list = Ti.UI.createTableView({
 					top:TOP,
