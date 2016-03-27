@@ -10,6 +10,10 @@ module.exports = function(record) {
 			RingTone.setActualDefaultRingtone({
 				url : soundfile.nativePath,
 				title : record.species_latin
+			}, function(_e) {
+				Ti.UI.createNotification({
+					message : 'Klingelton geändert.'
+				}).show();
 			});
 
 		}
