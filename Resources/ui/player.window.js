@@ -32,7 +32,7 @@ module.exports = function(_e) {
 	$.listView.appendRow(Row('', record.species + ' ' + record.erstbeschreibung));
 
 	record.Beschreibung && $.listView.appendRow(Row(record.Beschreibung, ''));
-	record.ort && $.listView.appendRow(Row('Aufnahme:', record.ort+ ', '+record.country+', '+record.cdate));
+	record.ort && $.listView.appendRow(Row('Aufnahme:', record.ort + ', ' + record.country + ', ' + record.cdate));
 	if (record.allRecordsOfSpeciesWithLatLng.records.length > 0) {
 		$.mapView = require('ui/map.row')(record);
 		$.listView.appendRow($.mapView);
@@ -121,7 +121,6 @@ module.exports = function(_e) {
 		right : 0
 	});
 	$.playerView.add($.playerView.darker);
-
 	$.add($.listView);
 	$.add($.playerView);
 	$.addEventListener('close', function() {
@@ -133,7 +132,6 @@ module.exports = function(_e) {
 		audioPlayer.release();
 		audioPlayer = null;
 	});
-
 	$.addEventListener('open', function(_event) {
 		if (Ti.Android) {
 			var АктйонБар = require('com.alcoapps.actionbarextras');
@@ -148,11 +146,9 @@ module.exports = function(_e) {
 			activity.actionBar.onHomeIconItemSelected = function() {
 				$.close();
 			};
-
 			activity.onCreateOptionsMenu = function(_menuevent) {
 				_menuevent.menu.clear();
-				
-				_menuevent.menu.add({
+					_menuevent.menu.add({
 					title : 'Favorite',
 					itemId : 1,
 					showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM,
@@ -162,16 +158,23 @@ module.exports = function(_e) {
 					_e.source.icon = (_e.source.icon == Ti.App.Android.R.drawable.ic_action_favorite_add) ? Ti.App.Android.R.drawable.ic_action_favorite : Ti.App.Android.R.drawable.ic_action_favorite_add;
 					alert('Merkzettel ist noch nicht umgesetzt.');
 				});
-
 				_menuevent.menu.add({
 					title : 'Klingelton',
 					itemId : 2,
 					showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM,
 					icon : Ti.App.Android.R.drawable.ic_action_ringtone
 				}).addEventListener("click", function() {
-					require('model/ringtone.adapter')(record);
+					var dialog = Ti.UI.createAlertDialog({
+						message : 'Möchten Sie die Tierstimmenaufnahme „'+ record.deutscher_name + '“ als neuen Klingelton verwenden?',
+						ok : 'Okay',
+						title : 'Neuer Klingelton'
+					});
+					dialog.addEventListener('click', function(_e) {
+						if (_e.index >= 0)
+							require('model/ringtone.adapter')(record);
+					});
+					dialog.show();
 				});
-
 			};
 			activity.invalidateOptionsMenu();
 		}

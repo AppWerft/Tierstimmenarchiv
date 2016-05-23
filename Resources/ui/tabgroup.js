@@ -3,7 +3,7 @@ Ti.UI.backgroundColor = COLOR.BROWN;
 module.exports = function() {
 	var $ = Ti.UI.createTabGroup({
 		fullscreen : false,
-		swipeable : true,
+		swipeable : false,
 		backgroundColor : COLOR.DARKGRREEN,
 		backgroundSelectedColor : COLOR.BROWN,
 		activeTabIconTint : COLOR.BROWN,
@@ -34,6 +34,5 @@ module.exports = function() {
 		backgroundColor : '#092B55'
 	}));
 	$.addEventListener('open', require('ui/tabgroup.actionbar'));
-
 	$.open();
 };

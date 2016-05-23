@@ -3,44 +3,34 @@ module.exports = function(id) {
 		backgroundColor : COLOR.LIGHTGREEN
 	});
 	var TSA = new (require('model/tsa.adapter'))();
-	$.list = Ti.UI.createTableView({
-		top : TOP+40,
+
+	var WheelModule = require('de.appwerft.fortunewheelview');
+	var wheelView = WheelModule.createWheelView({
+		icons : ["amphibia", "aves", "insecta", "mammalia", "reptilia"].map(function(icon) {
+			return Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "assets", icon + '.png').nativePath;
+		}),
+		width : 700,
+		height : 700,
+		borderWidth : 0,
+		borderColor : 'silver',
+		bottom : -250
+
 	});
-	$.add($.list);
-	$.addEventListener('focus', function(_e) {
-		if ($.list.data.length)
-			return;
-		$.list.data = TSA.getAllClasses().map(function(c) {
-			var image = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, c.image).read();
-			var row = Ti.UI.createTableViewRow({
-				height : Ti.UI.SIZE,
-				hasChild : true,
-				itemId : c.latin
-			});
-			row.add(Ti.UI.createImageView({
-				image : image,
-				top : 10,
-				bottom : 10,
-				touchEnabled : false,
-				left : 5,
-				width : 100,
-				height : image.height / image.width * 100
-			}));
-			row.add(Ti.UI.createLabel({
-				left : 120,
-				text : c.latin,
-				touchEnabled : false,
-				color : COLOR.DARKGREEN,
-				font : {
-					fontSize : 22,
-					fontWeight : 'bold'
-				}
-			}));
-			return row;
-		});
+	wheelView.addEventListener('change', function(_e) {
+
 	});
-	$.list.addEventListener('click', function(_e) {
-		require('ui/orders.window')(_e.row.itemId).open();
+	var titleView = Ti.UI.createLabel({
+		text : 'Amphibia',
+		top : 150,
+		zIndex : 9999,
+		height : Ti.UI.SIZE,
+		color : COLOR.DARKGREEN,
+		font : {
+			fontSize : 32,
+			fontWeight : 'bold'
+		}
 	});
+	$.add(wheelView);
+	$.add(titleView);
 	return $;
 };

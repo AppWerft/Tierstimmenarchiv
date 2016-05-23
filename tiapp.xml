@@ -2,7 +2,7 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>de.appwerft.tierstimmenarchiv</id>
     <name>Tierstimmenarchiv</name>
-    <version>2.3.14</version>
+    <version>2.3.15</version>
     <publisher>fuerst</publisher>
     <url>http://hamburger-appwerft.de</url>
     <description>kein Text</description>
@@ -22,6 +22,7 @@
         <module platform="android">de.appwerft.ringtonmanager</module>
         <module platform="android">ti.permissions</module>
         <module platform="android">com.alcoapps.actionbarextras</module>
+        <module platform="android">de.appwerft.fortunewheelview</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
