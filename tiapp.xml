@@ -2,7 +2,7 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>de.appwerft.tierstimmenarchiv</id>
     <name>Tierstimmenarchiv</name>
-    <version>2.3.15</version>
+    <version>2.6.1</version>
     <publisher>fuerst</publisher>
     <url>http://hamburger-appwerft.de</url>
     <description>kein Text</description>
@@ -15,14 +15,16 @@
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <android xmlns:android="http://schemas.android.com/apk/res/android"/>
     <modules>
-        <module platform="android" version="2.3.7">ti.map</module>
+        <module platform="android" version="2.5.0">ti.map</module>
         <module platform="android">com.gbaldera.titouchgallery</module>
         <module platform="android">titutorial.audiorecorder</module>
         <module platform="android">com.wwl.canvas</module>
         <module platform="android">de.appwerft.ringtonmanager</module>
         <module platform="android">ti.permissions</module>
+        <module platform="android">ti.touchid</module>
         <module platform="android">com.alcoapps.actionbarextras</module>
         <module platform="android">de.appwerft.fortunewheelview</module>
+        <module platform="android">ti.spectrumanalyzer</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
@@ -30,5 +32,5 @@
         <target device="iphone">false</target>
         <target device="mobileweb">false</target>
     </deployment-targets>
-    <sdk-version>5.2.0.GENPERM</sdk-version>
+    <sdk-version>5.5.1.GA</sdk-version>
 </ti:app>

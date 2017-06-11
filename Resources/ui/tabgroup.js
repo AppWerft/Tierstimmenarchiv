@@ -1,5 +1,6 @@
 Ti.UI.backgroundColor = COLOR.BROWN;
 
+
 module.exports = function() {
 	var $ = Ti.UI.createTabGroup({
 		fullscreen : false,
@@ -13,11 +14,23 @@ module.exports = function() {
 		tabs : [],
 		activeTab : 1
 	});
+	
 	$.addTab(Ti.UI.createTab({
 		title : 'Suche',
 		backgroundColor : '#092B55',
 		window : require('ui/search.window')()
 	}));
+	
+	/*
+	$.addTab(Ti.UI.createTab({
+		title : 'Aufnahme',
+		window : require('ui/recorder.window')($),
+		backgroundColor : '#092B55'
+	}));
+	*/
+	
+	
+	
 	$.addTab(Ti.UI.createTab({
 		title : 'Taxonomie',
 		window : require('ui/taxonomy.window')(),
@@ -28,11 +41,7 @@ module.exports = function() {
 		window : require('ui/map.window')(),
 		backgroundColor : '#092B55'
 	}));
-	$.addTab(Ti.UI.createTab({
-		title : 'Aufnahme(n)',
-		window : require('ui/recorder.window')(),
-		backgroundColor : '#092B55'
-	}));
+	
 	$.addEventListener('open', require('ui/tabgroup.actionbar'));
 	$.open();
 };

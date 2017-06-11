@@ -15,12 +15,18 @@ module.exports = function() {
 			latitudeDelta : 50,
 			longitudeDelta : 50
 		},
-		mapType : Map.TERRAIN_TYPE,
+		mapType : Map.NONE_TYPE,
 		enableZoomControls : false,
 		compassEnabled : false,
+		//	tileOverlay : watercolorOverlay,
 		userLocation : false,
 		userLocationButton : false,
 		mapToolbarEnabled : false
+	});
+	$.mapView.addEventListener('complete', function(_e) {
+		$.mapView.addTileOverlay(Map.createTileOverlay({
+			tileProvider : "Stamen/Watercolor"
+		}));
 	});
 	$.mapView.addEventListener('click', function(_e) {
 		Ti.Media.createAudioPlayer({
@@ -41,13 +47,14 @@ module.exports = function() {
 				map : $.mapView
 			});
 			Overlays[classname].addEventListener('start', function() {
-				
+
 			});
 			Overlays[classname].addEventListener('complete', function() {
-				
+
 			});
 		});
 	});
 	$.add($.mapView);
+
 	return $;
 };

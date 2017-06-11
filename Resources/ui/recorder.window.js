@@ -11,54 +11,53 @@ function(x) {
 	return Math.log(x) / Math.LN10;
 };
 
-module.exports = function() {
+module.exports = function(_parent) {
 	var audioRecorder,
 	    cron;
 	var $ = Ti.UI.createWindow({
-		backgroundColor : COLOR.LIGHTGREEN
+		theme : "Theme.AudioRecorder",
+		fullscreen : true,
+		backgroundColor : "#a000"
 	});
-	var Canvas = new CanvasModule();
-	var canvasView = Canvas.createView();
-	canvasView.top = BIGTOP;
-	$.add(canvasView);
 
-	function startRecorder() {
-		function onGetLevelFn() {
-			if (audioRecorder && audioRecorder.isRecording() && Canvas) {
-				var level = audioRecorder.getMaxAmplitude() / 20000;
-				Canvas.drawLevel(level);
-			}
-		}
+	$.container = Ti.UI.createView({
+		backgroundColor : "white",
+		width : "90%",
+		height : "90%"
+	});
+	$.add($.container);
+	var Spectrum = require("ti.spectrumanalyzer");
+	var spectrumView = Spectrum.createView({
+		width : Ti.UI.FILL,
+		bottom : 100,
+		top : 0,
+		color : "green",
+		borderWidth : 1,
+		borderColor : "gray",
+		borderRadius : 5,
+		backgroundColor : "#eee"
+	});
 
-		audioRecorder = require('titutorial.audiorecorder');
-		audioRecorder.startRecording({
-			outputFormat : audioRecorder.OutputFormat_MPEG_4,
-			audioEncoder : audioRecorder.AudioEncoder_AAC,
-			directoryName : "recordings",
-			maxDuration : MAXDURATION,
-			success : function(e) {
-				clearInterval(cron);
-			},
-			error : function(e) {
-			}
-		});
-		cron = setInterval(onGetLevelFn, TICK);
+	function onBlurFn(_event) {
+		//	console.log("TiSpec  onBlurFn");
+		//	spectrumView.stop();
 	}
 
-	function onCloseFn(_event) {
-		// TODO clearCron
-		audioRecorder && audioRecorder.stopRecording();
-		Canvas = null;
-	}
-
-
-	$.addEventListener('close', onCloseFn);
-	$.addEventListener('focus', function(_event) {
+	function onFocusFn(_event) {
 		require('vendor/permissions').requestPermissions(['RECORD_AUDIO', 'WRITE_EXTERNAL_STORAGE'], function(_success) {
-			_success && startRecorder();
-			_success || alert('Sie müssen für die Aufnahmefunktion zustimmen.');
+			if (_success) {
+				setTimeout(function() {
+					spectrumView.start();
+				}, 2000);
+				$.container.add(spectrumView);
+			} else
+				alert('Sie müssen für die Aufnahmefunktion der Aufnahmeberechtigung zustimmen.');
 		});
-	});
+	}
+
+
+	$.addEventListener('blur', onBlurFn);
+	$.addEventListener('open', onFocusFn);
 	return $;
 };
 
